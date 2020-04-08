@@ -31,7 +31,7 @@
     
     
     <entry>
-      <title>Hexo的一些记录</title>
+      <title>关于Hexo博客的一些记录</title>
       <link href="/2020/04/07/about_hexo/"/>
       <url>/2020/04/07/about_hexo/</url>
       
@@ -87,35 +87,6 @@
     
     
     <entry>
-      <title>Aplayer插件测试</title>
-      <link href="/2020/04/02/Aplayer%E6%8F%92%E4%BB%B6%E6%B5%8B%E8%AF%95/"/>
-      <url>/2020/04/02/Aplayer%E6%8F%92%E4%BB%B6%E6%B5%8B%E8%AF%95/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      <categories>
-          
-          <category> 测试 </category>
-          
-          <category> Aplayer </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Test </tag>
-            
-            <tag> Aplayer </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>网易云音乐外链测试</title>
       <link href="/2020/03/28/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E5%A4%96%E9%93%BE%E6%B5%8B%E8%AF%95/"/>
       <url>/2020/03/28/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E5%A4%96%E9%93%BE%E6%B5%8B%E8%AF%95/</url>
@@ -134,9 +105,9 @@
       
         <tags>
             
-            <tag> Test </tag>
-            
             <tag> Music </tag>
+            
+            <tag> Test </tag>
             
         </tags>
       
