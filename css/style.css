@@ -2,10 +2,15 @@
   padding-top: 10px;
 }
 #header #nav {
-  padding-top: 10px;
+  padding-top: 40px;
+  line-height: 9px;
 }
 #header #nav ul {
   font-size: 15px;
+}
+details {
+  border-bottom-style: outset;
+  line-height: 30px;
 }
 .inline {
   display: inline;
