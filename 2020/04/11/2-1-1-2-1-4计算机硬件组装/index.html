@@ -1,0 +1,1621 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="2.1.1微型计算机的硬件组成微型计算机概念从外形上来看 主机  主机的概念  一般将主机箱及颞部的部件统称为主机   主机的结构  主板 内存条 硬盘 光驱 显卡 声卡 网卡     输入设备  键盘  键盘是计算机系统的基本输入输出设备  键盘的分类  按键数来分  101键盘 104键盘 107键盘     键盘的5个组成部分  标准打字键区  功能键区  小键盘区  具备两个功能，由Num">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2.1.1-2.1.4计算机硬件组装">
+<meta property="og:url" content="http://flousfl.github.io/blog/2020/04/11/2-1-1-2-1-4%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6%E7%BB%84%E8%A3%85/index.html">
+<meta property="og:site_name" content="flous">
+<meta property="og:description" content="2.1.1微型计算机的硬件组成微型计算机概念从外形上来看 主机  主机的概念  一般将主机箱及颞部的部件统称为主机   主机的结构  主板 内存条 硬盘 光驱 显卡 声卡 网卡     输入设备  键盘  键盘是计算机系统的基本输入输出设备  键盘的分类  按键数来分  101键盘 104键盘 107键盘     键盘的5个组成部分  标准打字键区  功能键区  小键盘区  具备两个功能，由Num">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-04-11T08:27:43.000Z">
+<meta property="article:modified_time" content="2020-04-11T08:33:09.852Z">
+<meta property="article:author" content="flous">
+<meta property="article:tag" content="Loading">
+<meta property="article:tag" content="note">
+<meta name="twitter:card" content="summary">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.png">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>2.1.1-2.1.4计算机硬件组装</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+      
+<link rel="stylesheet" href="/css/rtl.css">
+
+    
+    <!-- rss -->
+    
+    
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="flous" type="application/atom+xml">
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/categories/">分类</a></li>
+         
+          <li><a href="/tags/">标签</a></li>
+         
+          <li><a href="/search">搜索</a></li>
+         
+          <li><a href="/links">友链</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2020/04/11/2-2-1-2-2-4%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/2020/04/11/1-5-1-1-5-5%E5%BE%AE%E5%9E%8B%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="mailto:?subject=2.1.1-2.1.4计算机硬件组装&body=Check out this article: http://flousfl.github.io/blog/2020/04/11/2-1-1-2-1-4%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6%E7%BB%84%E8%A3%85/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <!-- <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://flousfl.github.io/blog/2020/04/11/2-1-1-2-1-4%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6%E7%BB%84%E8%A3%85/" target="_blank" rel="noopener"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://flousfl.github.io/blog/2020/04/11/2-1-1-2-1-4%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6%E7%BB%84%E8%A3%85/&text=2.1.1-2.1.4计算机硬件组装" target="_blank" rel="noopener"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://flousfl.github.io/blog/2020/04/11/2-1-1-2-1-4%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6%E7%BB%84%E8%A3%85/&title=2.1.1-2.1.4计算机硬件组装" target="_blank" rel="noopener"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://flousfl.github.io/blog/2020/04/11/2-1-1-2-1-4%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6%E7%BB%84%E8%A3%85/&is_video=false&description=2.1.1-2.1.4计算机硬件组装" target="_blank" rel="noopener"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://flousfl.github.io/blog/2020/04/11/2-1-1-2-1-4%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6%E7%BB%84%E8%A3%85/&title=2.1.1-2.1.4计算机硬件组装" target="_blank" rel="noopener"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://flousfl.github.io/blog/2020/04/11/2-1-1-2-1-4%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6%E7%BB%84%E8%A3%85/&title=2.1.1-2.1.4计算机硬件组装" target="_blank" rel="noopener"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://flousfl.github.io/blog/2020/04/11/2-1-1-2-1-4%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6%E7%BB%84%E8%A3%85/&title=2.1.1-2.1.4计算机硬件组装" target="_blank" rel="noopener"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://flousfl.github.io/blog/2020/04/11/2-1-1-2-1-4%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6%E7%BB%84%E8%A3%85/&title=2.1.1-2.1.4计算机硬件组装" target="_blank" rel="noopener"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://flousfl.github.io/blog/2020/04/11/2-1-1-2-1-4%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6%E7%BB%84%E8%A3%85/&name=2.1.1-2.1.4计算机硬件组装&description=" target="_blank" rel="noopener"><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=http://flousfl.github.io/blog/2020/04/11/2-1-1-2-1-4%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6%E7%BB%84%E8%A3%85/&t=2.1.1-2.1.4计算机硬件组装" target="_blank" rel="noopener"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li> -->
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#2-1-1微型计算机的硬件组成"><span class="toc-number">1.</span> <span class="toc-text">2.1.1微型计算机的硬件组成</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#微型计算机概念"><span class="toc-number">1.1.</span> <span class="toc-text">微型计算机概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#从外形上来看"><span class="toc-number">1.1.1.</span> <span class="toc-text">从外形上来看</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#微型计算机又称微机、个人计算机、PC机、电脑"><span class="toc-number">1.2.</span> <span class="toc-text">微型计算机又称微机、个人计算机、PC机、电脑</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#微型计算机是电子计算机技术发展到第四代的产物"><span class="toc-number">1.3.</span> <span class="toc-text">微型计算机是电子计算机技术发展到第四代的产物</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#硬件部分"><span class="toc-number">1.4.</span> <span class="toc-text">硬件部分</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分别都-3"><span class="toc-number">1.5.</span> <span class="toc-text">分别都+3</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-1-2计算机主机外部接口"><span class="toc-number">2.</span> <span class="toc-text">2.1.2计算机主机外部接口</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#电源接口"><span class="toc-number">2.1.</span> <span class="toc-text">电源接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#用途"><span class="toc-number">2.1.1.</span> <span class="toc-text">用途</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#形状"><span class="toc-number">2.1.2.</span> <span class="toc-text">形状</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#注意事项"><span class="toc-number">2.1.3.</span> <span class="toc-text">注意事项</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#鼠标和键盘接口"><span class="toc-number">2.2.</span> <span class="toc-text">鼠标和键盘接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#PS-2接口"><span class="toc-number">2.2.1.</span> <span class="toc-text">PS&#x2F;2接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#USB接口"><span class="toc-number">2.2.2.</span> <span class="toc-text">USB接口</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#显示器接口"><span class="toc-number">2.3.</span> <span class="toc-text">显示器接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#VGA"><span class="toc-number">2.3.1.</span> <span class="toc-text">VGA</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DVI"><span class="toc-number">2.3.2.</span> <span class="toc-text">DVI</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#S-Video"><span class="toc-number">2.3.3.</span> <span class="toc-text">S-Video</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#USB接口-1"><span class="toc-number">2.4.</span> <span class="toc-text">USB接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#通用串行总线（英语：Universal-Serial-Bus，缩写：USB）"><span class="toc-number">2.4.1.</span> <span class="toc-text">通用串行总线（英语：Universal Serial Bus，缩写：USB）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#是1994年由因特尔、康柏、IBM、微软等多家公司联合提出的，目前已成功取代串口和并口"><span class="toc-number">2.4.2.</span> <span class="toc-text">是1994年由因特尔、康柏、IBM、微软等多家公司联合提出的，目前已成功取代串口和并口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1994年发布USB0-7，至今已经USB3-2"><span class="toc-number">2.4.3.</span> <span class="toc-text">1994年发布USB0.7，至今已经USB3.2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#USB1-1-gt-12Mbps"><span class="toc-number">2.4.4.</span> <span class="toc-text">USB1.1 -&gt; 12Mbps</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#USB2-0-gt-480Mbps"><span class="toc-number">2.4.5.</span> <span class="toc-text">USB2.0 -&gt; 480Mbps</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#USB3-0-gt-5Gbps"><span class="toc-number">2.4.6.</span> <span class="toc-text">USB3.0-&gt; 5Gbps</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#优点"><span class="toc-number">2.4.7.</span> <span class="toc-text">优点</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网线接口"><span class="toc-number">2.5.</span> <span class="toc-text">网线接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#超五类双绞线"><span class="toc-number">2.5.1.</span> <span class="toc-text">超五类双绞线</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#声卡接口"><span class="toc-number">2.6.</span> <span class="toc-text">声卡接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#复制音频的输入、输出"><span class="toc-number">2.6.1.</span> <span class="toc-text">复制音频的输入、输出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#大部分都使用小三芯接口"><span class="toc-number">2.6.2.</span> <span class="toc-text">大部分都使用小三芯接口</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#并行和串行接口"><span class="toc-number">2.7.</span> <span class="toc-text">并行和串行接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#并行（LPT）"><span class="toc-number">2.7.1.</span> <span class="toc-text">并行（LPT）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#串行（COM）"><span class="toc-number">2.7.2.</span> <span class="toc-text">串行（COM）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-1-3主要配件的识别与安装"><span class="toc-number">3.</span> <span class="toc-text">2.1.3主要配件的识别与安装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#主机箱"><span class="toc-number">3.1.</span> <span class="toc-text">主机箱</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#主机箱是电脑配件中的一部分"><span class="toc-number">3.1.1.</span> <span class="toc-text">主机箱是电脑配件中的一部分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#主机箱的结构"><span class="toc-number">3.1.2.</span> <span class="toc-text">主机箱的结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#主机箱的作用"><span class="toc-number">3.1.3.</span> <span class="toc-text">主机箱的作用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#主机箱款式"><span class="toc-number">3.1.4.</span> <span class="toc-text">主机箱款式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#机箱品牌"><span class="toc-number">3.1.5.</span> <span class="toc-text">机箱品牌</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#拆装机的注意事项"><span class="toc-number">3.2.</span> <span class="toc-text">拆装机的注意事项</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#防静电"><span class="toc-number">3.2.1.</span> <span class="toc-text">防静电</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#轻拿轻放"><span class="toc-number">3.2.2.</span> <span class="toc-text">轻拿轻放</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#防止液体进入配件"><span class="toc-number">3.2.3.</span> <span class="toc-text">防止液体进入配件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#不可暴力拆装"><span class="toc-number">3.2.4.</span> <span class="toc-text">不可暴力拆装</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#机箱电源"><span class="toc-number">3.3.</span> <span class="toc-text">机箱电源</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#是整个主机的能源提供者"><span class="toc-number">3.3.1.</span> <span class="toc-text">是整个主机的能源提供者</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#将220V转化为计算机所需的5V和3-3V的直流电"><span class="toc-number">3.3.2.</span> <span class="toc-text">将220V转化为计算机所需的5V和3.3V的直流电</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#最高输出电压为12V"><span class="toc-number">3.3.3.</span> <span class="toc-text">最高输出电压为12V</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#主机电源的质量的好坏会对计算机运行产生非常重要的影响"><span class="toc-number">3.3.4.</span> <span class="toc-text">主机电源的质量的好坏会对计算机运行产生非常重要的影响</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#机箱电源通常会为不同的设备提供各种接口"><span class="toc-number">3.3.5.</span> <span class="toc-text">机箱电源通常会为不同的设备提供各种接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#拆卸电源时要将电源连接线分别从主板、硬盘、光驱等设备上拔下，并整理好连接线，再卸下机箱背后固定的电源螺丝，最后从机箱内取出"><span class="toc-number">3.3.6.</span> <span class="toc-text">拆卸电源时要将电源连接线分别从主板、硬盘、光驱等设备上拔下，并整理好连接线，再卸下机箱背后固定的电源螺丝，最后从机箱内取出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装机箱电源的顺序与拆卸的顺序相反"><span class="toc-number">3.3.7.</span> <span class="toc-text">安装机箱电源的顺序与拆卸的顺序相反</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#主板"><span class="toc-number">3.4.</span> <span class="toc-text">主板</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#主板由多个部件组成，这些部件哦谈过一块大的电路板连接在一起的，这块大板被称为主板"><span class="toc-number">3.4.1.</span> <span class="toc-text">主板由多个部件组成，这些部件哦谈过一块大的电路板连接在一起的，这块大板被称为主板</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#又叫"><span class="toc-number">3.4.2.</span> <span class="toc-text">又叫</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#是微型计算机中最基本的，也是极其重要的部件之一"><span class="toc-number">3.4.3.</span> <span class="toc-text">是微型计算机中最基本的，也是极其重要的部件之一</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CPU、内存、各种接口卡，和外部设备都要靠主板来协调工作"><span class="toc-number">3.4.4.</span> <span class="toc-text">CPU、内存、各种接口卡，和外部设备都要靠主板来协调工作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#如果主板性能不好，与其相连接的部件的性能就不能得到充分的发挥"><span class="toc-number">3.4.5.</span> <span class="toc-text">如果主板性能不好，与其相连接的部件的性能就不能得到充分的发挥</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在主板上有两块主控芯片"><span class="toc-number">3.4.6.</span> <span class="toc-text">在主板上有两块主控芯片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#主板用6-9颗螺丝固定在机箱上，也有不封主板使用塑料扣子或铜螺帽固定，安装时将主板平整的放入机箱内，注意主板上的定位孔与机箱底部的金属螺丝或塑料钉相对应"><span class="toc-number">3.4.7.</span> <span class="toc-text">主板用6-9颗螺丝固定在机箱上，也有不封主板使用塑料扣子或铜螺帽固定，安装时将主板平整的放入机箱内，注意主板上的定位孔与机箱底部的金属螺丝或塑料钉相对应</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CPU"><span class="toc-number">3.5.</span> <span class="toc-text">CPU</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#即中央处理器"><span class="toc-number">3.5.1.</span> <span class="toc-text">即中央处理器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#组成部分"><span class="toc-number">3.5.2.</span> <span class="toc-text">组成部分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#是计算机运算与控制中心"><span class="toc-number">3.5.3.</span> <span class="toc-text">是计算机运算与控制中心</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#衡量CPU性能的主要技术的指标有"><span class="toc-number">3.5.4.</span> <span class="toc-text">衡量CPU性能的主要技术的指标有</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#生产CPU的公司主要有AMD-Intel-威盛-和中国龙芯"><span class="toc-number">3.5.5.</span> <span class="toc-text">生产CPU的公司主要有AMD Intel 威盛 和中国龙芯</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CPU的安装与拆卸"><span class="toc-number">3.5.6.</span> <span class="toc-text">CPU的安装与拆卸</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#内存"><span class="toc-number">3.6.</span> <span class="toc-text">内存</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#又称主存"><span class="toc-number">3.6.1.</span> <span class="toc-text">又称主存</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#是计算机的重要存储设备"><span class="toc-number">3.6.2.</span> <span class="toc-text">是计算机的重要存储设备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在计算机通电运行时用于临时存储运行的程序和数据"><span class="toc-number">3.6.3.</span> <span class="toc-text">在计算机通电运行时用于临时存储运行的程序和数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#特点"><span class="toc-number">3.6.4.</span> <span class="toc-text">特点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#组成"><span class="toc-number">3.6.5.</span> <span class="toc-text">组成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#分类"><span class="toc-number">3.6.6.</span> <span class="toc-text">分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#内存的-速度取决于内存的主频，即内存所能达到的最高工作频率"><span class="toc-number">3.6.7.</span> <span class="toc-text">内存的 速度取决于内存的主频，即内存所能达到的最高工作频率</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装内存条的方法"><span class="toc-number">3.6.8.</span> <span class="toc-text">安装内存条的方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#拆卸内存条"><span class="toc-number">3.6.9.</span> <span class="toc-text">拆卸内存条</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#硬盘"><span class="toc-number">3.7.</span> <span class="toc-text">硬盘</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#硬盘的组成"><span class="toc-number">3.7.1.</span> <span class="toc-text">硬盘的组成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#硬盘接口"><span class="toc-number">3.7.2.</span> <span class="toc-text">硬盘接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#硬盘的主要技术参数"><span class="toc-number">3.7.3.</span> <span class="toc-text">硬盘的主要技术参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#固态硬盘"><span class="toc-number">3.7.4.</span> <span class="toc-text">固态硬盘</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#光驱"><span class="toc-number">3.8.</span> <span class="toc-text">光驱</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#是计算机用来读写光盘的设备"><span class="toc-number">3.8.1.</span> <span class="toc-text">是计算机用来读写光盘的设备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#主要类型"><span class="toc-number">3.8.2.</span> <span class="toc-text">主要类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#接口类型"><span class="toc-number">3.8.3.</span> <span class="toc-text">接口类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#光盘"><span class="toc-number">3.8.4.</span> <span class="toc-text">光盘</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#显卡"><span class="toc-number">3.9.</span> <span class="toc-text">显卡</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#全称显示接口卡"><span class="toc-number">3.9.1.</span> <span class="toc-text">全称显示接口卡</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#又称显示适配器"><span class="toc-number">3.9.2.</span> <span class="toc-text">又称显示适配器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#是主机与显示器之间的接口电路"><span class="toc-number">3.9.3.</span> <span class="toc-text">是主机与显示器之间的接口电路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#作用是把主机要显示的字符、图形等信息进过电路的转换，用显示器可以接受的形式送到显示器显示"><span class="toc-number">3.9.4.</span> <span class="toc-text">作用是把主机要显示的字符、图形等信息进过电路的转换，用显示器可以接受的形式送到显示器显示</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#分类-1"><span class="toc-number">3.9.5.</span> <span class="toc-text">分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#组成部分-1"><span class="toc-number">3.9.6.</span> <span class="toc-text">组成部分</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-1-4"><span class="toc-number">4.</span> <span class="toc-text">2.1.4</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#BIOS与CMOS"><span class="toc-number">4.1.</span> <span class="toc-text">BIOS与CMOS</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#BIOS"><span class="toc-number">4.1.1.</span> <span class="toc-text">BIOS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CMOS"><span class="toc-number">4.1.2.</span> <span class="toc-text">CMOS</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CMOS设置"><span class="toc-number">4.2.</span> <span class="toc-text">CMOS设置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#开启或重启计算机，当屏幕出现自检画面时，根据屏幕提示按Delete或Del-就可以进入BIOS设置界面，在BIOS设置界面中，我们能了解CMOS版本名称以及一些常用按键的作用"><span class="toc-number">4.2.1.</span> <span class="toc-text">开启或重启计算机，当屏幕出现自检画面时，根据屏幕提示按Delete或Del,就可以进入BIOS设置界面，在BIOS设置界面中，我们能了解CMOS版本名称以及一些常用按键的作用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#目前BIOS有三种类型，即Award-BIOS、AMI-BIOS-和-Phoenix-BIOS"><span class="toc-number">4.2.2.</span> <span class="toc-text">目前BIOS有三种类型，即Award BIOS、AMI BIOS 和 Phoenix BIOS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#版本越高的BIOS所支持的硬件就越多"><span class="toc-number">4.2.3.</span> <span class="toc-text">版本越高的BIOS所支持的硬件就越多</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CMOS设置-1"><span class="toc-number">4.2.4.</span> <span class="toc-text">CMOS设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#清除BIOS密码"><span class="toc-number">4.2.5.</span> <span class="toc-text">清除BIOS密码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#UEFI"><span class="toc-number">4.3.</span> <span class="toc-text">UEFI</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#统一可扩展固件接口"><span class="toc-number">4.3.1.</span> <span class="toc-text">统一可扩展固件接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#用于操作系统自动从预启动的操作系统环境加载到一种操作系统上"><span class="toc-number">4.3.2.</span> <span class="toc-text">用于操作系统自动从预启动的操作系统环境加载到一种操作系统上</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#旨在代替BIOS，从而使开机程序化繁为简，节省时间，提高开机后操作系统的启动速度"><span class="toc-number">4.3.3.</span> <span class="toc-text">旨在代替BIOS，从而使开机程序化繁为简，节省时间，提高开机后操作系统的启动速度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#此标准由140多个公司共同创建，包括微软"><span class="toc-number">4.3.4.</span> <span class="toc-text">此标准由140多个公司共同创建，包括微软</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#UEFI减少了BIOS的自检过程，所以能缩短开机时间，给用户带来良好开机体验"><span class="toc-number">4.3.5.</span> <span class="toc-text">UEFI减少了BIOS的自检过程，所以能缩短开机时间，给用户带来良好开机体验</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在UEFI模式下安装的系统只能用UEFI引导"><span class="toc-number">4.3.6.</span> <span class="toc-text">在UEFI模式下安装的系统只能用UEFI引导</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在Legacy模式下安装的系统也只能在Legacy下引导"><span class="toc-number">4.3.7.</span> <span class="toc-text">在Legacy模式下安装的系统也只能在Legacy下引导</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Legacy模式支持磁盘分区为MBR结构"><span class="toc-number">4.3.8.</span> <span class="toc-text">Legacy模式支持磁盘分区为MBR结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#特点-1"><span class="toc-number">4.3.9.</span> <span class="toc-text">特点</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MBR和GPT"><span class="toc-number">4.4.</span> <span class="toc-text">MBR和GPT</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#MBR"><span class="toc-number">4.4.1.</span> <span class="toc-text">MBR</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#GPT"><span class="toc-number">4.4.2.</span> <span class="toc-text">GPT</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Award-BIOS"><span class="toc-number">4.5.</span> <span class="toc-text">Award BIOS</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#MB-Intelligent（M-I-T）"><span class="toc-number">4.5.1.</span> <span class="toc-text">MB Intelligent（M.I.T）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Stand-CMOS-Features"><span class="toc-number">4.5.2.</span> <span class="toc-text">Stand CMOS Features</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Advanced-BIOS-Features"><span class="toc-number">4.5.3.</span> <span class="toc-text">Advanced BIOS Features</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Integrated-Peripherals"><span class="toc-number">4.5.4.</span> <span class="toc-text">Integrated Peripherals</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Power-Management-Setup"><span class="toc-number">4.5.5.</span> <span class="toc-text">Power Management Setup</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Load-Fail-Safe-Defaults"><span class="toc-number">4.5.6.</span> <span class="toc-text">Load Fail-Safe Defaults</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Load-Optimized-Defaults"><span class="toc-number">4.5.7.</span> <span class="toc-text">Load Optimized Defaults</span></a></li></ol></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <header id="header">
+  <a href="/">
+    
+      
+        <div id="logo" style="background-image: url(/images/avatar.png);"></div>
+      
+    
+  </a>
+  <div id="nav">
+    <ul>
+      <li class="icon">
+        <a href="#"><i class="fas fa-bars fa-2x"></i></a>
+      </li>
+       
+        <li><a href="/">首页</a></li>
+       
+        <li><a href="/archives/">归档</a></li>
+       
+        <li><a href="/categories/">分类</a></li>
+       
+        <li><a href="/tags/">标签</a></li>
+       
+        <li><a href="/search">搜索</a></li>
+       
+        <li><a href="/links">友链</a></li>
+       
+        <li><a href="/about/">关于</a></li>
+      
+    </ul>
+  </div>
+</header>
+<!-- On Large Screen the Sidebar is hard to use, so I add there  -->
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        2.1.1-2.1.4计算机硬件组装
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">flous</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2020-04-11T08:27:43.000Z" itemprop="datePublished">2020-04-11</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a> › <a class="category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/2-1-1-2-1-4%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6%E7%BB%84%E8%A3%85/">2.1.1-2.1.4计算机硬件组装</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/Loading/" rel="tag">Loading</a>, <a class="tag-link" href="/tags/note/" rel="tag">note</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h1 id="2-1-1微型计算机的硬件组成"><a href="#2-1-1微型计算机的硬件组成" class="headerlink" title="2.1.1微型计算机的硬件组成"></a>2.1.1微型计算机的硬件组成</h1><h2 id="微型计算机概念"><a href="#微型计算机概念" class="headerlink" title="微型计算机概念"></a>微型计算机概念</h2><h3 id="从外形上来看"><a href="#从外形上来看" class="headerlink" title="从外形上来看"></a>从外形上来看</h3><ul>
+<li><p>主机</p>
+<ul>
+<li><p>主机的概念</p>
+<ul>
+<li>一般将主机箱及颞部的部件统称为主机</li>
+</ul>
+</li>
+<li><p>主机的结构</p>
+<ul>
+<li>主板</li>
+<li>内存条</li>
+<li>硬盘</li>
+<li>光驱</li>
+<li>显卡</li>
+<li>声卡</li>
+<li>网卡</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>输入设备</p>
+<ul>
+<li><p>键盘</p>
+<ul>
+<li><p>键盘是计算机系统的基本输入输出设备</p>
+</li>
+<li><p>键盘的分类</p>
+<ul>
+<li><p>按键数来分</p>
+<ul>
+<li>101键盘</li>
+<li>104键盘</li>
+<li>107键盘</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>键盘的5个组成部分</p>
+<ul>
+<li><p>标准打字键区</p>
+</li>
+<li><p>功能键区</p>
+</li>
+<li><p>小键盘区</p>
+<ul>
+<li><p>具备两个功能，由NumLock决定</p>
+<ul>
+<li>灯亮为数字输入功能</li>
+<li>灯灭为上下左右、翻页功能</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>光标控制区</p>
+</li>
+<li><p>信号灯状态显示区</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>鼠标</p>
+<ul>
+<li><p>按工作原理来分</p>
+<ul>
+<li><p>机械鼠标（已被淘汰）</p>
+<ul>
+<li><p>结构</p>
+<ul>
+<li>鼠标里有一个可以滚动的小球</li>
+</ul>
+</li>
+<li><p>原理</p>
+<ul>
+<li>小球滚动摩擦两个滚轮，将滚动的举例转换为电信号</li>
+</ul>
+</li>
+<li><p>缺点</p>
+<ul>
+<li>定位精度低</li>
+<li>容易磨损</li>
+<li>寿命较短</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>光电鼠标</p>
+<ul>
+<li><p>普通光电鼠标</p>
+<ul>
+<li><p>结构</p>
+<ul>
+<li>鼠标下方的小光源</li>
+<li>反射板</li>
+<li>接收器</li>
+</ul>
+</li>
+<li><p>原理</p>
+<ul>
+<li>鼠标移动时，光源发出的光线经过反射板后由接收器接收</li>
+</ul>
+</li>
+<li><p>优点</p>
+<ul>
+<li>定位精度高</li>
+<li>防尘性能好</li>
+<li>第一代要在特定是反射板上使用，第二代可以在除镜面以外的任何场所使用</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>激光鼠标</p>
+<ul>
+<li><p>原理</p>
+<ul>
+<li>和普通光电鼠标一样，但用激光代替LED灯</li>
+</ul>
+</li>
+<li><p>优点</p>
+<ul>
+<li>可以在任何表面使用</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>扫描仪</p>
+<ul>
+<li><p>原理</p>
+<ul>
+<li>利用光电技术和数字处理技术，以扫描的方式将图形或图像信息转换为数字信号输入设备</li>
+</ul>
+</li>
+<li><p>结构</p>
+<ul>
+<li>光源</li>
+<li>透镜</li>
+<li>电荷耦合器（CCD）</li>
+<li>A/D转换器</li>
+</ul>
+</li>
+<li><p>参数</p>
+</li>
+<li><p>工作过程</p>
+<ul>
+<li>一：光源发出光线扫描原稿后被反射到一个透镜上</li>
+<li>二：经过透镜打到电荷耦合器（CCD）上</li>
+<li>三：CCD产生输出电压</li>
+<li>四：经过A/D转换成数字信号再送到计算机</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>输出设备</p>
+<ul>
+<li><p>显示系统组成</p>
+<ul>
+<li><p>显示器</p>
+<ul>
+<li><p>显示器分类</p>
+<ul>
+<li><p>阴极射线管（CRT）显示器</p>
+<ul>
+<li><p>结构</p>
+<ul>
+<li>电子枪</li>
+<li>偏转线圈</li>
+<li>荫罩</li>
+<li>高压石墨电极</li>
+<li>玻璃外壳</li>
+<li>玻璃外壳上的荧光粉图层</li>
+</ul>
+</li>
+<li><p>优点</p>
+<ul>
+<li>可视角度大</li>
+<li>无坏点</li>
+<li>色彩还原度高</li>
+<li>色度均匀</li>
+<li>可调节的多分辨率模式</li>
+<li>响应时间短</li>
+</ul>
+</li>
+<li><p>缺点</p>
+</li>
+</ul>
+</li>
+<li><p>液晶（LCD）显示器</p>
+<ul>
+<li><p>原理</p>
+<ul>
+<li>以电流刺激液晶分子产生点、线、面配合背部灯管构成画面</li>
+</ul>
+</li>
+<li><p>结构</p>
+<ul>
+<li>彩色或黑白像素</li>
+<li>光源</li>
+<li>反射面</li>
+</ul>
+</li>
+<li><p>优点</p>
+<ul>
+<li>占用空间小</li>
+<li>能耗低</li>
+<li>辐射小</li>
+<li>画面柔</li>
+</ul>
+</li>
+<li><p>缺点</p>
+</li>
+</ul>
+</li>
+<li><p>等离子体显示器（PDP）</p>
+<ul>
+<li><p>原理</p>
+<ul>
+<li>采用了进几年来高速发展的等离子平面技术的新一代显示设备</li>
+</ul>
+</li>
+<li><p>优点</p>
+<ul>
+<li>高亮度</li>
+<li>高对比度</li>
+<li>色彩还原性好</li>
+<li>厚度薄</li>
+<li>视角宽</li>
+<li>画面响应速度快</li>
+</ul>
+</li>
+<li><p>缺点</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>显示卡</p>
+</li>
+<li><p>相应软件</p>
+</li>
+</ul>
+</li>
+<li><p>打印机</p>
+<ul>
+<li><p>打印机的分类</p>
+<ul>
+<li><p>击打式打印机</p>
+<ul>
+<li><p>针式打印机</p>
+<ul>
+<li><p>原理</p>
+<ul>
+<li>利用打印钢针在纸上打印出由点阵组成的字符图形</li>
+</ul>
+</li>
+<li><p>结构</p>
+<ul>
+<li><p>打印头</p>
+<ul>
+<li>9针</li>
+<li>16针</li>
+<li>24针</li>
+</ul>
+</li>
+<li><p>字车</p>
+</li>
+<li><p>输纸机构</p>
+</li>
+<li><p>色带</p>
+</li>
+<li><p>控制电路</p>
+</li>
+</ul>
+</li>
+<li><p>耗材</p>
+<ul>
+<li>色带</li>
+</ul>
+</li>
+<li><p>优点</p>
+<ul>
+<li>耗材成本低</li>
+<li>能平面打印也可以打印多联票据</li>
+</ul>
+</li>
+<li><p>缺点</p>
+<ul>
+<li>打印质量低</li>
+<li>噪音大</li>
+</ul>
+</li>
+<li><p>应用领域</p>
+<ul>
+<li>银行</li>
+<li>超市</li>
+<li>用于票单打印的地方</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>非机打式打印机</p>
+<ul>
+<li><p>喷墨打印机</p>
+<ul>
+<li><p>根据墨水的驱动方式不同</p>
+<ul>
+<li>分压电式</li>
+<li>热气泡式</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>激光打印机</p>
+<ul>
+<li><p>原理</p>
+<ul>
+<li>利用激光扫描把要打印的字符在硒鼓上形成静电潜象，然后转成磁信号，使碳粉吸附在纸上，经定影后输出</li>
+</ul>
+</li>
+<li><p>优点</p>
+<ul>
+<li>高质量的文字及图形</li>
+<li>打印速度快</li>
+</ul>
+</li>
+<li><p>耗材</p>
+<ul>
+<li>碳粉</li>
+<li>硒鼓</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>热升华打印机</p>
+<ul>
+<li><p>原理</p>
+<ul>
+<li>利用热能将四种颜色（CMYK）的固体颜料转印至打印介质上的仪器，通过半导体加热元件调节出不同的温度来控制色彩的比例和浓暗程度</li>
+</ul>
+</li>
+<li><p>优点</p>
+<ul>
+<li>输出效果好</li>
+</ul>
+</li>
+<li><p>缺点</p>
+<ul>
+<li>对打印的介质和使用环境要求很高</li>
+<li>打印成本高</li>
+<li>不适合打印文字、表格等</li>
+</ul>
+</li>
+<li><p>耗材</p>
+<ul>
+<li>热升华墨水</li>
+<li>热转印纸</li>
+</ul>
+</li>
+<li><p>应用领域</p>
+<ul>
+<li>打印彩色数码照片</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>打印机的性能指标</p>
+<ul>
+<li><p>打印分辨率</p>
+<ul>
+<li><p>概念</p>
+<ul>
+<li>指打印机在输出时，横向和纵向上每英寸最多能打印的点数</li>
+</ul>
+</li>
+<li><p>单位</p>
+<ul>
+<li><p>DPI（每英寸打印点数）</p>
+</li>
+<li><p>针式打印机</p>
+<ul>
+<li>180DPI</li>
+<li>360DPI</li>
+</ul>
+</li>
+<li><p>喷墨打印机</p>
+<ul>
+<li>720DPI</li>
+<li>1440DPI</li>
+<li>2800DPI</li>
+<li>4800DPI</li>
+</ul>
+</li>
+<li><p>激光打印机</p>
+<ul>
+<li>300DPI</li>
+<li>600DPI</li>
+<li>1200DPI</li>
+<li>2400DPI</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>打印速度</p>
+<ul>
+<li><p>概念</p>
+<ul>
+<li>指打印机每分钟可以输出多少内容</li>
+<li>打印速度不是固定不变的，会受到不同打印对象，数据传输方式、打印机内存大小、计算机性能的影响</li>
+</ul>
+</li>
+<li><p>单位</p>
+<ul>
+<li><p>针式</p>
+<ul>
+<li>CPI（每英寸打印字符个数）</li>
+</ul>
+</li>
+<li><p>喷墨</p>
+</li>
+<li><p>激光</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>打印幅面</p>
+<ul>
+<li><p>概念</p>
+<ul>
+<li>指打印机最大能够支持打印纸张的规格</li>
+</ul>
+</li>
+<li><p>单位</p>
+<ul>
+<li>A3</li>
+<li>A4</li>
+<li>等</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="微型计算机又称微机、个人计算机、PC机、电脑"><a href="#微型计算机又称微机、个人计算机、PC机、电脑" class="headerlink" title="微型计算机又称微机、个人计算机、PC机、电脑"></a>微型计算机又称微机、个人计算机、PC机、电脑</h2><h2 id="微型计算机是电子计算机技术发展到第四代的产物"><a href="#微型计算机是电子计算机技术发展到第四代的产物" class="headerlink" title="微型计算机是电子计算机技术发展到第四代的产物"></a>微型计算机是电子计算机技术发展到第四代的产物</h2><h2 id="硬件部分"><a href="#硬件部分" class="headerlink" title="硬件部分"></a>硬件部分</h2><h2 id="分别都-3"><a href="#分别都-3" class="headerlink" title="分别都+3"></a>分别都+3</h2><!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<h1 id="2-1-2计算机主机外部接口"><a href="#2-1-2计算机主机外部接口" class="headerlink" title="2.1.2计算机主机外部接口"></a>2.1.2计算机主机外部接口</h1><h2 id="电源接口"><a href="#电源接口" class="headerlink" title="电源接口"></a>电源接口</h2><h3 id="用途"><a href="#用途" class="headerlink" title="用途"></a>用途</h3><ul>
+<li>用于连接主机电源线</li>
+<li>是主机的供电接口</li>
+<li>计算机通过该接口与220V市电连接</li>
+</ul>
+<h3 id="形状"><a href="#形状" class="headerlink" title="形状"></a>形状</h3><ul>
+<li>D形接口</li>
+<li>防止电源线插反</li>
+</ul>
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
+<li>拔除电源时要先切断电源</li>
+<li>一手扶住机箱，一手抓住电源线轻拔</li>
+<li>拔除时可以摇晃</li>
+</ul>
+<h2 id="鼠标和键盘接口"><a href="#鼠标和键盘接口" class="headerlink" title="鼠标和键盘接口"></a>鼠标和键盘接口</h2><h3 id="PS-2接口"><a href="#PS-2接口" class="headerlink" title="PS/2接口"></a>PS/2接口</h3><ul>
+<li>是键盘和鼠标专用接口</li>
+<li>圆形6孔</li>
+<li>绿色为鼠标接口</li>
+<li>紫色为键盘接口</li>
+<li>不支持热插拔</li>
+<li>不能在带电情况下拔插鼠标，否则可能损坏接口电路</li>
+</ul>
+<h3 id="USB接口"><a href="#USB接口" class="headerlink" title="USB接口"></a>USB接口</h3><h2 id="显示器接口"><a href="#显示器接口" class="headerlink" title="显示器接口"></a>显示器接口</h2><h3 id="VGA"><a href="#VGA" class="headerlink" title="VGA"></a>VGA</h3><ul>
+<li>又称D-SUB</li>
+<li>15针的D形接口</li>
+</ul>
+<h3 id="DVI"><a href="#DVI" class="headerlink" title="DVI"></a>DVI</h3><ul>
+<li>是数字视频接口</li>
+<li>无需将显卡产生的数字信号转换为模拟信号可以直接显示在屏幕上</li>
+<li>对于LCD显示器而言，DVI接口更有优势，将逐渐取代D-SUB端口</li>
+</ul>
+<h3 id="S-Video"><a href="#S-Video" class="headerlink" title="S-Video"></a>S-Video</h3><ul>
+<li>又称S端子</li>
+<li>全称Separate Video</li>
+<li>将亮度信号与色度信号分开传输，避免了亮度和色度互相干扰</li>
+<li>只能传输视频</li>
+</ul>
+<h2 id="USB接口-1"><a href="#USB接口-1" class="headerlink" title="USB接口"></a>USB接口</h2><h3 id="通用串行总线（英语：Universal-Serial-Bus，缩写：USB）"><a href="#通用串行总线（英语：Universal-Serial-Bus，缩写：USB）" class="headerlink" title="通用串行总线（英语：Universal Serial Bus，缩写：USB）"></a>通用串行总线（英语：Universal Serial Bus，缩写：USB）</h3><h3 id="是1994年由因特尔、康柏、IBM、微软等多家公司联合提出的，目前已成功取代串口和并口"><a href="#是1994年由因特尔、康柏、IBM、微软等多家公司联合提出的，目前已成功取代串口和并口" class="headerlink" title="是1994年由因特尔、康柏、IBM、微软等多家公司联合提出的，目前已成功取代串口和并口"></a>是1994年由因特尔、康柏、IBM、微软等多家公司联合提出的，目前已成功取代串口和并口</h3><h3 id="1994年发布USB0-7，至今已经USB3-2"><a href="#1994年发布USB0-7，至今已经USB3-2" class="headerlink" title="1994年发布USB0.7，至今已经USB3.2"></a>1994年发布USB0.7，至今已经USB3.2</h3><h3 id="USB1-1-gt-12Mbps"><a href="#USB1-1-gt-12Mbps" class="headerlink" title="USB1.1 -&gt; 12Mbps"></a>USB1.1 -&gt; 12Mbps</h3><h3 id="USB2-0-gt-480Mbps"><a href="#USB2-0-gt-480Mbps" class="headerlink" title="USB2.0 -&gt; 480Mbps"></a>USB2.0 -&gt; 480Mbps</h3><h3 id="USB3-0-gt-5Gbps"><a href="#USB3-0-gt-5Gbps" class="headerlink" title="USB3.0-&gt; 5Gbps"></a>USB3.0-&gt; 5Gbps</h3><h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ul>
+<li><p>使用方便</p>
+</li>
+<li><p>支持热插拔</p>
+<ul>
+<li>热插拔指用户在不关闭系统，不切断电源的情况下拔出连接在主机的外部设备，或取出、更换损坏硬盘</li>
+<li>热插拔技术提高了系统对灾难的及时恢复能力、扩展性和灵活性等</li>
+<li>计算机的USB和IEE1394（火线接口）都支持热插拔</li>
+</ul>
+</li>
+<li><p>连接灵活</p>
+</li>
+<li><p>独立供电</p>
+</li>
+<li><p>可连接最多127个设备</p>
+</li>
+</ul>
+<h2 id="网线接口"><a href="#网线接口" class="headerlink" title="网线接口"></a>网线接口</h2><h3 id="超五类双绞线"><a href="#超五类双绞线" class="headerlink" title="超五类双绞线"></a>超五类双绞线</h3><ul>
+<li>与计算机连接的接口是RJ-45，俗称水晶头</li>
+<li>是目前计算机连接网络最常用的接口</li>
+</ul>
+<h2 id="声卡接口"><a href="#声卡接口" class="headerlink" title="声卡接口"></a>声卡接口</h2><h3 id="复制音频的输入、输出"><a href="#复制音频的输入、输出" class="headerlink" title="复制音频的输入、输出"></a>复制音频的输入、输出</h3><h3 id="大部分都使用小三芯接口"><a href="#大部分都使用小三芯接口" class="headerlink" title="大部分都使用小三芯接口"></a>大部分都使用小三芯接口</h3><ul>
+<li>红（音频输入）</li>
+<li>绿（音频输出）</li>
+<li>蓝（数字音频输入）</li>
+</ul>
+<h2 id="并行和串行接口"><a href="#并行和串行接口" class="headerlink" title="并行和串行接口"></a>并行和串行接口</h2><h3 id="并行（LPT）"><a href="#并行（LPT）" class="headerlink" title="并行（LPT）"></a>并行（LPT）</h3><ul>
+<li>简称并口</li>
+<li>25针D形接口</li>
+<li>目前针式打印机都用并行接口</li>
+<li>数据传输慢</li>
+<li>传输距离短（最大2米）</li>
+<li>不支持热插拔</li>
+</ul>
+<h3 id="串行（COM）"><a href="#串行（COM）" class="headerlink" title="串行（COM）"></a>串行（COM）</h3><p>注意：专指COM口，非USB口</p>
+<ul>
+<li><p>与并口相比</p>
+<ul>
+<li>使用数据线少（并口8条 -&gt; 串口1条）</li>
+<li>传输距离远</li>
+<li>速度传输慢（比并口还慢）<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<h1 id="2-1-3主要配件的识别与安装"><a href="#2-1-3主要配件的识别与安装" class="headerlink" title="2.1.3主要配件的识别与安装"></a>2.1.3主要配件的识别与安装</h1></li>
+</ul>
+</li>
+</ul>
+<h2 id="主机箱"><a href="#主机箱" class="headerlink" title="主机箱"></a>主机箱</h2><h3 id="主机箱是电脑配件中的一部分"><a href="#主机箱是电脑配件中的一部分" class="headerlink" title="主机箱是电脑配件中的一部分"></a>主机箱是电脑配件中的一部分</h3><h3 id="主机箱的结构"><a href="#主机箱的结构" class="headerlink" title="主机箱的结构"></a>主机箱的结构</h3><ul>
+<li>外壳</li>
+<li>支架</li>
+<li>面板上的各种开关</li>
+<li>指示灯</li>
+</ul>
+<h3 id="主机箱的作用"><a href="#主机箱的作用" class="headerlink" title="主机箱的作用"></a>主机箱的作用</h3><ul>
+<li>放置和固定各种电脑配件</li>
+<li>起一个承托和保护作用</li>
+<li>屏蔽电磁辐射</li>
+</ul>
+<h3 id="主机箱款式"><a href="#主机箱款式" class="headerlink" title="主机箱款式"></a>主机箱款式</h3><ul>
+<li><p>AT</p>
+<ul>
+<li>全称BaBy AT</li>
+</ul>
+</li>
+<li><p>ATX</p>
+<ul>
+<li>是现在最常见的机箱</li>
+<li>空间大</li>
+<li>安装槽多</li>
+<li>扩展性好</li>
+<li>通风条件也不错</li>
+</ul>
+</li>
+<li><p>Micro ATX</p>
+<ul>
+<li>是在ATX机箱的基础上改进的</li>
+<li>体积比ATX小，进一步节省空间</li>
+</ul>
+</li>
+<li><p>BTX</p>
+<ul>
+<li>是Intel定义并引导的桌面计算平台的新规范</li>
+<li>其架构支持窄版设计</li>
+<li>系统结构更紧凑</li>
+<li>更易于散热</li>
+<li>安装更加便捷</li>
+</ul>
+</li>
+</ul>
+<h3 id="机箱品牌"><a href="#机箱品牌" class="headerlink" title="机箱品牌"></a>机箱品牌</h3><ul>
+<li>金河田</li>
+<li>酷冷至尊</li>
+<li>Tt</li>
+<li>航嘉百盛</li>
+<li>多彩</li>
+<li>大水牛</li>
+<li>爱国者</li>
+<li>技展</li>
+<li>富士康</li>
+<li>华硕</li>
+</ul>
+<h2 id="拆装机的注意事项"><a href="#拆装机的注意事项" class="headerlink" title="拆装机的注意事项"></a>拆装机的注意事项</h2><h3 id="防静电"><a href="#防静电" class="headerlink" title="防静电"></a>防静电</h3><ul>
+<li><p>特点</p>
+<ul>
+<li>能量小</li>
+<li>电压高</li>
+</ul>
+</li>
+<li><p>危害</p>
+<ul>
+<li>严重影响无线电设备的正常运作</li>
+<li>容易导致接触不良等故障</li>
+<li>静电火花会点燃某些易燃物而发生爆炸</li>
+</ul>
+</li>
+<li><p>对计算机的影响</p>
+<ul>
+<li>带阴极射线管的显示设备，当受到静电干扰时会引起图像紊乱、模糊不清</li>
+<li>会造成Modem、网卡、Fax等工作失常，打印机总线不顺等故障</li>
+</ul>
+</li>
+</ul>
+<h3 id="轻拿轻放"><a href="#轻拿轻放" class="headerlink" title="轻拿轻放"></a>轻拿轻放</h3><h3 id="防止液体进入配件"><a href="#防止液体进入配件" class="headerlink" title="防止液体进入配件"></a>防止液体进入配件</h3><h3 id="不可暴力拆装"><a href="#不可暴力拆装" class="headerlink" title="不可暴力拆装"></a>不可暴力拆装</h3><h2 id="机箱电源"><a href="#机箱电源" class="headerlink" title="机箱电源"></a>机箱电源</h2><h3 id="是整个主机的能源提供者"><a href="#是整个主机的能源提供者" class="headerlink" title="是整个主机的能源提供者"></a>是整个主机的能源提供者</h3><h3 id="将220V转化为计算机所需的5V和3-3V的直流电"><a href="#将220V转化为计算机所需的5V和3-3V的直流电" class="headerlink" title="将220V转化为计算机所需的5V和3.3V的直流电"></a>将220V转化为计算机所需的5V和3.3V的直流电</h3><h3 id="最高输出电压为12V"><a href="#最高输出电压为12V" class="headerlink" title="最高输出电压为12V"></a>最高输出电压为12V</h3><h3 id="主机电源的质量的好坏会对计算机运行产生非常重要的影响"><a href="#主机电源的质量的好坏会对计算机运行产生非常重要的影响" class="headerlink" title="主机电源的质量的好坏会对计算机运行产生非常重要的影响"></a>主机电源的质量的好坏会对计算机运行产生非常重要的影响</h3><h3 id="机箱电源通常会为不同的设备提供各种接口"><a href="#机箱电源通常会为不同的设备提供各种接口" class="headerlink" title="机箱电源通常会为不同的设备提供各种接口"></a>机箱电源通常会为不同的设备提供各种接口</h3><ul>
+<li>主板接口</li>
+<li>CPU电源接口</li>
+<li>软驱电源接口</li>
+<li>IDE设备电源D形接口</li>
+<li>SATA设备电源扁平接口</li>
+</ul>
+<h3 id="拆卸电源时要将电源连接线分别从主板、硬盘、光驱等设备上拔下，并整理好连接线，再卸下机箱背后固定的电源螺丝，最后从机箱内取出"><a href="#拆卸电源时要将电源连接线分别从主板、硬盘、光驱等设备上拔下，并整理好连接线，再卸下机箱背后固定的电源螺丝，最后从机箱内取出" class="headerlink" title="拆卸电源时要将电源连接线分别从主板、硬盘、光驱等设备上拔下，并整理好连接线，再卸下机箱背后固定的电源螺丝，最后从机箱内取出"></a>拆卸电源时要将电源连接线分别从主板、硬盘、光驱等设备上拔下，并整理好连接线，再卸下机箱背后固定的电源螺丝，最后从机箱内取出</h3><h3 id="安装机箱电源的顺序与拆卸的顺序相反"><a href="#安装机箱电源的顺序与拆卸的顺序相反" class="headerlink" title="安装机箱电源的顺序与拆卸的顺序相反"></a>安装机箱电源的顺序与拆卸的顺序相反</h3><h2 id="主板"><a href="#主板" class="headerlink" title="主板"></a>主板</h2><h3 id="主板由多个部件组成，这些部件哦谈过一块大的电路板连接在一起的，这块大板被称为主板"><a href="#主板由多个部件组成，这些部件哦谈过一块大的电路板连接在一起的，这块大板被称为主板" class="headerlink" title="主板由多个部件组成，这些部件哦谈过一块大的电路板连接在一起的，这块大板被称为主板"></a>主板由多个部件组成，这些部件哦谈过一块大的电路板连接在一起的，这块大板被称为主板</h3><h3 id="又叫"><a href="#又叫" class="headerlink" title="又叫"></a>又叫</h3><ul>
+<li>主机板</li>
+<li>系统板</li>
+<li>母版</li>
+</ul>
+<h3 id="是微型计算机中最基本的，也是极其重要的部件之一"><a href="#是微型计算机中最基本的，也是极其重要的部件之一" class="headerlink" title="是微型计算机中最基本的，也是极其重要的部件之一"></a>是微型计算机中最基本的，也是极其重要的部件之一</h3><h3 id="CPU、内存、各种接口卡，和外部设备都要靠主板来协调工作"><a href="#CPU、内存、各种接口卡，和外部设备都要靠主板来协调工作" class="headerlink" title="CPU、内存、各种接口卡，和外部设备都要靠主板来协调工作"></a>CPU、内存、各种接口卡，和外部设备都要靠主板来协调工作</h3><h3 id="如果主板性能不好，与其相连接的部件的性能就不能得到充分的发挥"><a href="#如果主板性能不好，与其相连接的部件的性能就不能得到充分的发挥" class="headerlink" title="如果主板性能不好，与其相连接的部件的性能就不能得到充分的发挥"></a>如果主板性能不好，与其相连接的部件的性能就不能得到充分的发挥</h3><h3 id="在主板上有两块主控芯片"><a href="#在主板上有两块主控芯片" class="headerlink" title="在主板上有两块主控芯片"></a>在主板上有两块主控芯片</h3><ul>
+<li><p>南桥芯片</p>
+<ul>
+<li><p>一般位于PIC插槽上面</p>
+</li>
+<li><p>负责I/O设备的挂接</p>
+<ul>
+<li>PCI总线</li>
+<li>USB</li>
+<li>LAN</li>
+<li>ATA</li>
+<li>SATA</li>
+<li>音频控制器</li>
+<li>键盘控制器</li>
+<li>实时时钟控制器</li>
+<li>高级电源管理</li>
+</ul>
+</li>
+<li><p>发展的方向是集成更多功能</p>
+<ul>
+<li>网卡</li>
+<li>READ</li>
+<li>IEEE 1394</li>
+<li>无线网络</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>北桥芯片</p>
+<ul>
+<li>靠近CPU旁边，被散热片盖住的是北桥芯片</li>
+<li>负责与CPU联系</li>
+<li>控制内存</li>
+<li>AGP</li>
+<li>PCI数据在北桥内部传输</li>
+<li>提供对CPU的类型和主频</li>
+<li>系统的前端总线频率</li>
+<li>内存的类型和最大容量</li>
+<li>ISA/PCI/AGP插槽、ECC纠错等支持</li>
+<li>整合芯片组的北桥芯片还集成了显示核心</li>
+<li>由于北桥芯片的发热量较大，因此都装有扇热芯片</li>
+<li>很多主板型号都是以北桥芯片命名的</li>
+</ul>
+</li>
+</ul>
+<h3 id="主板用6-9颗螺丝固定在机箱上，也有不封主板使用塑料扣子或铜螺帽固定，安装时将主板平整的放入机箱内，注意主板上的定位孔与机箱底部的金属螺丝或塑料钉相对应"><a href="#主板用6-9颗螺丝固定在机箱上，也有不封主板使用塑料扣子或铜螺帽固定，安装时将主板平整的放入机箱内，注意主板上的定位孔与机箱底部的金属螺丝或塑料钉相对应" class="headerlink" title="主板用6-9颗螺丝固定在机箱上，也有不封主板使用塑料扣子或铜螺帽固定，安装时将主板平整的放入机箱内，注意主板上的定位孔与机箱底部的金属螺丝或塑料钉相对应"></a>主板用6-9颗螺丝固定在机箱上，也有不封主板使用塑料扣子或铜螺帽固定，安装时将主板平整的放入机箱内，注意主板上的定位孔与机箱底部的金属螺丝或塑料钉相对应</h3><h2 id="CPU"><a href="#CPU" class="headerlink" title="CPU"></a>CPU</h2><h3 id="即中央处理器"><a href="#即中央处理器" class="headerlink" title="即中央处理器"></a>即中央处理器</h3><h3 id="组成部分"><a href="#组成部分" class="headerlink" title="组成部分"></a>组成部分</h3><ul>
+<li>运算器</li>
+<li>控制器</li>
+<li>寄存器</li>
+</ul>
+<h3 id="是计算机运算与控制中心"><a href="#是计算机运算与控制中心" class="headerlink" title="是计算机运算与控制中心"></a>是计算机运算与控制中心</h3><h3 id="衡量CPU性能的主要技术的指标有"><a href="#衡量CPU性能的主要技术的指标有" class="headerlink" title="衡量CPU性能的主要技术的指标有"></a>衡量CPU性能的主要技术的指标有</h3><ul>
+<li>字长</li>
+<li>主频</li>
+<li>缓存Cache</li>
+</ul>
+<h3 id="生产CPU的公司主要有AMD-Intel-威盛-和中国龙芯"><a href="#生产CPU的公司主要有AMD-Intel-威盛-和中国龙芯" class="headerlink" title="生产CPU的公司主要有AMD Intel 威盛 和中国龙芯"></a>生产CPU的公司主要有AMD Intel 威盛 和中国龙芯</h3><h3 id="CPU的安装与拆卸"><a href="#CPU的安装与拆卸" class="headerlink" title="CPU的安装与拆卸"></a>CPU的安装与拆卸</h3><ul>
+<li><p>安装CPU</p>
+<ul>
+<li>安装CPU前先观察CPU 的铭牌、针脚和主板上的CPU插槽</li>
+<li>将主板放在工作台上向外拎起弯钩样的主板CPU卡鞘</li>
+<li>再将CPU卡架拎起到底</li>
+<li>找到CPU缺角标记对应的主板三角形缺口</li>
+<li>将CPU缺角标记对应主板的三角形缺口位置</li>
+<li>合上CPU卡架，扳下CPU卡销</li>
+<li>CPU的一角有一个缺口，安装时位置一定要对准</li>
+<li>安装好CPU后还要安装CPU风扇</li>
+<li>在CPU与风扇的接触面涂上硅脂，保证CPU与风扇的无缝接触，提高扇热效率</li>
+</ul>
+</li>
+<li><p>先拆卸CPU风扇</p>
+</li>
+<li><p>拔下CPU风扇的电源线</p>
+</li>
+<li><p>拆卸主板底部的风扇底座</p>
+</li>
+<li><p>拆卸CPU时先拉起卡销及卡架，轻轻拉到底，然后用手指捏住CPU边缘取出</p>
+</li>
+</ul>
+<h2 id="内存"><a href="#内存" class="headerlink" title="内存"></a>内存</h2><h3 id="又称主存"><a href="#又称主存" class="headerlink" title="又称主存"></a>又称主存</h3><h3 id="是计算机的重要存储设备"><a href="#是计算机的重要存储设备" class="headerlink" title="是计算机的重要存储设备"></a>是计算机的重要存储设备</h3><h3 id="在计算机通电运行时用于临时存储运行的程序和数据"><a href="#在计算机通电运行时用于临时存储运行的程序和数据" class="headerlink" title="在计算机通电运行时用于临时存储运行的程序和数据"></a>在计算机通电运行时用于临时存储运行的程序和数据</h3><h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><ul>
+<li>传输速度快</li>
+<li>容量小</li>
+<li>价格高</li>
+<li>断电后内存中的数据将丢失</li>
+</ul>
+<h3 id="组成"><a href="#组成" class="headerlink" title="组成"></a>组成</h3><ul>
+<li>内存芯片</li>
+<li>电路板</li>
+<li>金手指</li>
+</ul>
+<h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><ul>
+<li><p>SDRAM（同步动态随机存储器）</p>
+<ul>
+<li>已经被市场淘汰</li>
+</ul>
+</li>
+<li><p>DDR SDRAM（双倍速率同步动态随机存储器）</p>
+<ul>
+<li><p>占据了市场的主流</p>
+</li>
+<li><p>发展出了</p>
+<ul>
+<li>DDR2</li>
+<li>DDR3</li>
+<li>DDR4</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>RDRAM（采用芯片对芯片接口技术的存储器）</p>
+</li>
+</ul>
+<h3 id="内存的-速度取决于内存的主频，即内存所能达到的最高工作频率"><a href="#内存的-速度取决于内存的主频，即内存所能达到的最高工作频率" class="headerlink" title="内存的 速度取决于内存的主频，即内存所能达到的最高工作频率"></a>内存的 速度取决于内存的主频，即内存所能达到的最高工作频率</h3><h3 id="安装内存条的方法"><a href="#安装内存条的方法" class="headerlink" title="安装内存条的方法"></a>安装内存条的方法</h3><ul>
+<li>观察主板上的内存插槽</li>
+<li>用双手大拇指将内存插槽两边的卡栓向外扳到底</li>
+<li>注意将内存的方误插标记</li>
+<li>将内存的方误差标记与主板内存插槽的槽口对齐后，两手大拇指将内存插槽两边的卡栓用力往下压</li>
+<li>随着内存的插入，当听到咔的一声响，插槽两边卡栓自动弹起将内存条扣紧，内存安装完成</li>
+</ul>
+<h3 id="拆卸内存条"><a href="#拆卸内存条" class="headerlink" title="拆卸内存条"></a>拆卸内存条</h3><ul>
+<li>双手大拇指同时向外扳开内存插槽两侧白色的卡栓，内存条会自动弹出</li>
+</ul>
+<h2 id="硬盘"><a href="#硬盘" class="headerlink" title="硬盘"></a>硬盘</h2><h3 id="硬盘的组成"><a href="#硬盘的组成" class="headerlink" title="硬盘的组成"></a>硬盘的组成</h3><ul>
+<li><p>硬盘驱动器</p>
+<ul>
+<li>又称硬盘机或硬盘子系统</li>
+<li>是独立于主机之外的一个完整装置</li>
+</ul>
+</li>
+<li><p>硬盘控制器</p>
+<ul>
+<li>俗称硬盘控制卡</li>
+<li>做成电路板的形式插在主机箱内主板的总线插槽中</li>
+<li>作用是接收主机发送的命令和数据，并转换成控制命令和驱动器可以接收的数据格式，以控制驱动器的读写操作</li>
+</ul>
+</li>
+<li><p>盘片</p>
+<ul>
+<li><p>是信息存储的介质</p>
+</li>
+<li><p>材质</p>
+<ul>
+<li>铝合金</li>
+<li>陶瓷</li>
+<li>玻璃</li>
+<li>基片上涂磁性材料</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>把多片盘片固定在一根主轴上，称为盘组</p>
+</li>
+<li><p>把磁头、电机、盘片等驱动部件甚至读写电路制成一个不可随意拆卸的整体，叫“头盘组合体”</p>
+</li>
+<li><p>硬盘是 个高度密封的组合体，不可随意拆开</p>
+</li>
+</ul>
+<h3 id="硬盘接口"><a href="#硬盘接口" class="headerlink" title="硬盘接口"></a>硬盘接口</h3><ul>
+<li><p>接口类型</p>
+<ul>
+<li><p>IDE</p>
+<ul>
+<li><p>把主机和硬盘之间的接口电路与硬盘控制器整合在一起</p>
+</li>
+<li><p>优点</p>
+<ul>
+<li>简化了主机方面连接硬盘的接口电路</li>
+</ul>
+</li>
+<li><p>是一个接口标准，定义了主机与硬盘连接的40条信号线</p>
+</li>
+<li><p>是设备级接口</p>
+</li>
+<li><p>特点</p>
+<ul>
+<li>数据最大传输速率3MB/s</li>
+<li>一条IDE信号线最多连接两台IDE设备</li>
+<li>IDE接口与ISA总线相连</li>
+</ul>
+</li>
+<li><p>IDE改进后的接口称为EIDE接口</p>
+<ul>
+<li>一般提供两个接口</li>
+<li>每个接口可以连接主从两个设备</li>
+<li>两个接口可以同时连接四个设备</li>
+<li>不仅限于硬盘，还支持CD-ROM等IDE设备</li>
+<li>支持的最大硬盘容量为8.4GB</li>
+<li>最大传输速率为16.7MB/s</li>
+<li>普遍使用PIO（程序输入输出）模式传送数据</li>
+<li>在PIO模式下，CPU可以直接进行读写控制</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>SATA</p>
+<ul>
+<li><p>即串行ATA接口</p>
+</li>
+<li><p>作为一种新形的硬盘接口技术于2000年由Intel公司率先提出</p>
+</li>
+<li><p>技术</p>
+<ul>
+<li><p>低电压差分信号技术</p>
+<ul>
+<li><p>数据传输率更大</p>
+</li>
+<li><p>传送距离更远</p>
+</li>
+<li><p>信号电压从并行ATA的5V降低到了SATA的0.7V</p>
+<ul>
+<li>降低了磁盘驱动器的功耗</li>
+<li>缩小了开关控制器的尺寸</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>采用点对点拓扑结构</p>
+<ul>
+<li>可以为每个设备提供全部带宽</li>
+<li>提高了总体性能</li>
+</ul>
+</li>
+<li><p>SATA标准</p>
+<ul>
+<li><p>SATA 1.0</p>
+<ul>
+<li>150MB/s</li>
+</ul>
+</li>
+<li><p>SATA 2.0</p>
+<ul>
+<li>300MB/s</li>
+</ul>
+</li>
+<li><p>SATA 3.0</p>
+<ul>
+<li>600MB/s</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>SCSI</p>
+<ul>
+<li><p>是一种智能化、通用型、系统级的接口</p>
+</li>
+<li><p>适合并发数据处理</p>
+</li>
+<li><p>可以把外部设备与一台或几台主机相连</p>
+</li>
+<li><p>有5个通道，可以在6M或更长的距离内以菊花链的方式挂接7个不同的外设</p>
+</li>
+<li><p>SCSI-1</p>
+<ul>
+<li>最大外部传输率为5MB</li>
+</ul>
+</li>
+<li><p>SCSI-2</p>
+</li>
+<li><p>Ultra SCSI（也称SCSI-3）</p>
+<ul>
+<li><p>根据使用的频率和总线插槽分为</p>
+<ul>
+<li><p>快速</p>
+</li>
+<li><p>宽带</p>
+</li>
+<li><p>快速宽带</p>
+<ul>
+<li>80MB/s</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>主要用在服务器上</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="硬盘的主要技术参数"><a href="#硬盘的主要技术参数" class="headerlink" title="硬盘的主要技术参数"></a>硬盘的主要技术参数</h3><ul>
+<li><p>容量</p>
+<ul>
+<li>以兆字节（MB）、吉字节（GB）、太字节（TB）为单位</li>
+</ul>
+</li>
+<li><p>传输率</p>
+<ul>
+<li><p>指硬盘的读写数据的速度</p>
+</li>
+<li><p>单位是MB/s</p>
+</li>
+<li><p>硬盘的数据传输率也称为持续传输率</p>
+<ul>
+<li>内部传输率</li>
+<li>外部传输率</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>主轴转速</p>
+<ul>
+<li><p>内部传输率</p>
+<ul>
+<li>也称持续传输率</li>
+<li>反映了硬盘缓冲区未用时的性能</li>
+<li>取决于硬盘的转速</li>
+</ul>
+</li>
+<li><p>外部传输率</p>
+<ul>
+<li>也称突发传输或接口传输率</li>
+<li>标称的是系统总线与硬盘缓冲区之间的数据传输率</li>
+<li>主要与硬盘接口类型和硬盘缓存大小有关</li>
+</ul>
+</li>
+<li><p>转速</p>
+<ul>
+<li>7200rpm</li>
+<li>4200rpm</li>
+<li>5400rpm</li>
+<li>10000rpm</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="固态硬盘"><a href="#固态硬盘" class="headerlink" title="固态硬盘"></a>固态硬盘</h3><ul>
+<li><p>SSD，简称固盘</p>
+</li>
+<li><p>用固态电子存储芯片阵列而制成的的硬盘</p>
+</li>
+<li><p>在外系上也完全与普通硬盘一致</p>
+</li>
+<li><p>优点</p>
+<ul>
+<li>读写速度快</li>
+<li>防震抗摔性强</li>
+<li>低功耗</li>
+<li>无噪音</li>
+<li>重量轻</li>
+</ul>
+</li>
+<li><p>缺点</p>
+<ul>
+<li>容量小</li>
+<li>价格高</li>
+<li>使用寿命短</li>
+</ul>
+</li>
+</ul>
+<h2 id="光驱"><a href="#光驱" class="headerlink" title="光驱"></a>光驱</h2><h3 id="是计算机用来读写光盘的设备"><a href="#是计算机用来读写光盘的设备" class="headerlink" title="是计算机用来读写光盘的设备"></a>是计算机用来读写光盘的设备</h3><h3 id="主要类型"><a href="#主要类型" class="headerlink" title="主要类型"></a>主要类型</h3><ul>
+<li>CD-ROM光驱</li>
+<li>DVD-ROM光驱</li>
+<li>CD-RW刻录机</li>
+<li>DVD-RW刻录机</li>
+</ul>
+<h3 id="接口类型"><a href="#接口类型" class="headerlink" title="接口类型"></a>接口类型</h3><ul>
+<li>IDE接口</li>
+<li>SATA接口</li>
+</ul>
+<h3 id="光盘"><a href="#光盘" class="headerlink" title="光盘"></a>光盘</h3><ul>
+<li><p>CD-ROM</p>
+<ul>
+<li>只读形光盘存储器</li>
+<li>数据传输率以150KB/s为1倍速用X来表示</li>
+<li>最大的读取速度是56X</li>
+</ul>
+</li>
+<li><p>DVD</p>
+<ul>
+<li>全称Digital Versatile Disc</li>
+<li>DVD-ROM读取速度是1358KB/s</li>
+<li>最大的DVD读取速度是16X</li>
+<li>最大的CD读取速度是48X</li>
+</ul>
+</li>
+<li><p>容量</p>
+<ul>
+<li>CD-R、CD-RW容量在650 - 800MB之间</li>
+<li>DVD-R</li>
+<li>DVD-RW</li>
+<li>DWD+RW</li>
+</ul>
+</li>
+</ul>
+<h2 id="显卡"><a href="#显卡" class="headerlink" title="显卡"></a>显卡</h2><h3 id="全称显示接口卡"><a href="#全称显示接口卡" class="headerlink" title="全称显示接口卡"></a>全称显示接口卡</h3><h3 id="又称显示适配器"><a href="#又称显示适配器" class="headerlink" title="又称显示适配器"></a>又称显示适配器</h3><h3 id="是主机与显示器之间的接口电路"><a href="#是主机与显示器之间的接口电路" class="headerlink" title="是主机与显示器之间的接口电路"></a>是主机与显示器之间的接口电路</h3><h3 id="作用是把主机要显示的字符、图形等信息进过电路的转换，用显示器可以接受的形式送到显示器显示"><a href="#作用是把主机要显示的字符、图形等信息进过电路的转换，用显示器可以接受的形式送到显示器显示" class="headerlink" title="作用是把主机要显示的字符、图形等信息进过电路的转换，用显示器可以接受的形式送到显示器显示"></a>作用是把主机要显示的字符、图形等信息进过电路的转换，用显示器可以接受的形式送到显示器显示</h3><h3 id="分类-1"><a href="#分类-1" class="headerlink" title="分类"></a>分类</h3><ul>
+<li><p>集成显卡</p>
+<ul>
+<li>将显示芯片、显存等机场在主板上</li>
+<li>稳定性好</li>
+<li>兼容性强</li>
+</ul>
+</li>
+<li><p>独立显卡</p>
+<ul>
+<li><p>以板卡的形式插在专用插槽上</p>
+</li>
+<li><p>按接口类型分类</p>
+<ul>
+<li>ISA显卡</li>
+<li>PCI显卡</li>
+<li>AGP显卡</li>
+<li>PCI-E显卡</li>
+</ul>
+</li>
+<li><p>有单独的显存，一般不占用系统内存</p>
+</li>
+<li><p>缺点</p>
+<ul>
+<li>发热量大</li>
+<li>系统功耗有所加大</li>
+<li>需要额外花费购买显卡的资金</li>
+</ul>
+</li>
+<li><p>拆卸独立显卡</p>
+<ul>
+<li>用螺丝刀顺时针旋出螺丝</li>
+<li>用拇指向外掰开显卡卡栓</li>
+<li>左右两只手同时按住板卡两侧垂直向上用力将显卡拔出</li>
+<li>注意不能左右摇晃，避免弄坏插槽</li>
+<li>不要让显卡金手指与金属物体接触</li>
+</ul>
+</li>
+<li><p>安装独立显卡</p>
+<ul>
+<li>观察拆下的显卡和主板的显卡插槽</li>
+<li>将卡栓向外扳开</li>
+<li>双手按住显卡上方垂直向下插入槽中</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="组成部分-1"><a href="#组成部分-1" class="headerlink" title="组成部分"></a>组成部分</h3><ul>
+<li><p>显示芯片</p>
+<ul>
+<li><p>又称图形处理器（GPU）</p>
+</li>
+<li><p>是显卡的大脑</p>
+</li>
+<li><p>在显卡中如同计算机中的CPU</p>
+</li>
+<li><p>其性能很大程度上决定显卡的档次和性能</p>
+</li>
+<li><p>是2D显示卡和3D显示卡的区别依据</p>
+<ul>
+<li>2D显卡卡在处理3D图像时主要依靠CPU的处理能力，称为“软加速”</li>
+<li>3D显示芯片是将是三维图像和特效处理功能集中在显示芯片内，即所谓的“硬件加速”功能</li>
+</ul>
+</li>
+<li><p>常见的显示芯片生产厂家</p>
+<ul>
+<li><p>Intel</p>
+</li>
+<li><p>IVA(S3)威盛</p>
+</li>
+<li><p>SIS矽统</p>
+</li>
+<li><p>AMD</p>
+<ul>
+<li>Radeon（镭龙）</li>
+</ul>
+</li>
+<li><p>NVIDIA</p>
+<ul>
+<li>GeForce（精视）</li>
+</ul>
+</li>
+<li><p>matrox 迈创</p>
+</li>
+<li><p>3D Labs</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>显存</p>
+</li>
+<li><p>数模转换器</p>
+</li>
+<li><p>接口</p>
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<h1 id="2-1-4"><a href="#2-1-4" class="headerlink" title="2.1.4"></a>2.1.4</h1><p>CMOS设置</p>
+</li>
+</ul>
+<h2 id="BIOS与CMOS"><a href="#BIOS与CMOS" class="headerlink" title="BIOS与CMOS"></a>BIOS与CMOS</h2><h3 id="BIOS"><a href="#BIOS" class="headerlink" title="BIOS"></a>BIOS</h3><ul>
+<li>是指微机的基本输入输出系统</li>
+<li>是一组固化在计算机主板上的一个ROM芯片上的程序</li>
+<li>基本输入输出程序（BIOS）</li>
+<li>主要保存计算机系统最重要的基本输入输出程序，系统底层设置，开机上电自检程序和系统启动自举程序等</li>
+<li>主要功能是给计算机提供最底层、最直接的硬件控制和设置</li>
+<li>断电后BIOS设置不会丢失</li>
+</ul>
+<h3 id="CMOS"><a href="#CMOS" class="headerlink" title="CMOS"></a>CMOS</h3><ul>
+<li>金属互补氧化物半导体存储器</li>
+<li>是计算机主板上一块可读写的RAM芯片，用来保存当前计算机系统的硬件配置和相关参数的设定信息</li>
+<li>CMOS芯片由系统通过一块后备电池供电无论开机还是关机，CMOS中的数据都不会丢失</li>
+</ul>
+<h2 id="CMOS设置"><a href="#CMOS设置" class="headerlink" title="CMOS设置"></a>CMOS设置</h2><h3 id="开启或重启计算机，当屏幕出现自检画面时，根据屏幕提示按Delete或Del-就可以进入BIOS设置界面，在BIOS设置界面中，我们能了解CMOS版本名称以及一些常用按键的作用"><a href="#开启或重启计算机，当屏幕出现自检画面时，根据屏幕提示按Delete或Del-就可以进入BIOS设置界面，在BIOS设置界面中，我们能了解CMOS版本名称以及一些常用按键的作用" class="headerlink" title="开启或重启计算机，当屏幕出现自检画面时，根据屏幕提示按Delete或Del,就可以进入BIOS设置界面，在BIOS设置界面中，我们能了解CMOS版本名称以及一些常用按键的作用"></a>开启或重启计算机，当屏幕出现自检画面时，根据屏幕提示按Delete或Del,就可以进入BIOS设置界面，在BIOS设置界面中，我们能了解CMOS版本名称以及一些常用按键的作用</h3><h3 id="目前BIOS有三种类型，即Award-BIOS、AMI-BIOS-和-Phoenix-BIOS"><a href="#目前BIOS有三种类型，即Award-BIOS、AMI-BIOS-和-Phoenix-BIOS" class="headerlink" title="目前BIOS有三种类型，即Award BIOS、AMI BIOS 和 Phoenix BIOS"></a>目前BIOS有三种类型，即Award BIOS、AMI BIOS 和 Phoenix BIOS</h3><h3 id="版本越高的BIOS所支持的硬件就越多"><a href="#版本越高的BIOS所支持的硬件就越多" class="headerlink" title="版本越高的BIOS所支持的硬件就越多"></a>版本越高的BIOS所支持的硬件就越多</h3><h3 id="CMOS设置-1"><a href="#CMOS设置-1" class="headerlink" title="CMOS设置"></a>CMOS设置</h3><ul>
+<li><p>查看计算机信息</p>
+<ul>
+<li><p>在BIOS设置中选择Standard CMOS Features</p>
+<ul>
+<li>可以查看计算机中</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>修改BIOS的日期和时间</p>
+<ul>
+<li>在BIOS设置中选择Standard CMOS Features</li>
+</ul>
+</li>
+<li><p>设置计算机启动时除键盘故障外检测到任何故障终止</p>
+<ul>
+<li>在BIOS设置中选择Standard CMOS Features</li>
+</ul>
+</li>
+<li><p>设置启动顺序</p>
+<ul>
+<li><p>Advanced BIOS Features</p>
+<ul>
+<li>高级BIOS功能设置</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>设置开机密码</p>
+<ul>
+<li>Set Supervisor Password</li>
+</ul>
+</li>
+<li><p>清除BIOS密码</p>
+</li>
+<li><p>恢复BIOS设置</p>
+</li>
+<li><p>载入最安全设定</p>
+</li>
+</ul>
+<h3 id="清除BIOS密码"><a href="#清除BIOS密码" class="headerlink" title="清除BIOS密码"></a>清除BIOS密码</h3><ul>
+<li><p>电池放电法</p>
+<ul>
+<li>用镊子将主板上的纽扣电池取出</li>
+<li>用金属导体短接电池座中的正负极</li>
+<li>再将电池放入</li>
+</ul>
+</li>
+<li><p>跳线短接法</p>
+<ul>
+<li>关闭计算机电源</li>
+<li>在电池附近找到跳线开关</li>
+<li>用镊子将跳线帽从1、2脚换到2、3脚上，再插入回1、2脚</li>
+</ul>
+</li>
+</ul>
+<h2 id="UEFI"><a href="#UEFI" class="headerlink" title="UEFI"></a>UEFI</h2><h3 id="统一可扩展固件接口"><a href="#统一可扩展固件接口" class="headerlink" title="统一可扩展固件接口"></a>统一可扩展固件接口</h3><h3 id="用于操作系统自动从预启动的操作系统环境加载到一种操作系统上"><a href="#用于操作系统自动从预启动的操作系统环境加载到一种操作系统上" class="headerlink" title="用于操作系统自动从预启动的操作系统环境加载到一种操作系统上"></a>用于操作系统自动从预启动的操作系统环境加载到一种操作系统上</h3><h3 id="旨在代替BIOS，从而使开机程序化繁为简，节省时间，提高开机后操作系统的启动速度"><a href="#旨在代替BIOS，从而使开机程序化繁为简，节省时间，提高开机后操作系统的启动速度" class="headerlink" title="旨在代替BIOS，从而使开机程序化繁为简，节省时间，提高开机后操作系统的启动速度"></a>旨在代替BIOS，从而使开机程序化繁为简，节省时间，提高开机后操作系统的启动速度</h3><h3 id="此标准由140多个公司共同创建，包括微软"><a href="#此标准由140多个公司共同创建，包括微软" class="headerlink" title="此标准由140多个公司共同创建，包括微软"></a>此标准由140多个公司共同创建，包括微软</h3><h3 id="UEFI减少了BIOS的自检过程，所以能缩短开机时间，给用户带来良好开机体验"><a href="#UEFI减少了BIOS的自检过程，所以能缩短开机时间，给用户带来良好开机体验" class="headerlink" title="UEFI减少了BIOS的自检过程，所以能缩短开机时间，给用户带来良好开机体验"></a>UEFI减少了BIOS的自检过程，所以能缩短开机时间，给用户带来良好开机体验</h3><h3 id="在UEFI模式下安装的系统只能用UEFI引导"><a href="#在UEFI模式下安装的系统只能用UEFI引导" class="headerlink" title="在UEFI模式下安装的系统只能用UEFI引导"></a>在UEFI模式下安装的系统只能用UEFI引导</h3><h3 id="在Legacy模式下安装的系统也只能在Legacy下引导"><a href="#在Legacy模式下安装的系统也只能在Legacy下引导" class="headerlink" title="在Legacy模式下安装的系统也只能在Legacy下引导"></a>在Legacy模式下安装的系统也只能在Legacy下引导</h3><h3 id="Legacy模式支持磁盘分区为MBR结构"><a href="#Legacy模式支持磁盘分区为MBR结构" class="headerlink" title="Legacy模式支持磁盘分区为MBR结构"></a>Legacy模式支持磁盘分区为MBR结构</h3><h3 id="特点-1"><a href="#特点-1" class="headerlink" title="特点"></a>特点</h3><ul>
+<li>通过保护预启动或预引导进程，抵御bookit攻击，从而提高安全性</li>
+<li>缩短了启动时间和从休眠状态恢复的时间</li>
+<li>支持容量超过2.1TB的驱动器</li>
+<li>支持64位的现代固件设备驱动程序，系统在启动过程中可以使用他们来对超过172GB内存进行寻址</li>
+<li>UEFI可以与BIOS结合使用</li>
+<li>支持超过2.1TB的驱动器</li>
+</ul>
+<h2 id="MBR和GPT"><a href="#MBR和GPT" class="headerlink" title="MBR和GPT"></a>MBR和GPT</h2><h3 id="MBR"><a href="#MBR" class="headerlink" title="MBR"></a>MBR</h3><ul>
+<li>主引导记录</li>
+<li>又叫主引导扇区</li>
+<li>是开机后访问的第一个扇区</li>
+<li>无法支持超过2GB的分区</li>
+</ul>
+<h3 id="GPT"><a href="#GPT" class="headerlink" title="GPT"></a>GPT</h3><ul>
+<li>全局唯一标识分区表</li>
+<li>提供更加灵活的分区机制</li>
+<li>允许大于2TB的容量</li>
+<li>win8以后才有支持UEFT的</li>
+</ul>
+<h2 id="Award-BIOS"><a href="#Award-BIOS" class="headerlink" title="Award BIOS"></a>Award BIOS</h2><h3 id="MB-Intelligent（M-I-T）"><a href="#MB-Intelligent（M-I-T）" class="headerlink" title="MB Intelligent（M.I.T）"></a>MB Intelligent（M.I.T）</h3><ul>
+<li>M.I.T调整CPU频率电压</li>
+</ul>
+<h3 id="Stand-CMOS-Features"><a href="#Stand-CMOS-Features" class="headerlink" title="Stand CMOS Features"></a>Stand CMOS Features</h3><ul>
+<li>基本CMOS功能设置</li>
+</ul>
+<h3 id="Advanced-BIOS-Features"><a href="#Advanced-BIOS-Features" class="headerlink" title="Advanced BIOS Features"></a>Advanced BIOS Features</h3><ul>
+<li>高级BIOS功能设置</li>
+</ul>
+<h3 id="Integrated-Peripherals"><a href="#Integrated-Peripherals" class="headerlink" title="Integrated Peripherals"></a>Integrated Peripherals</h3><ul>
+<li>外部设备设定</li>
+</ul>
+<h3 id="Power-Management-Setup"><a href="#Power-Management-Setup" class="headerlink" title="Power Management Setup"></a>Power Management Setup</h3><ul>
+<li>电源管理设定</li>
+</ul>
+<h3 id="Load-Fail-Safe-Defaults"><a href="#Load-Fail-Safe-Defaults" class="headerlink" title="Load Fail-Safe Defaults"></a>Load Fail-Safe Defaults</h3><ul>
+<li>载入最安全的设定</li>
+</ul>
+<h3 id="Load-Optimized-Defaults"><a href="#Load-Optimized-Defaults" class="headerlink" title="Load Optimized Defaults"></a>Load Optimized Defaults</h3><ul>
+<li>载入高性能的设定</li>
+</ul>
+
+  </div>
+</article>
+<!-- 评论区域 -->
+<!-- 
+ -->
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/categories/">分类</a></li>
+         
+          <li><a href="/tags/">标签</a></li>
+         
+          <li><a href="/search">搜索</a></li>
+         
+          <li><a href="/links">友链</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#2-1-1微型计算机的硬件组成"><span class="toc-number">1.</span> <span class="toc-text">2.1.1微型计算机的硬件组成</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#微型计算机概念"><span class="toc-number">1.1.</span> <span class="toc-text">微型计算机概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#从外形上来看"><span class="toc-number">1.1.1.</span> <span class="toc-text">从外形上来看</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#微型计算机又称微机、个人计算机、PC机、电脑"><span class="toc-number">1.2.</span> <span class="toc-text">微型计算机又称微机、个人计算机、PC机、电脑</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#微型计算机是电子计算机技术发展到第四代的产物"><span class="toc-number">1.3.</span> <span class="toc-text">微型计算机是电子计算机技术发展到第四代的产物</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#硬件部分"><span class="toc-number">1.4.</span> <span class="toc-text">硬件部分</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分别都-3"><span class="toc-number">1.5.</span> <span class="toc-text">分别都+3</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-1-2计算机主机外部接口"><span class="toc-number">2.</span> <span class="toc-text">2.1.2计算机主机外部接口</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#电源接口"><span class="toc-number">2.1.</span> <span class="toc-text">电源接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#用途"><span class="toc-number">2.1.1.</span> <span class="toc-text">用途</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#形状"><span class="toc-number">2.1.2.</span> <span class="toc-text">形状</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#注意事项"><span class="toc-number">2.1.3.</span> <span class="toc-text">注意事项</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#鼠标和键盘接口"><span class="toc-number">2.2.</span> <span class="toc-text">鼠标和键盘接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#PS-2接口"><span class="toc-number">2.2.1.</span> <span class="toc-text">PS&#x2F;2接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#USB接口"><span class="toc-number">2.2.2.</span> <span class="toc-text">USB接口</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#显示器接口"><span class="toc-number">2.3.</span> <span class="toc-text">显示器接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#VGA"><span class="toc-number">2.3.1.</span> <span class="toc-text">VGA</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DVI"><span class="toc-number">2.3.2.</span> <span class="toc-text">DVI</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#S-Video"><span class="toc-number">2.3.3.</span> <span class="toc-text">S-Video</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#USB接口-1"><span class="toc-number">2.4.</span> <span class="toc-text">USB接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#通用串行总线（英语：Universal-Serial-Bus，缩写：USB）"><span class="toc-number">2.4.1.</span> <span class="toc-text">通用串行总线（英语：Universal Serial Bus，缩写：USB）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#是1994年由因特尔、康柏、IBM、微软等多家公司联合提出的，目前已成功取代串口和并口"><span class="toc-number">2.4.2.</span> <span class="toc-text">是1994年由因特尔、康柏、IBM、微软等多家公司联合提出的，目前已成功取代串口和并口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1994年发布USB0-7，至今已经USB3-2"><span class="toc-number">2.4.3.</span> <span class="toc-text">1994年发布USB0.7，至今已经USB3.2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#USB1-1-gt-12Mbps"><span class="toc-number">2.4.4.</span> <span class="toc-text">USB1.1 -&gt; 12Mbps</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#USB2-0-gt-480Mbps"><span class="toc-number">2.4.5.</span> <span class="toc-text">USB2.0 -&gt; 480Mbps</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#USB3-0-gt-5Gbps"><span class="toc-number">2.4.6.</span> <span class="toc-text">USB3.0-&gt; 5Gbps</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#优点"><span class="toc-number">2.4.7.</span> <span class="toc-text">优点</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网线接口"><span class="toc-number">2.5.</span> <span class="toc-text">网线接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#超五类双绞线"><span class="toc-number">2.5.1.</span> <span class="toc-text">超五类双绞线</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#声卡接口"><span class="toc-number">2.6.</span> <span class="toc-text">声卡接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#复制音频的输入、输出"><span class="toc-number">2.6.1.</span> <span class="toc-text">复制音频的输入、输出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#大部分都使用小三芯接口"><span class="toc-number">2.6.2.</span> <span class="toc-text">大部分都使用小三芯接口</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#并行和串行接口"><span class="toc-number">2.7.</span> <span class="toc-text">并行和串行接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#并行（LPT）"><span class="toc-number">2.7.1.</span> <span class="toc-text">并行（LPT）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#串行（COM）"><span class="toc-number">2.7.2.</span> <span class="toc-text">串行（COM）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-1-3主要配件的识别与安装"><span class="toc-number">3.</span> <span class="toc-text">2.1.3主要配件的识别与安装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#主机箱"><span class="toc-number">3.1.</span> <span class="toc-text">主机箱</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#主机箱是电脑配件中的一部分"><span class="toc-number">3.1.1.</span> <span class="toc-text">主机箱是电脑配件中的一部分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#主机箱的结构"><span class="toc-number">3.1.2.</span> <span class="toc-text">主机箱的结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#主机箱的作用"><span class="toc-number">3.1.3.</span> <span class="toc-text">主机箱的作用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#主机箱款式"><span class="toc-number">3.1.4.</span> <span class="toc-text">主机箱款式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#机箱品牌"><span class="toc-number">3.1.5.</span> <span class="toc-text">机箱品牌</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#拆装机的注意事项"><span class="toc-number">3.2.</span> <span class="toc-text">拆装机的注意事项</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#防静电"><span class="toc-number">3.2.1.</span> <span class="toc-text">防静电</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#轻拿轻放"><span class="toc-number">3.2.2.</span> <span class="toc-text">轻拿轻放</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#防止液体进入配件"><span class="toc-number">3.2.3.</span> <span class="toc-text">防止液体进入配件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#不可暴力拆装"><span class="toc-number">3.2.4.</span> <span class="toc-text">不可暴力拆装</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#机箱电源"><span class="toc-number">3.3.</span> <span class="toc-text">机箱电源</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#是整个主机的能源提供者"><span class="toc-number">3.3.1.</span> <span class="toc-text">是整个主机的能源提供者</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#将220V转化为计算机所需的5V和3-3V的直流电"><span class="toc-number">3.3.2.</span> <span class="toc-text">将220V转化为计算机所需的5V和3.3V的直流电</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#最高输出电压为12V"><span class="toc-number">3.3.3.</span> <span class="toc-text">最高输出电压为12V</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#主机电源的质量的好坏会对计算机运行产生非常重要的影响"><span class="toc-number">3.3.4.</span> <span class="toc-text">主机电源的质量的好坏会对计算机运行产生非常重要的影响</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#机箱电源通常会为不同的设备提供各种接口"><span class="toc-number">3.3.5.</span> <span class="toc-text">机箱电源通常会为不同的设备提供各种接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#拆卸电源时要将电源连接线分别从主板、硬盘、光驱等设备上拔下，并整理好连接线，再卸下机箱背后固定的电源螺丝，最后从机箱内取出"><span class="toc-number">3.3.6.</span> <span class="toc-text">拆卸电源时要将电源连接线分别从主板、硬盘、光驱等设备上拔下，并整理好连接线，再卸下机箱背后固定的电源螺丝，最后从机箱内取出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装机箱电源的顺序与拆卸的顺序相反"><span class="toc-number">3.3.7.</span> <span class="toc-text">安装机箱电源的顺序与拆卸的顺序相反</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#主板"><span class="toc-number">3.4.</span> <span class="toc-text">主板</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#主板由多个部件组成，这些部件哦谈过一块大的电路板连接在一起的，这块大板被称为主板"><span class="toc-number">3.4.1.</span> <span class="toc-text">主板由多个部件组成，这些部件哦谈过一块大的电路板连接在一起的，这块大板被称为主板</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#又叫"><span class="toc-number">3.4.2.</span> <span class="toc-text">又叫</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#是微型计算机中最基本的，也是极其重要的部件之一"><span class="toc-number">3.4.3.</span> <span class="toc-text">是微型计算机中最基本的，也是极其重要的部件之一</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CPU、内存、各种接口卡，和外部设备都要靠主板来协调工作"><span class="toc-number">3.4.4.</span> <span class="toc-text">CPU、内存、各种接口卡，和外部设备都要靠主板来协调工作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#如果主板性能不好，与其相连接的部件的性能就不能得到充分的发挥"><span class="toc-number">3.4.5.</span> <span class="toc-text">如果主板性能不好，与其相连接的部件的性能就不能得到充分的发挥</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在主板上有两块主控芯片"><span class="toc-number">3.4.6.</span> <span class="toc-text">在主板上有两块主控芯片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#主板用6-9颗螺丝固定在机箱上，也有不封主板使用塑料扣子或铜螺帽固定，安装时将主板平整的放入机箱内，注意主板上的定位孔与机箱底部的金属螺丝或塑料钉相对应"><span class="toc-number">3.4.7.</span> <span class="toc-text">主板用6-9颗螺丝固定在机箱上，也有不封主板使用塑料扣子或铜螺帽固定，安装时将主板平整的放入机箱内，注意主板上的定位孔与机箱底部的金属螺丝或塑料钉相对应</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CPU"><span class="toc-number">3.5.</span> <span class="toc-text">CPU</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#即中央处理器"><span class="toc-number">3.5.1.</span> <span class="toc-text">即中央处理器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#组成部分"><span class="toc-number">3.5.2.</span> <span class="toc-text">组成部分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#是计算机运算与控制中心"><span class="toc-number">3.5.3.</span> <span class="toc-text">是计算机运算与控制中心</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#衡量CPU性能的主要技术的指标有"><span class="toc-number">3.5.4.</span> <span class="toc-text">衡量CPU性能的主要技术的指标有</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#生产CPU的公司主要有AMD-Intel-威盛-和中国龙芯"><span class="toc-number">3.5.5.</span> <span class="toc-text">生产CPU的公司主要有AMD Intel 威盛 和中国龙芯</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CPU的安装与拆卸"><span class="toc-number">3.5.6.</span> <span class="toc-text">CPU的安装与拆卸</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#内存"><span class="toc-number">3.6.</span> <span class="toc-text">内存</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#又称主存"><span class="toc-number">3.6.1.</span> <span class="toc-text">又称主存</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#是计算机的重要存储设备"><span class="toc-number">3.6.2.</span> <span class="toc-text">是计算机的重要存储设备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在计算机通电运行时用于临时存储运行的程序和数据"><span class="toc-number">3.6.3.</span> <span class="toc-text">在计算机通电运行时用于临时存储运行的程序和数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#特点"><span class="toc-number">3.6.4.</span> <span class="toc-text">特点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#组成"><span class="toc-number">3.6.5.</span> <span class="toc-text">组成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#分类"><span class="toc-number">3.6.6.</span> <span class="toc-text">分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#内存的-速度取决于内存的主频，即内存所能达到的最高工作频率"><span class="toc-number">3.6.7.</span> <span class="toc-text">内存的 速度取决于内存的主频，即内存所能达到的最高工作频率</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装内存条的方法"><span class="toc-number">3.6.8.</span> <span class="toc-text">安装内存条的方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#拆卸内存条"><span class="toc-number">3.6.9.</span> <span class="toc-text">拆卸内存条</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#硬盘"><span class="toc-number">3.7.</span> <span class="toc-text">硬盘</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#硬盘的组成"><span class="toc-number">3.7.1.</span> <span class="toc-text">硬盘的组成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#硬盘接口"><span class="toc-number">3.7.2.</span> <span class="toc-text">硬盘接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#硬盘的主要技术参数"><span class="toc-number">3.7.3.</span> <span class="toc-text">硬盘的主要技术参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#固态硬盘"><span class="toc-number">3.7.4.</span> <span class="toc-text">固态硬盘</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#光驱"><span class="toc-number">3.8.</span> <span class="toc-text">光驱</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#是计算机用来读写光盘的设备"><span class="toc-number">3.8.1.</span> <span class="toc-text">是计算机用来读写光盘的设备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#主要类型"><span class="toc-number">3.8.2.</span> <span class="toc-text">主要类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#接口类型"><span class="toc-number">3.8.3.</span> <span class="toc-text">接口类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#光盘"><span class="toc-number">3.8.4.</span> <span class="toc-text">光盘</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#显卡"><span class="toc-number">3.9.</span> <span class="toc-text">显卡</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#全称显示接口卡"><span class="toc-number">3.9.1.</span> <span class="toc-text">全称显示接口卡</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#又称显示适配器"><span class="toc-number">3.9.2.</span> <span class="toc-text">又称显示适配器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#是主机与显示器之间的接口电路"><span class="toc-number">3.9.3.</span> <span class="toc-text">是主机与显示器之间的接口电路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#作用是把主机要显示的字符、图形等信息进过电路的转换，用显示器可以接受的形式送到显示器显示"><span class="toc-number">3.9.4.</span> <span class="toc-text">作用是把主机要显示的字符、图形等信息进过电路的转换，用显示器可以接受的形式送到显示器显示</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#分类-1"><span class="toc-number">3.9.5.</span> <span class="toc-text">分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#组成部分-1"><span class="toc-number">3.9.6.</span> <span class="toc-text">组成部分</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-1-4"><span class="toc-number">4.</span> <span class="toc-text">2.1.4</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#BIOS与CMOS"><span class="toc-number">4.1.</span> <span class="toc-text">BIOS与CMOS</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#BIOS"><span class="toc-number">4.1.1.</span> <span class="toc-text">BIOS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CMOS"><span class="toc-number">4.1.2.</span> <span class="toc-text">CMOS</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CMOS设置"><span class="toc-number">4.2.</span> <span class="toc-text">CMOS设置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#开启或重启计算机，当屏幕出现自检画面时，根据屏幕提示按Delete或Del-就可以进入BIOS设置界面，在BIOS设置界面中，我们能了解CMOS版本名称以及一些常用按键的作用"><span class="toc-number">4.2.1.</span> <span class="toc-text">开启或重启计算机，当屏幕出现自检画面时，根据屏幕提示按Delete或Del,就可以进入BIOS设置界面，在BIOS设置界面中，我们能了解CMOS版本名称以及一些常用按键的作用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#目前BIOS有三种类型，即Award-BIOS、AMI-BIOS-和-Phoenix-BIOS"><span class="toc-number">4.2.2.</span> <span class="toc-text">目前BIOS有三种类型，即Award BIOS、AMI BIOS 和 Phoenix BIOS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#版本越高的BIOS所支持的硬件就越多"><span class="toc-number">4.2.3.</span> <span class="toc-text">版本越高的BIOS所支持的硬件就越多</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CMOS设置-1"><span class="toc-number">4.2.4.</span> <span class="toc-text">CMOS设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#清除BIOS密码"><span class="toc-number">4.2.5.</span> <span class="toc-text">清除BIOS密码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#UEFI"><span class="toc-number">4.3.</span> <span class="toc-text">UEFI</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#统一可扩展固件接口"><span class="toc-number">4.3.1.</span> <span class="toc-text">统一可扩展固件接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#用于操作系统自动从预启动的操作系统环境加载到一种操作系统上"><span class="toc-number">4.3.2.</span> <span class="toc-text">用于操作系统自动从预启动的操作系统环境加载到一种操作系统上</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#旨在代替BIOS，从而使开机程序化繁为简，节省时间，提高开机后操作系统的启动速度"><span class="toc-number">4.3.3.</span> <span class="toc-text">旨在代替BIOS，从而使开机程序化繁为简，节省时间，提高开机后操作系统的启动速度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#此标准由140多个公司共同创建，包括微软"><span class="toc-number">4.3.4.</span> <span class="toc-text">此标准由140多个公司共同创建，包括微软</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#UEFI减少了BIOS的自检过程，所以能缩短开机时间，给用户带来良好开机体验"><span class="toc-number">4.3.5.</span> <span class="toc-text">UEFI减少了BIOS的自检过程，所以能缩短开机时间，给用户带来良好开机体验</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在UEFI模式下安装的系统只能用UEFI引导"><span class="toc-number">4.3.6.</span> <span class="toc-text">在UEFI模式下安装的系统只能用UEFI引导</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在Legacy模式下安装的系统也只能在Legacy下引导"><span class="toc-number">4.3.7.</span> <span class="toc-text">在Legacy模式下安装的系统也只能在Legacy下引导</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Legacy模式支持磁盘分区为MBR结构"><span class="toc-number">4.3.8.</span> <span class="toc-text">Legacy模式支持磁盘分区为MBR结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#特点-1"><span class="toc-number">4.3.9.</span> <span class="toc-text">特点</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MBR和GPT"><span class="toc-number">4.4.</span> <span class="toc-text">MBR和GPT</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#MBR"><span class="toc-number">4.4.1.</span> <span class="toc-text">MBR</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#GPT"><span class="toc-number">4.4.2.</span> <span class="toc-text">GPT</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Award-BIOS"><span class="toc-number">4.5.</span> <span class="toc-text">Award BIOS</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#MB-Intelligent（M-I-T）"><span class="toc-number">4.5.1.</span> <span class="toc-text">MB Intelligent（M.I.T）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Stand-CMOS-Features"><span class="toc-number">4.5.2.</span> <span class="toc-text">Stand CMOS Features</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Advanced-BIOS-Features"><span class="toc-number">4.5.3.</span> <span class="toc-text">Advanced BIOS Features</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Integrated-Peripherals"><span class="toc-number">4.5.4.</span> <span class="toc-text">Integrated Peripherals</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Power-Management-Setup"><span class="toc-number">4.5.5.</span> <span class="toc-text">Power Management Setup</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Load-Fail-Safe-Defaults"><span class="toc-number">4.5.6.</span> <span class="toc-text">Load Fail-Safe Defaults</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Load-Optimized-Defaults"><span class="toc-number">4.5.7.</span> <span class="toc-text">Load Optimized Defaults</span></a></li></ol></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="mailto:?subject=2.1.1-2.1.4计算机硬件组装&body=Check out this article: http://flousfl.github.io/blog/2020/04/11/2-1-1-2-1-4%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6%E7%BB%84%E8%A3%85/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <!-- <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://flousfl.github.io/blog/2020/04/11/2-1-1-2-1-4%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6%E7%BB%84%E8%A3%85/" target="_blank" rel="noopener"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://flousfl.github.io/blog/2020/04/11/2-1-1-2-1-4%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6%E7%BB%84%E8%A3%85/&text=2.1.1-2.1.4计算机硬件组装" target="_blank" rel="noopener"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://flousfl.github.io/blog/2020/04/11/2-1-1-2-1-4%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6%E7%BB%84%E8%A3%85/&title=2.1.1-2.1.4计算机硬件组装" target="_blank" rel="noopener"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://flousfl.github.io/blog/2020/04/11/2-1-1-2-1-4%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6%E7%BB%84%E8%A3%85/&is_video=false&description=2.1.1-2.1.4计算机硬件组装" target="_blank" rel="noopener"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://flousfl.github.io/blog/2020/04/11/2-1-1-2-1-4%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6%E7%BB%84%E8%A3%85/&title=2.1.1-2.1.4计算机硬件组装" target="_blank" rel="noopener"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://flousfl.github.io/blog/2020/04/11/2-1-1-2-1-4%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6%E7%BB%84%E8%A3%85/&title=2.1.1-2.1.4计算机硬件组装" target="_blank" rel="noopener"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://flousfl.github.io/blog/2020/04/11/2-1-1-2-1-4%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6%E7%BB%84%E8%A3%85/&title=2.1.1-2.1.4计算机硬件组装" target="_blank" rel="noopener"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://flousfl.github.io/blog/2020/04/11/2-1-1-2-1-4%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6%E7%BB%84%E8%A3%85/&title=2.1.1-2.1.4计算机硬件组装" target="_blank" rel="noopener"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://flousfl.github.io/blog/2020/04/11/2-1-1-2-1-4%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6%E7%BB%84%E8%A3%85/&name=2.1.1-2.1.4计算机硬件组装&description=" target="_blank" rel="noopener"><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=http://flousfl.github.io/blog/2020/04/11/2-1-1-2-1-4%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6%E7%BB%84%E8%A3%85/&t=2.1.1-2.1.4计算机硬件组装" target="_blank" rel="noopener"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li> -->
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2019-2020
+    flous
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/categories/">分类</a></li>
+         
+          <li><a href="/tags/">标签</a></li>
+         
+          <li><a href="/search">搜索</a></li>
+         
+          <li><a href="/links">友链</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+  
+    <script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'></script>
+    <script>
+      if (window.mermaid) {
+        mermaid.initialize({theme: 'forest'});
+      }
+    </script>
+  
+</footer>
+
+    </div>
+    <!-- styles -->
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+
+    <!-- jquery -->
+
+<script src="/lib/jquery/jquery.min.js"></script>
+
+
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+
+<!-- clipboard -->
+
+  
+<script src="/lib/clipboard/clipboard.min.js"></script>
+
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
