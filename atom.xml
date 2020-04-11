@@ -258,10 +258,10 @@
   
   <entry>
     <title>1.5.1-1.5.5微型计算机操作系统（未整理）</title>
-    <link href="http://flousfl.github.io/blog/2020/04/11/1-5-1-1-5-5%E5%BE%AE%E5%9E%8B%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
-    <id>http://flousfl.github.io/blog/2020/04/11/1-5-1-1-5-5%E5%BE%AE%E5%9E%8B%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</id>
+    <link href="http://flousfl.github.io/blog/2020/04/11/1-5-1-1-5-5%E5%BE%AE%E5%9E%8B%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%EF%BC%88%E6%9C%AA%E6%95%B4%E7%90%86%EF%BC%89/"/>
+    <id>http://flousfl.github.io/blog/2020/04/11/1-5-1-1-5-5%E5%BE%AE%E5%9E%8B%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%EF%BC%88%E6%9C%AA%E6%95%B4%E7%90%86%EF%BC%89/</id>
     <published>2020-04-11T08:24:27.000Z</published>
-    <updated>2020-04-11T08:28:38.545Z</updated>
+    <updated>2020-04-11T09:04:04.885Z</updated>
     
     <summary type="html">
     
@@ -281,10 +281,10 @@
   
   <entry>
     <title>1.4.1-1.4.3计算机安全知识防护(未整理)</title>
-    <link href="http://flousfl.github.io/blog/2020/04/11/1-4-1-1-4-3%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AE%89%E5%85%A8%E7%9F%A5%E8%AF%86%E9%98%B2%E6%8A%A4/"/>
-    <id>http://flousfl.github.io/blog/2020/04/11/1-4-1-1-4-3%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AE%89%E5%85%A8%E7%9F%A5%E8%AF%86%E9%98%B2%E6%8A%A4/</id>
+    <link href="http://flousfl.github.io/blog/2020/04/11/1-4-1-1-4-3%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AE%89%E5%85%A8%E7%9F%A5%E8%AF%86%E9%98%B2%E6%8A%A4%EF%BC%88%E6%9C%AA%E6%95%B4%E7%90%86%EF%BC%89/"/>
+    <id>http://flousfl.github.io/blog/2020/04/11/1-4-1-1-4-3%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AE%89%E5%85%A8%E7%9F%A5%E8%AF%86%E9%98%B2%E6%8A%A4%EF%BC%88%E6%9C%AA%E6%95%B4%E7%90%86%EF%BC%89/</id>
     <published>2020-04-11T08:22:55.000Z</published>
-    <updated>2020-04-11T08:29:33.942Z</updated>
+    <updated>2020-04-11T09:03:56.526Z</updated>
     
     <summary type="html">
     
@@ -307,16 +307,26 @@
     <link href="http://flousfl.github.io/blog/2020/04/11/1-3-1-1-3-4%E6%95%B0%E5%AD%97%E5%8C%96%E4%BF%A1%E6%81%AF%E7%BC%96%E7%A0%81%E4%B8%8E%E6%95%B0%E6%8D%AE%E8%A1%A8%E7%A4%BA/"/>
     <id>http://flousfl.github.io/blog/2020/04/11/1-3-1-1-3-4%E6%95%B0%E5%AD%97%E5%8C%96%E4%BF%A1%E6%81%AF%E7%BC%96%E7%A0%81%E4%B8%8E%E6%95%B0%E6%8D%AE%E8%A1%A8%E7%A4%BA/</id>
     <published>2020-04-11T08:13:05.000Z</published>
-    <updated>2020-04-11T08:13:23.787Z</updated>
+    <updated>2020-04-11T09:03:25.010Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="1-3-1进制计数制"><a href="#1-3-1进制计数制" class="headerlink" title="1.3.1进制计数制"></a>1.3.1进制计数制</h1></details><details><summary><h4 id="数制"><a href="#数制" class="headerlink" title="数制 "></a>数制 </summary></h4><ul><li>也称计数制，是指计数的方法，即采用一组计数符号的组合来表示任意一个数的方法，为了更好的理解计数制，我们首先要理解几个基本术语</details></details><details><summary></li></ul><h4 id="数码"><a href="#数码" class="headerlink" title="数码"></a>数码</summary></h4><ul><li>每种数制中都有固定的基本符号，称为数码，不同的数制具有不同的数码</li></ul></details><details><summary><h4 id="基数"><a href="#基数" class="headerlink" title="基数"></a>基数</summary></h4><ul><li>在任何一种计数汇总，所使用的数码个数总是一定的，有限的。例如，在十进制中，使用0···9十个数码我们把一种计数制中所使用的数码个数称为该计数法的基数</details></li></ul></details><details><summary><h4 id="位权"><a href="#位权" class="headerlink" title="位权"></a>位权</summary></h4><ul><li><p>在任意一个数码序列中，每一个数位上的数码所表示的数值大小等于该数码自身值乘以该数位所代表的位权值</p></li><li><p>在进位计数制的数字系统中，如果只用R个基本符号表示数值，则称其为R进制。其特点是“逢R进一”，R进制由R个数码符号（包括0,1,2，R-1）组成，基数为R，小数点前i位的权为R^i+1</p></li></ul><!--  --><!--  --><!--  --><!--  --><!--  --><!--  --><h1 id="1-3-2进制转换"><a href="#1-3-2进制转换" class="headerlink" title="1.3.2进制转换"></a>1.3.2进制转换</h1></details><details><summary><h4 id="进制转换"><a href="#进制转换" class="headerlink" title="进制转换"></a>进制转换</summary></h4><h5 id="虽然在计算机内部使用二进制有很多的优点，但对于人们使用来说确比较麻烦，如书写不方便，阅读不直观，难记忆等，因此在人与机器之间就使用了不同的进制，这就需要在不同进制之间转换"><a href="#虽然在计算机内部使用二进制有很多的优点，但对于人们使用来说确比较麻烦，如书写不方便，阅读不直观，难记忆等，因此在人与机器之间就使用了不同的进制，这就需要在不同进制之间转换" class="headerlink" title="虽然在计算机内部使用二进制有很多的优点，但对于人们使用来说确比较麻烦，如书写不方便，阅读不直观，难记忆等，因此在人与机器之间就使用了不同的进制，这就需要在不同进制之间转换"></a>虽然在计算机内部使用二进制有很多的优点，但对于人们使用来说确比较麻烦，如书写不方便，阅读不直观，难记忆等，因此在人与机器之间就使用了不同的进制，这就需要在不同进制之间转换</h5></details><details><summary><h4 id="换算方式"><a href="#换算方式" class="headerlink" title="换算方式"></a>换算方式</summary></h4><ul><li>十进制转R进制</li><li>除R取余</li><li>R进制转十进制</li><li>按权展开</li></ul></details><!--  --><!--  --><!--  --><!--  --><!--  --><!--  --><h1 id="1-3-3原码、反码、补码"><a href="#1-3-3原码、反码、补码" class="headerlink" title="1.3.3原码、反码、补码"></a>1.3.3原码、反码、补码</h1><details><summary><h3 id="反码、补码"><a href="#反码、补码" class="headerlink" title="反码、补码"></a>反码、补码</summary></h3><h4 id="计算机处理的数据分为两种，一种是无符号数，另一种是有符号数。在计算机中只能用0或1来表示，所以符号也用数码0和1来表示。通常把最高位定义为符号，其余各位表示数值位。带正负符号的数称为真值数；原码、原码"><a href="#计算机处理的数据分为两种，一种是无符号数，另一种是有符号数。在计算机中只能用0或1来表示，所以符号也用数码0和1来表示。通常把最高位定义为符号，其余各位表示数值位。带正负符号的数称为真值数；原码、原码" class="headerlink" title="计算机处理的数据分为两种，一种是无符号数，另一种是有符号数。在计算机中只能用0或1来表示，所以符号也用数码0和1来表示。通常把最高位定义为符号，其余各位表示数值位。带正负符号的数称为真值数；原码、原码"></a>计算机处理的数据分为两种，一种是无符号数，另一种是有符号数。在计算机中只能用0或1来表示，所以符号也用数码0和1来表示。通常把最高位定义为符号，其余各位表示数值位。带正负符号的数称为真值数；原码、原码</h4></details><h3 id="计算机中正数符号位用0表示，负数符号位用1表示，这种方法表示的数称为原码，"><a href="#计算机中正数符号位用0表示，负数符号位用1表示，这种方法表示的数称为原码，" class="headerlink" title="计算机中正数符号位用0表示，负数符号位用1表示，这种方法表示的数称为原码，"></a>计算机中正数符号位用0表示，负数符号位用1表示，这种方法表示的数称为原码，</h3><h3 id="正数"><a href="#正数" class="headerlink" title="正数"></a>正数</h3><ul><li>符号位用0表示</li></ul><h3 id="负数"><a href="#负数" class="headerlink" title="负数"></a>负数</h3><ul><li>符号位用1表示</li></ul><h2 id="反码"><a href="#反码" class="headerlink" title="反码"></a>反码</h2><h3 id="反码是相对原码而言的，反码与原码的关系有两种：正数的反码和负数的反码。"><a href="#反码是相对原码而言的，反码与原码的关系有两种：正数的反码和负数的反码。" class="headerlink" title="反码是相对原码而言的，反码与原码的关系有两种：正数的反码和负数的反码。"></a>反码是相对原码而言的，反码与原码的关系有两种：正数的反码和负数的反码。</h3><h3 id="正数-1"><a href="#正数-1" class="headerlink" title="正数"></a>正数</h3><ul><li>原码=反码</li></ul><h3 id="负数-1"><a href="#负数-1" class="headerlink" title="负数"></a>负数</h3><ul><li>符号位不变，其余各位取反</li></ul><h2 id="补码"><a href="#补码" class="headerlink" title="补码"></a>补码</h2><h3 id="补码相对原码而言的，补码与原码的关系有两种：正数的补码和负数的补码"><a href="#补码相对原码而言的，补码与原码的关系有两种：正数的补码和负数的补码" class="headerlink" title="补码相对原码而言的，补码与原码的关系有两种：正数的补码和负数的补码"></a>补码相对原码而言的，补码与原码的关系有两种：正数的补码和负数的补码</h3><h3 id="正数-2"><a href="#正数-2" class="headerlink" title="正数"></a>正数</h3><ul><li>原码=反码=补码</li></ul><h3 id="负数-2"><a href="#负数-2" class="headerlink" title="负数"></a>负数</h3><ul><li>补码+1</li></ul><h3 id="0的补码只有0"><a href="#0的补码只有0" class="headerlink" title="0的补码只有0"></a>0的补码只有0</h3><h3 id="10000001-127"><a href="#10000001-127" class="headerlink" title="10000001 = - 127"></a>10000001 = - 127</h3>]]></content>
     
     <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;1-3-1进制计数制&quot;&gt;&lt;a href=&quot;#1-3-1进制计数制&quot; class=&quot;headerlink&quot; title=&quot;1.3.1进制计数制&quot;&gt;&lt;/a&gt;1.3.1进制计数制&lt;/h1&gt;&lt;/details&gt;
+&lt;details&gt;&lt;summary&gt;
+
+&lt;h4 id=&quot;数制
+      
     
     </summary>
     
     
       <category term="计算机基础" scheme="http://flousfl.github.io/blog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
     
-      <category term="n.n" scheme="http://flousfl.github.io/blog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/n-n/"/>
+      <category term="1.3.1-1.3.4数字化信息编码与数据表示" scheme="http://flousfl.github.io/blog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/1-3-1-1-3-4%E6%95%B0%E5%AD%97%E5%8C%96%E4%BF%A1%E6%81%AF%E7%BC%96%E7%A0%81%E4%B8%8E%E6%95%B0%E6%8D%AE%E8%A1%A8%E7%A4%BA/"/>
     
     
   </entry>
