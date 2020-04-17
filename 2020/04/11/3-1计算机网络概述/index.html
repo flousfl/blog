@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="3.1.1计算机网络概念与功能计算机网络所谓计算机网络，是指将地理位置不同，且具有独立功能的多台计算机及其外部设备，通过信息设备和通信线路连接起来，在网络操作系统，网络管理软件，以及网络通信协议等计算机网络存在的主要目的是在于解决计算机之间的数据通信和资源共享计算机网络是一个复杂的软硬件系统，不仅包括计算机、通信设备、通信线路等相关硬件，还需要多种网络软件的密切配合和支持计算机网络主要包括包含网络">
+<meta property="og:type" content="article">
+<meta property="og:title" content="3.1计算机网络概述">
+<meta property="og:url" content="http://flousfl.github.io/blog/2020/04/11/3-1%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0/index.html">
+<meta property="og:site_name" content="flous">
+<meta property="og:description" content="3.1.1计算机网络概念与功能计算机网络所谓计算机网络，是指将地理位置不同，且具有独立功能的多台计算机及其外部设备，通过信息设备和通信线路连接起来，在网络操作系统，网络管理软件，以及网络通信协议等计算机网络存在的主要目的是在于解决计算机之间的数据通信和资源共享计算机网络是一个复杂的软硬件系统，不仅包括计算机、通信设备、通信线路等相关硬件，还需要多种网络软件的密切配合和支持计算机网络主要包括包含网络">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-04-11T08:48:07.000Z">
+<meta property="article:modified_time" content="2020-04-17T11:40:01.396Z">
+<meta property="article:author" content="flous">
+<meta property="article:tag" content="Loading">
+<meta property="article:tag" content="note">
+<meta name="twitter:card" content="summary">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.png">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>3.1计算机网络概述</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+      
+<link rel="stylesheet" href="/css/rtl.css">
+
+    
+    <!-- rss -->
+    
+    
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="flous" type="application/atom+xml">
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/categories/">分类</a></li>
+         
+          <li><a href="/tags/">标签</a></li>
+         
+          <li><a href="/search">搜索</a></li>
+         
+          <li><a href="/links">友链</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2020/04/11/3-2%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1%E6%A6%82%E8%BF%B0/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/2020/04/11/2-4%E8%AE%A1%E7%AE%97%E6%9C%BA%E9%80%89%E8%B4%AD/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="mailto:?subject=3.1计算机网络概述&body=Check out this article: http://flousfl.github.io/blog/2020/04/11/3-1%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <!-- <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://flousfl.github.io/blog/2020/04/11/3-1%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0/" target="_blank" rel="noopener"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://flousfl.github.io/blog/2020/04/11/3-1%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0/&text=3.1计算机网络概述" target="_blank" rel="noopener"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://flousfl.github.io/blog/2020/04/11/3-1%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0/&title=3.1计算机网络概述" target="_blank" rel="noopener"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://flousfl.github.io/blog/2020/04/11/3-1%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0/&is_video=false&description=3.1计算机网络概述" target="_blank" rel="noopener"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://flousfl.github.io/blog/2020/04/11/3-1%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0/&title=3.1计算机网络概述" target="_blank" rel="noopener"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://flousfl.github.io/blog/2020/04/11/3-1%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0/&title=3.1计算机网络概述" target="_blank" rel="noopener"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://flousfl.github.io/blog/2020/04/11/3-1%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0/&title=3.1计算机网络概述" target="_blank" rel="noopener"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://flousfl.github.io/blog/2020/04/11/3-1%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0/&title=3.1计算机网络概述" target="_blank" rel="noopener"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://flousfl.github.io/blog/2020/04/11/3-1%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0/&name=3.1计算机网络概述&description=" target="_blank" rel="noopener"><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=http://flousfl.github.io/blog/2020/04/11/3-1%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0/&t=3.1计算机网络概述" target="_blank" rel="noopener"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li> -->
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#3-1-1计算机网络概念与功能"><span class="toc-number">1.</span> <span class="toc-text">3.1.1计算机网络概念与功能</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#计算机网络"><span class="toc-number">1.1.</span> <span class="toc-text">计算机网络</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#所谓计算机网络，是指将地理位置不同，且具有独立功能的多台计算机及其外部设备，通过信息设备和通信线路连接起来，在网络操作系统，网络管理软件，以及网络通信协议等"><span class="toc-number">1.1.1.</span> <span class="toc-text">所谓计算机网络，是指将地理位置不同，且具有独立功能的多台计算机及其外部设备，通过信息设备和通信线路连接起来，在网络操作系统，网络管理软件，以及网络通信协议等</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#计算机网络存在的主要目的是在于解决计算机之间的数据通信和资源共享"><span class="toc-number">1.1.2.</span> <span class="toc-text">计算机网络存在的主要目的是在于解决计算机之间的数据通信和资源共享</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#计算机网络是一个复杂的软硬件系统，不仅包括计算机、通信设备、通信线路等相关硬件，还需要多种网络软件的密切配合和支持"><span class="toc-number">1.1.3.</span> <span class="toc-text">计算机网络是一个复杂的软硬件系统，不仅包括计算机、通信设备、通信线路等相关硬件，还需要多种网络软件的密切配合和支持</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#计算机网络主要包括包含网络连接对象（即元件、网络传输介质、网络连接的控制机制）和网络的方式和结构四个部分"><span class="toc-number">1.1.4.</span> <span class="toc-text">计算机网络主要包括包含网络连接对象（即元件、网络传输介质、网络连接的控制机制）和网络的方式和结构四个部分</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#计算机网络的主要功能和作用"><span class="toc-number">1.2.</span> <span class="toc-text">计算机网络的主要功能和作用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#数据通信"><span class="toc-number">1.2.1.</span> <span class="toc-text">数据通信</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#资源共享"><span class="toc-number">1.2.2.</span> <span class="toc-text">资源共享</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#提高系统可靠性"><span class="toc-number">1.2.3.</span> <span class="toc-text">提高系统可靠性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#分布处理"><span class="toc-number">1.2.4.</span> <span class="toc-text">分布处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#负载平衡"><span class="toc-number">1.2.5.</span> <span class="toc-text">负载平衡</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-1-2计算机网络分类"><span class="toc-number">2.</span> <span class="toc-text">3.1.2计算机网络分类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#按网络分布的地理范围"><span class="toc-number">2.1.</span> <span class="toc-text">按网络分布的地理范围</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#局域网"><span class="toc-number">2.1.1.</span> <span class="toc-text">局域网</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#城域网"><span class="toc-number">2.1.2.</span> <span class="toc-text">城域网</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#广域网"><span class="toc-number">2.1.3.</span> <span class="toc-text">广域网</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#按网络速率与网络带宽"><span class="toc-number">2.2.</span> <span class="toc-text">按网络速率与网络带宽</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#按网络传输速率可以分为高速网和低速网"><span class="toc-number">2.2.1.</span> <span class="toc-text">按网络传输速率可以分为高速网和低速网</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在每秒几兆比特至每秒几比特范围的网络称为高速网络。"><span class="toc-number">2.2.2.</span> <span class="toc-text">在每秒几兆比特至每秒几比特范围的网络称为高速网络。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#也可将传输速率在每秒几千比特的网络称为低速网"><span class="toc-number">2.2.3.</span> <span class="toc-text">也可将传输速率在每秒几千比特的网络称为低速网</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-1-3计算机网络组成"><span class="toc-number">3.</span> <span class="toc-text">3.1.3计算机网络组成</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#网络软件系统"><span class="toc-number">3.1.</span> <span class="toc-text">网络软件系统</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#网络软件系统包括网络操作系统，通信软件，网络协议，和网络应用软件"><span class="toc-number">3.1.1.</span> <span class="toc-text">网络软件系统包括网络操作系统，通信软件，网络协议，和网络应用软件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#网络操作系统运行与服务器上，除了具有一般操作系统的处理器管理，存储器管理，设备管理和文件管理外，还需具备以下两大功能，一是提供高效、可靠的网络通信功能，以实现计算机之间高效可靠的通信；二是为网上用户提供多种网络服务功能，如文件传输服务功能、电子邮件服务功能、远程打印服务功能等"><span class="toc-number">3.1.2.</span> <span class="toc-text">网络操作系统运行与服务器上，除了具有一般操作系统的处理器管理，存储器管理，设备管理和文件管理外，还需具备以下两大功能，一是提供高效、可靠的网络通信功能，以实现计算机之间高效可靠的通信；二是为网上用户提供多种网络服务功能，如文件传输服务功能、电子邮件服务功能、远程打印服务功能等</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#目前常用的网络操作系统"><span class="toc-number">3.1.3.</span> <span class="toc-text">目前常用的网络操作系统</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#通信软件"><span class="toc-number">3.2.</span> <span class="toc-text">通信软件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#通信软件是用以监督和控制通信工作的软件，它不仅是计算机网络软件遵守的规则集合，简而言之，是为进行网络数据交换而建立的规则，标准或约定，是网络软件系统的重要组成部分"><span class="toc-number">3.2.1.</span> <span class="toc-text">通信软件是用以监督和控制通信工作的软件，它不仅是计算机网络软件遵守的规则集合，简而言之，是为进行网络数据交换而建立的规则，标准或约定，是网络软件系统的重要组成部分</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网络协议"><span class="toc-number">3.3.</span> <span class="toc-text">网络协议</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一条网络协议至少包括三个基本要素"><span class="toc-number">3.3.1.</span> <span class="toc-text">一条网络协议至少包括三个基本要素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#目前常用的协议有：基于互联网的TCP-IP协议和局域网IEEE-802-X协议"><span class="toc-number">3.3.2.</span> <span class="toc-text">目前常用的协议有：基于互联网的TCP&#x2F;IP协议和局域网IEEE 802.X协议</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TCP-IP协议现已成为网络互连的基本标准，包含两个核心协议：传输控制协议（TCP）和网际协议（IP）"><span class="toc-number">3.3.3.</span> <span class="toc-text">TCP&#x2F;IP协议现已成为网络互连的基本标准，包含两个核心协议：传输控制协议（TCP）和网际协议（IP）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IEEE-802-X协议是以太局域网接入标准协议，其中，IEEE-802-3协议是总线型局域网的标准"><span class="toc-number">3.3.4.</span> <span class="toc-text">IEEE 802.X协议是以太局域网接入标准协议，其中，IEEE 802.3协议是总线型局域网的标准</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#开放系统互联模型"><span class="toc-number">3.4.</span> <span class="toc-text">开放系统互联模型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#计算机网路技术是伴随着各种计算机网络应用的需求而逐渐发展起来的，不同的网络系统有着各自不同的通信方式和内部网络编码。为了使计算机能够在异种网络间实现自由通信和资源共享，国际标准化组织简称ISO-在1981年提出了开放系统互联模型-OSI-这一标准的问世消除了不同网络系统间因协议不同而导致的通信障碍，使得在互联网范围内，不同的网络系统可以不需要转码的转换装置即可实现通信。这其中的“开放”是指任何两个准守参考模型和相关标准的系统能进行连接，而互联则指能够将不同的系统互相连接而实现共享资源，交换信息、分布处理和分布应用等网络应用"><span class="toc-number">3.4.1.</span> <span class="toc-text">计算机网路技术是伴随着各种计算机网络应用的需求而逐渐发展起来的，不同的网络系统有着各自不同的通信方式和内部网络编码。为了使计算机能够在异种网络间实现自由通信和资源共享，国际标准化组织简称ISO 在1981年提出了开放系统互联模型 OSI 这一标准的问世消除了不同网络系统间因协议不同而导致的通信障碍，使得在互联网范围内，不同的网络系统可以不需要转码的转换装置即可实现通信。这其中的“开放”是指任何两个准守参考模型和相关标准的系统能进行连接，而互联则指能够将不同的系统互相连接而实现共享资源，交换信息、分布处理和分布应用等网络应用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#OSI是一个机遇网络协议规范化的网络工作逻辑参考模型"><span class="toc-number">3.4.2.</span> <span class="toc-text">OSI是一个机遇网络协议规范化的网络工作逻辑参考模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#七层模型"><span class="toc-number">3.4.3.</span> <span class="toc-text">七层模型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网络硬件系统"><span class="toc-number">3.5.</span> <span class="toc-text">网络硬件系统</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#网络硬件系统包括"><span class="toc-number">3.5.1.</span> <span class="toc-text">网络硬件系统包括</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#软件实现"><span class="toc-number">3.6.</span> <span class="toc-text">软件实现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#硬件实现"><span class="toc-number">3.7.</span> <span class="toc-text">硬件实现</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-1-4计算机网络拓扑结构"><span class="toc-number">4.</span> <span class="toc-text">3.1.4计算机网络拓扑结构</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#计算机网络拓扑结构"><span class="toc-number">4.1.</span> <span class="toc-text">计算机网络拓扑结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#网络拓扑结构是指在计算机网络中，各通信节点通过制定设备和线路进行相互连接的方法和形式，其核心内容是网络节点之间的连接关系。"><span class="toc-number">4.1.1.</span> <span class="toc-text">网络拓扑结构是指在计算机网络中，各通信节点通过制定设备和线路进行相互连接的方法和形式，其核心内容是网络节点之间的连接关系。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#目前常见的局域网拓扑结构主要有星型，总线型，环形，和网状型。"><span class="toc-number">4.1.2.</span> <span class="toc-text">目前常见的局域网拓扑结构主要有星型，总线型，环形，和网状型。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#广域网采用网状拓扑结构"><span class="toc-number">4.1.3.</span> <span class="toc-text">广域网采用网状拓扑结构</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常见拓扑结构"><span class="toc-number">4.2.</span> <span class="toc-text">常见拓扑结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#星形"><span class="toc-number">4.2.1.</span> <span class="toc-text">星形</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#总线型"><span class="toc-number">4.2.2.</span> <span class="toc-text">总线型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#环型"><span class="toc-number">4.2.3.</span> <span class="toc-text">环型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#网状型"><span class="toc-number">4.2.4.</span> <span class="toc-text">网状型</span></a></li></ol></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <header id="header">
+  <a href="/">
+    
+      
+        <div id="logo" style="background-image: url(/images/avatar.png);"></div>
+      
+    
+  </a>
+  <div id="nav">
+    <ul>
+      <li class="icon">
+        <a href="#"><i class="fas fa-bars fa-2x"></i></a>
+      </li>
+       
+        <li><a href="/">首页</a></li>
+       
+        <li><a href="/archives/">归档</a></li>
+       
+        <li><a href="/categories/">分类</a></li>
+       
+        <li><a href="/tags/">标签</a></li>
+       
+        <li><a href="/search">搜索</a></li>
+       
+        <li><a href="/links">友链</a></li>
+       
+        <li><a href="/about/">关于</a></li>
+      
+    </ul>
+  </div>
+</header>
+<!-- On Large Screen the Sidebar is hard to use, so I add there  -->
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        3.1计算机网络概述
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">flous</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2020-04-11T08:48:07.000Z" itemprop="datePublished">2020-04-11</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a> › <a class="category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/3-1%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0/">3.1计算机网络概述</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/Loading/" rel="tag">Loading</a>, <a class="tag-link" href="/tags/note/" rel="tag">note</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h1 id="3-1-1计算机网络概念与功能"><a href="#3-1-1计算机网络概念与功能" class="headerlink" title="3.1.1计算机网络概念与功能"></a>3.1.1计算机网络概念与功能</h1><h2 id="计算机网络"><a href="#计算机网络" class="headerlink" title="计算机网络"></a>计算机网络</h2><h3 id="所谓计算机网络，是指将地理位置不同，且具有独立功能的多台计算机及其外部设备，通过信息设备和通信线路连接起来，在网络操作系统，网络管理软件，以及网络通信协议等"><a href="#所谓计算机网络，是指将地理位置不同，且具有独立功能的多台计算机及其外部设备，通过信息设备和通信线路连接起来，在网络操作系统，网络管理软件，以及网络通信协议等" class="headerlink" title="所谓计算机网络，是指将地理位置不同，且具有独立功能的多台计算机及其外部设备，通过信息设备和通信线路连接起来，在网络操作系统，网络管理软件，以及网络通信协议等"></a>所谓计算机网络，是指将地理位置不同，且具有独立功能的多台计算机及其外部设备，通过信息设备和通信线路连接起来，在网络操作系统，网络管理软件，以及网络通信协议等</h3><h3 id="计算机网络存在的主要目的是在于解决计算机之间的数据通信和资源共享"><a href="#计算机网络存在的主要目的是在于解决计算机之间的数据通信和资源共享" class="headerlink" title="计算机网络存在的主要目的是在于解决计算机之间的数据通信和资源共享"></a>计算机网络存在的主要目的是在于解决计算机之间的数据通信和资源共享</h3><h3 id="计算机网络是一个复杂的软硬件系统，不仅包括计算机、通信设备、通信线路等相关硬件，还需要多种网络软件的密切配合和支持"><a href="#计算机网络是一个复杂的软硬件系统，不仅包括计算机、通信设备、通信线路等相关硬件，还需要多种网络软件的密切配合和支持" class="headerlink" title="计算机网络是一个复杂的软硬件系统，不仅包括计算机、通信设备、通信线路等相关硬件，还需要多种网络软件的密切配合和支持"></a>计算机网络是一个复杂的软硬件系统，不仅包括计算机、通信设备、通信线路等相关硬件，还需要多种网络软件的密切配合和支持</h3><h3 id="计算机网络主要包括包含网络连接对象（即元件、网络传输介质、网络连接的控制机制）和网络的方式和结构四个部分"><a href="#计算机网络主要包括包含网络连接对象（即元件、网络传输介质、网络连接的控制机制）和网络的方式和结构四个部分" class="headerlink" title="计算机网络主要包括包含网络连接对象（即元件、网络传输介质、网络连接的控制机制）和网络的方式和结构四个部分"></a>计算机网络主要包括包含网络连接对象（即元件、网络传输介质、网络连接的控制机制）和网络的方式和结构四个部分</h3><h2 id="计算机网络的主要功能和作用"><a href="#计算机网络的主要功能和作用" class="headerlink" title="计算机网络的主要功能和作用"></a>计算机网络的主要功能和作用</h2><h3 id="数据通信"><a href="#数据通信" class="headerlink" title="数据通信"></a>数据通信</h3><ul>
+<li>数据通信是</li>
+</ul>
+<h3 id="资源共享"><a href="#资源共享" class="headerlink" title="资源共享"></a>资源共享</h3><ul>
+<li>数据共享</li>
+<li>软件共享</li>
+<li>硬件共享</li>
+</ul>
+<h3 id="提高系统可靠性"><a href="#提高系统可靠性" class="headerlink" title="提高系统可靠性"></a>提高系统可靠性</h3><ul>
+<li>提高计算机系统可靠性主要体现在计算机网络中每台计算机都可以通过计算机网络相互称为后备节点，在某台计算机出现故障后，其他计算机可以立即运行由故障机承担的任务，从而避免系统的瘫痪</li>
+</ul>
+<h3 id="分布处理"><a href="#分布处理" class="headerlink" title="分布处理"></a>分布处理</h3><ul>
+<li>分布处理是指计算机网络中，用户可以合理选择计算机网络内的资源进行相应的数据处理，对于较为复杂的问题，还可以通过算法将任务分给不同的计算机处理，从而达到均衡网络资源的目的。此外，还可以通过算法将任务分给不同计算机处理，从而达到金很网络资源的目的，以并行的方式实现提高性能的运算，也被称为协同式计算机网络计算</li>
+</ul>
+<h3 id="负载平衡"><a href="#负载平衡" class="headerlink" title="负载平衡"></a>负载平衡</h3><ul>
+<li>负载平衡。负载平衡是指在具有分布处理能力的计算机网络中，运行任务被相对均匀的分配给网络上的各台计算机，系统能根据计算机运行负载大小来转移任务，从而实现计算机网络负载的平衡</li>
+</ul>
+<!-- 用来防止源码看晕过去 -->
+<!-- 用来防止源码看晕过去 -->
+<!-- 用来防止源码看晕过去 -->
+<!-- 用来防止源码看晕过去 -->
+<!-- 用来防止源码看晕过去 -->
+<!-- 用来防止源码看晕过去 -->
+<h1 id="3-1-2计算机网络分类"><a href="#3-1-2计算机网络分类" class="headerlink" title="3.1.2计算机网络分类"></a>3.1.2计算机网络分类</h1><h2 id="按网络分布的地理范围"><a href="#按网络分布的地理范围" class="headerlink" title="按网络分布的地理范围"></a>按网络分布的地理范围</h2><h3 id="局域网"><a href="#局域网" class="headerlink" title="局域网"></a>局域网</h3><ul>
+<li>也称局部网，是一种在小范围内实现的计算机网络，其网络分布范围一般在几百米到几十千米</li>
+<li>局域网结构相对简单，接入点通常在几十到几百个之间</li>
+</ul>
+<h3 id="城域网"><a href="#城域网" class="headerlink" title="城域网"></a>城域网</h3><ul>
+<li>也称都市网，通常是在一个城市或地区内部实现的计算机网络，其网络分布范围一般在几十千米到上千米。</li>
+<li>城域网是局域网在地理范围上的延伸，其结构复杂，接入的计算机网络节点数目众多</li>
+</ul>
+<h3 id="广域网"><a href="#广域网" class="headerlink" title="广域网"></a>广域网</h3><ul>
+<li>又称远程网，是一种覆盖范围比城域网更广的网络，可分布在一个省份内、一个国家，连接范围从几百千米到几千千米，可以分布在一个省份内，一个国家，典型的如全球最大的计算机网络，Internet</li>
+</ul>
+<h2 id="按网络速率与网络带宽"><a href="#按网络速率与网络带宽" class="headerlink" title="按网络速率与网络带宽"></a>按网络速率与网络带宽</h2><h3 id="按网络传输速率可以分为高速网和低速网"><a href="#按网络传输速率可以分为高速网和低速网" class="headerlink" title="按网络传输速率可以分为高速网和低速网"></a>按网络传输速率可以分为高速网和低速网</h3><h3 id="在每秒几兆比特至每秒几比特范围的网络称为高速网络。"><a href="#在每秒几兆比特至每秒几比特范围的网络称为高速网络。" class="headerlink" title="在每秒几兆比特至每秒几比特范围的网络称为高速网络。"></a>在每秒几兆比特至每秒几比特范围的网络称为高速网络。</h3><h3 id="也可将传输速率在每秒几千比特的网络称为低速网"><a href="#也可将传输速率在每秒几千比特的网络称为低速网" class="headerlink" title="也可将传输速率在每秒几千比特的网络称为低速网"></a>也可将传输速率在每秒几千比特的网络称为低速网</h3><!-- 用来防止源码看晕过去 -->
+<!-- 用来防止源码看晕过去 -->
+<!-- 用来防止源码看晕过去 -->
+<!-- 用来防止源码看晕过去 -->
+<!-- 用来防止源码看晕过去 -->
+<!-- 用来防止源码看晕过去 -->
+
+<h1 id="3-1-3计算机网络组成"><a href="#3-1-3计算机网络组成" class="headerlink" title="3.1.3计算机网络组成"></a>3.1.3计算机网络组成</h1><h2 id="网络软件系统"><a href="#网络软件系统" class="headerlink" title="网络软件系统"></a>网络软件系统</h2><h3 id="网络软件系统包括网络操作系统，通信软件，网络协议，和网络应用软件"><a href="#网络软件系统包括网络操作系统，通信软件，网络协议，和网络应用软件" class="headerlink" title="网络软件系统包括网络操作系统，通信软件，网络协议，和网络应用软件"></a>网络软件系统包括网络操作系统，通信软件，网络协议，和网络应用软件</h3><h3 id="网络操作系统运行与服务器上，除了具有一般操作系统的处理器管理，存储器管理，设备管理和文件管理外，还需具备以下两大功能，一是提供高效、可靠的网络通信功能，以实现计算机之间高效可靠的通信；二是为网上用户提供多种网络服务功能，如文件传输服务功能、电子邮件服务功能、远程打印服务功能等"><a href="#网络操作系统运行与服务器上，除了具有一般操作系统的处理器管理，存储器管理，设备管理和文件管理外，还需具备以下两大功能，一是提供高效、可靠的网络通信功能，以实现计算机之间高效可靠的通信；二是为网上用户提供多种网络服务功能，如文件传输服务功能、电子邮件服务功能、远程打印服务功能等" class="headerlink" title="网络操作系统运行与服务器上，除了具有一般操作系统的处理器管理，存储器管理，设备管理和文件管理外，还需具备以下两大功能，一是提供高效、可靠的网络通信功能，以实现计算机之间高效可靠的通信；二是为网上用户提供多种网络服务功能，如文件传输服务功能、电子邮件服务功能、远程打印服务功能等"></a>网络操作系统运行与服务器上，除了具有一般操作系统的处理器管理，存储器管理，设备管理和文件管理外，还需具备以下两大功能，一是提供高效、可靠的网络通信功能，以实现计算机之间高效可靠的通信；二是为网上用户提供多种网络服务功能，如文件传输服务功能、电子邮件服务功能、远程打印服务功能等</h3><h3 id="目前常用的网络操作系统"><a href="#目前常用的网络操作系统" class="headerlink" title="目前常用的网络操作系统"></a>目前常用的网络操作系统</h3><ul>
+<li><p>Windows 系列</p>
+<ul>
+<li>由微软公司研发的网络操作系统主要有 Windows NT Server Windows 2000 Server /advance Windows 2003 Server 等</li>
+</ul>
+</li>
+<li><p>Unix 系列</p>
+<ul>
+<li>是一个强大的支持多用户，多任务，的网络操作系统。他支持多种处理器架构，属于分时操作系统，通常应用于大型企业，单位的局域网中</li>
+</ul>
+</li>
+<li><p>Linux 系列</p>
+<ul>
+<li>是一种类似UNIXb并基于源代码开放的网络操作系统。改系统已成为世界上使用最多的一种UNIX类操作系统，Linux是一款免费的操作系统，用户可以通过网络或其他途径免费获得，并可以任意修改其源代码。目前使用较广的Linux发型版本有RED hat fodora bebian ubyntu  红旗linux 等</li>
+</ul>
+</li>
+</ul>
+<h2 id="通信软件"><a href="#通信软件" class="headerlink" title="通信软件"></a>通信软件</h2><h3 id="通信软件是用以监督和控制通信工作的软件，它不仅是计算机网络软件遵守的规则集合，简而言之，是为进行网络数据交换而建立的规则，标准或约定，是网络软件系统的重要组成部分"><a href="#通信软件是用以监督和控制通信工作的软件，它不仅是计算机网络软件遵守的规则集合，简而言之，是为进行网络数据交换而建立的规则，标准或约定，是网络软件系统的重要组成部分" class="headerlink" title="通信软件是用以监督和控制通信工作的软件，它不仅是计算机网络软件遵守的规则集合，简而言之，是为进行网络数据交换而建立的规则，标准或约定，是网络软件系统的重要组成部分"></a>通信软件是用以监督和控制通信工作的软件，它不仅是计算机网络软件遵守的规则集合，简而言之，是为进行网络数据交换而建立的规则，标准或约定，是网络软件系统的重要组成部分</h3><h2 id="网络协议"><a href="#网络协议" class="headerlink" title="网络协议"></a>网络协议</h2><h3 id="一条网络协议至少包括三个基本要素"><a href="#一条网络协议至少包括三个基本要素" class="headerlink" title="一条网络协议至少包括三个基本要素"></a>一条网络协议至少包括三个基本要素</h3><ul>
+<li><p>语法</p>
+<ul>
+<li>约定数据与控制信息的结构和格式</li>
+</ul>
+</li>
+<li><p>语义</p>
+<ul>
+<li>用以说明通信双方如何操作，及应答方式</li>
+</ul>
+</li>
+<li><p>时序</p>
+<ul>
+<li>用以详细说明事件实现的先后顺序</li>
+</ul>
+</li>
+</ul>
+<h3 id="目前常用的协议有：基于互联网的TCP-IP协议和局域网IEEE-802-X协议"><a href="#目前常用的协议有：基于互联网的TCP-IP协议和局域网IEEE-802-X协议" class="headerlink" title="目前常用的协议有：基于互联网的TCP/IP协议和局域网IEEE 802.X协议"></a>目前常用的协议有：基于互联网的TCP/IP协议和局域网IEEE 802.X协议</h3><h3 id="TCP-IP协议现已成为网络互连的基本标准，包含两个核心协议：传输控制协议（TCP）和网际协议（IP）"><a href="#TCP-IP协议现已成为网络互连的基本标准，包含两个核心协议：传输控制协议（TCP）和网际协议（IP）" class="headerlink" title="TCP/IP协议现已成为网络互连的基本标准，包含两个核心协议：传输控制协议（TCP）和网际协议（IP）"></a>TCP/IP协议现已成为网络互连的基本标准，包含两个核心协议：传输控制协议（TCP）和网际协议（IP）</h3><h3 id="IEEE-802-X协议是以太局域网接入标准协议，其中，IEEE-802-3协议是总线型局域网的标准"><a href="#IEEE-802-X协议是以太局域网接入标准协议，其中，IEEE-802-3协议是总线型局域网的标准" class="headerlink" title="IEEE 802.X协议是以太局域网接入标准协议，其中，IEEE 802.3协议是总线型局域网的标准"></a>IEEE 802.X协议是以太局域网接入标准协议，其中，IEEE 802.3协议是总线型局域网的标准</h3><h2 id="开放系统互联模型"><a href="#开放系统互联模型" class="headerlink" title="开放系统互联模型"></a>开放系统互联模型</h2><h3 id="计算机网路技术是伴随着各种计算机网络应用的需求而逐渐发展起来的，不同的网络系统有着各自不同的通信方式和内部网络编码。为了使计算机能够在异种网络间实现自由通信和资源共享，国际标准化组织简称ISO-在1981年提出了开放系统互联模型-OSI-这一标准的问世消除了不同网络系统间因协议不同而导致的通信障碍，使得在互联网范围内，不同的网络系统可以不需要转码的转换装置即可实现通信。这其中的“开放”是指任何两个准守参考模型和相关标准的系统能进行连接，而互联则指能够将不同的系统互相连接而实现共享资源，交换信息、分布处理和分布应用等网络应用"><a href="#计算机网路技术是伴随着各种计算机网络应用的需求而逐渐发展起来的，不同的网络系统有着各自不同的通信方式和内部网络编码。为了使计算机能够在异种网络间实现自由通信和资源共享，国际标准化组织简称ISO-在1981年提出了开放系统互联模型-OSI-这一标准的问世消除了不同网络系统间因协议不同而导致的通信障碍，使得在互联网范围内，不同的网络系统可以不需要转码的转换装置即可实现通信。这其中的“开放”是指任何两个准守参考模型和相关标准的系统能进行连接，而互联则指能够将不同的系统互相连接而实现共享资源，交换信息、分布处理和分布应用等网络应用" class="headerlink" title="计算机网路技术是伴随着各种计算机网络应用的需求而逐渐发展起来的，不同的网络系统有着各自不同的通信方式和内部网络编码。为了使计算机能够在异种网络间实现自由通信和资源共享，国际标准化组织简称ISO 在1981年提出了开放系统互联模型 OSI 这一标准的问世消除了不同网络系统间因协议不同而导致的通信障碍，使得在互联网范围内，不同的网络系统可以不需要转码的转换装置即可实现通信。这其中的“开放”是指任何两个准守参考模型和相关标准的系统能进行连接，而互联则指能够将不同的系统互相连接而实现共享资源，交换信息、分布处理和分布应用等网络应用"></a>计算机网路技术是伴随着各种计算机网络应用的需求而逐渐发展起来的，不同的网络系统有着各自不同的通信方式和内部网络编码。为了使计算机能够在异种网络间实现自由通信和资源共享，国际标准化组织简称ISO 在1981年提出了开放系统互联模型 OSI 这一标准的问世消除了不同网络系统间因协议不同而导致的通信障碍，使得在互联网范围内，不同的网络系统可以不需要转码的转换装置即可实现通信。这其中的“开放”是指任何两个准守参考模型和相关标准的系统能进行连接，而互联则指能够将不同的系统互相连接而实现共享资源，交换信息、分布处理和分布应用等网络应用</h3><h3 id="OSI是一个机遇网络协议规范化的网络工作逻辑参考模型"><a href="#OSI是一个机遇网络协议规范化的网络工作逻辑参考模型" class="headerlink" title="OSI是一个机遇网络协议规范化的网络工作逻辑参考模型"></a>OSI是一个机遇网络协议规范化的网络工作逻辑参考模型</h3><h3 id="七层模型"><a href="#七层模型" class="headerlink" title="七层模型"></a>七层模型</h3><ul>
+<li><p>应用层</p>
+<ul>
+<li><p>主要功能是保持应用程序之间建立连接所需的记录，包含大量用于现实文件传输，电子邮件收发，远程登录以及其他各种软件应用的协议</p>
+</li>
+<li><p>简而言之，应用陈层主要是实现以下终端服务的应用，如文件上传下载，网页浏览，及时通信等</p>
+</li>
+<li><p>常见协议</p>
+<ul>
+<li>FTP</li>
+<li>DNS</li>
+<li>SMTP</li>
+<li>HTTP</li>
+<li>NFS</li>
+<li>Telnet</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>表示层</p>
+<ul>
+<li>主要功能是为了让采用不同表示方法的计算机之间能够通信</li>
+<li>简而言之，表示层主要是对接收的数据进行解释或恢复，如数据编码，数据的加密与解密，数据压缩与恢复等</li>
+</ul>
+</li>
+<li><p>会话层</p>
+<ul>
+<li>主要负责两个会话进程之间的通信。会话层让不同计算机上用户建立起会话关系，并对会话进行管理。会话层允许信息同时双向传输，或任意时刻只能单向传输。</li>
+<li>简而言之，会话层主要在系统之间发起会话或接受会话请求，这一会话可以基于IP地址，也可以是MAC或是主机名</li>
+</ul>
+</li>
+<li><p>传输层</p>
+<ul>
+<li><p>从会话层接收数据，并在必要时把它分解为较小的单元，传递给网络层</p>
+</li>
+<li><p>简而言之，传输层定义了数据传输的协议和端口号，如TCP协议，UDP协议，万维网WWW端口80等，并将从下层接收的数据进行分段传输，在达到目的地址后进行重组。在这一层，数据可视为段</p>
+</li>
+<li><p>常见协议</p>
+<ul>
+<li>TCP协议</li>
+<li>UDP协议</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>网络层</p>
+<ul>
+<li><p>主要功能是实现路由的选择，阻塞控制，以及异种网络的互联，</p>
+</li>
+<li><p>简而言之，网络层主要是将接收到的数据进行IP地址的封装与解封装。在这一层数据可视为数据包，路由器，二层交换机、三层交换机工作于此</p>
+</li>
+<li><p>常见协议</p>
+<ul>
+<li>IP协议</li>
+<li>ICMP协议</li>
+<li>ARP协议</li>
+<li>RARP协议</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>数据链路层</p>
+<ul>
+<li>是OSI的第二层，主要功能是在两台主机间建立数据连接，向物理层传输数据信号，并使之对网络层呈现为一条无差错传输线路。</li>
+<li>在数据链路层还需实现流量控制，解决在双向传输数据时的收发双方数据帧竞争线路使用权问题以及解决广播式网络的共享信道访问的问题</li>
+<li>简而言之，就是将接收的数据进行MAC地址（网卡地址）的封装或解封装，在数据链路层，数据可视为帧，网桥，二层交换机工作与此</li>
+</ul>
+</li>
+<li><p>物理层</p>
+<ul>
+<li>是OSI的第一层，也是最底层，主要功能是定义了网络的物理结构、传输的电磁标准、比特流的编码及网络的时间原则，如网线的接口类型、光纤的接口类型、各种传输介质的传输速率等，以实现比特流的传输（通过电流变换来传输数据，即模数转换与数模转换）</li>
+<li>简而言之，就是针对信号的实际物理传输设计相应的接口标准。在物理层，数据以比特流的形式存在</li>
+</ul>
+</li>
+</ul>
+<h2 id="网络硬件系统"><a href="#网络硬件系统" class="headerlink" title="网络硬件系统"></a>网络硬件系统</h2><h3 id="网络硬件系统包括"><a href="#网络硬件系统包括" class="headerlink" title="网络硬件系统包括"></a>网络硬件系统包括</h3><ul>
+<li><p>网络服务器</p>
+<ul>
+<li>是向网络内工作站提供各类服务的计算机，是网络的核心。其最主要的作用是运行网络操作系统，同时存储，管理，网络郑的共享资源，并具有对各工作站的程序服务和监控功能，网络服务器具有速度快，容量大，可靠性高的特点</li>
+</ul>
+</li>
+<li><p>网络工作站</p>
+<ul>
+<li>是用户和网络的接口设备</li>
+<li>可称为客户机</li>
+<li>通过网卡，通信介质以及通信设备连接到网络服务器，实现网络的访问和资源的获取</li>
+</ul>
+</li>
+<li><p>网络传输介质</p>
+<ul>
+<li><p>是指在网络中传输信息的载体，作用是形成通信网络中发送方和接收方之间的一条物理通信线路</p>
+</li>
+<li><p>有线</p>
+<ul>
+<li><p>双绞线</p>
+<ul>
+<li><p>是由两根相互绝缘的导线按照一定规格螺旋状缠绕而排列在一起的一种通用配线。</p>
+</li>
+<li><p>双绞线可分为屏蔽双绞线（STP）和非屏蔽双绞线（UTP）</p>
+<ul>
+<li>非屏蔽双绞线抗电磁干扰能力弱，但具有节省空间，成本低，重量轻，易弯曲，易安装可以同时传输模拟信号和数字信号的有点，其传输距离一般为100米</li>
+</ul>
+</li>
+<li><p>按粗细与直径规格可分为一类线至七类线，其中五类线最高传输率可达到100Mbps至1000Mbps,广泛应用于百兆和千兆以太网连接</p>
+</li>
+</ul>
+</li>
+<li><p>同轴电缆</p>
+<ul>
+<li><p>由两根轴心，相互绝缘的圆柱形金属导体构成的基本单元（同轴对），再由单个或多个同轴对组成的电缆</p>
+</li>
+<li><p>从里到外一共有四层</p>
+<ul>
+<li>中心铜线</li>
+<li>塑料绝缘体</li>
+<li>网状导电层</li>
+<li>外层绝缘材料</li>
+</ul>
+</li>
+<li><p>常用的同轴电缆有两类</p>
+<ul>
+<li><p>基带同轴电缆</p>
+<ul>
+<li>一般为细缆，阻抗为50欧</li>
+<li>用于数字传输，传输带宽为1~20MHz</li>
+<li>最大传输距离为180M</li>
+<li>要与50欧的T形连接器配合使用</li>
+</ul>
+</li>
+<li><p>宽带同轴电缆</p>
+<ul>
+<li>一般为粗缆</li>
+<li>其阻抗为75欧</li>
+<li>适用于模拟传输，常用语CATV网（有线电视网）</li>
+<li>最大传输距离可达2000米以上</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>光缆</p>
+<ul>
+<li>光缆是由光导纤维（光纤）缆芯、包层、吸收外壳和保护层四部分组成，外层是一层折射率较低的材料，按光在纤维中的传输模式，光纤可分单模光纤和多模光纤，单模光纤只能传送一种模式的光，有效传输距离可达数十千米</li>
+<li>多模光纤容许不同模式的光在一根光纤上传输，在千兆网中，多模光纤最高可支持550米的传输距离，在百以太网中，多模光纤最高可支持2000米的传输距离</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>无线</p>
+<ul>
+<li>红外线</li>
+<li>微波</li>
+<li>卫星通信</li>
+<li>激光信道</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>网络设备</p>
+<ul>
+<li><p>网络适配器</p>
+<ul>
+<li><p>也称网络接口卡或网卡</p>
+</li>
+<li><p>是连接计算机与网络的硬件接口设备，网卡主要功能在于实现数据的封装与解封装，即将来自于本机的数据封装为数据包并向网络转发，</p>
+</li>
+<li><p>每一块网卡在出厂时都会为其分配唯一一个物理地址</p>
+</li>
+<li><p>按网卡支持的总线接口</p>
+<ul>
+<li>ISA网卡</li>
+<li>EISA网卡</li>
+<li>PIC网卡</li>
+<li>USB网卡</li>
+</ul>
+</li>
+<li><p>按网卡的传输介质</p>
+<ul>
+<li>RJ45网卡</li>
+<li>BNC网卡</li>
+<li>AUI网卡</li>
+</ul>
+</li>
+<li><p>按网卡的速度</p>
+<ul>
+<li>10Mbps</li>
+<li>100Mbps</li>
+<li>10/100Mbps</li>
+<li>1000Mbps</li>
+<li>10000Mbps</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>中继器</p>
+<ul>
+<li>也称集中器，工作与物理层，是两个网络节点之间进行物理信号双向转发的网络互连设备，他的主要作用是通过对传输信号的整形与放大，来避免干线上传输信号因衰减而失真，从而延长信号灯传输距离，扩展局域网的连接范围</li>
+</ul>
+</li>
+<li><p>集线器</p>
+<ul>
+<li>又称网络转发器，是一种作为网络中暑连接各类节点，从而形成星形结构的一种网络设备，集线器的主要功能是对来自网络的信号进行再生，整形和放大，以扩大网络的传输距离，并把所有的节点连接起来，集线器的工作原理类似于中继器，工作在物理层</li>
+</ul>
+</li>
+<li><p>交换机</p>
+<ul>
+<li>可以为接入交换机的任意两个网络节点提供独享的店信号线路，</li>
+</ul>
+</li>
+<li><p>路由器</p>
+<ul>
+<li>工作与网络层，要求网络层以上的高层协议相同或兼容，用以实现不同类型的局域网互联，或实现局域网与广域网的互联。路由器可以实现网络层以下各各层协议的转换，除了具备网桥全部功能外，还有路由选择功能</li>
+</ul>
+</li>
+<li><p>网关</p>
+<ul>
+<li>网关，又称为网间连接器、网间协议转换器，工作与OSI的多个层面，（传输层，会话层，表示层，应用层）</li>
+<li>用于提供协议转换，路由选择，数据交换等网络兼容共的网络互连设备</li>
+<li>用于提供协议转换，路由选择，数据交换等网络网络兼容的网络互连设备。网关基层了路由器的全部功能，同时还提供协议之间的转换，既可以用于广域网互连，也可以用于局域网互联</li>
+</ul>
+</li>
+<li><p>网桥</p>
+<ul>
+<li>工作在数据链路层，实现多个网络协议相同或兼容的网络协议，其主要作用是将网络内多个网段加以连接，并对网络数据的流通进行过滤，转发隔离等操作者，从而调高网络的性能、可靠性和安全性</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="软件实现"><a href="#软件实现" class="headerlink" title="软件实现"></a>软件实现</h2><h2 id="硬件实现"><a href="#硬件实现" class="headerlink" title="硬件实现"></a>硬件实现</h2><!-- 用来防止源码看晕过去 -->
+<!-- 用来防止源码看晕过去 -->
+<!-- 用来防止源码看晕过去 -->
+<!-- 用来防止源码看晕过去 -->
+<!-- 用来防止源码看晕过去 -->
+<!-- 用来防止源码看晕过去 -->
+
+<h1 id="3-1-4计算机网络拓扑结构"><a href="#3-1-4计算机网络拓扑结构" class="headerlink" title="3.1.4计算机网络拓扑结构"></a>3.1.4计算机网络拓扑结构</h1><h2 id="计算机网络拓扑结构"><a href="#计算机网络拓扑结构" class="headerlink" title="计算机网络拓扑结构"></a>计算机网络拓扑结构</h2><h3 id="网络拓扑结构是指在计算机网络中，各通信节点通过制定设备和线路进行相互连接的方法和形式，其核心内容是网络节点之间的连接关系。"><a href="#网络拓扑结构是指在计算机网络中，各通信节点通过制定设备和线路进行相互连接的方法和形式，其核心内容是网络节点之间的连接关系。" class="headerlink" title="网络拓扑结构是指在计算机网络中，各通信节点通过制定设备和线路进行相互连接的方法和形式，其核心内容是网络节点之间的连接关系。"></a>网络拓扑结构是指在计算机网络中，各通信节点通过制定设备和线路进行相互连接的方法和形式，其核心内容是网络节点之间的连接关系。</h3><h3 id="目前常见的局域网拓扑结构主要有星型，总线型，环形，和网状型。"><a href="#目前常见的局域网拓扑结构主要有星型，总线型，环形，和网状型。" class="headerlink" title="目前常见的局域网拓扑结构主要有星型，总线型，环形，和网状型。"></a>目前常见的局域网拓扑结构主要有星型，总线型，环形，和网状型。</h3><h3 id="广域网采用网状拓扑结构"><a href="#广域网采用网状拓扑结构" class="headerlink" title="广域网采用网状拓扑结构"></a>广域网采用网状拓扑结构</h3><h2 id="常见拓扑结构"><a href="#常见拓扑结构" class="headerlink" title="常见拓扑结构"></a>常见拓扑结构</h2><h3 id="星形"><a href="#星形" class="headerlink" title="星形"></a>星形</h3><ul>
+<li><p>由中央节点和通过点到点的链路连接到中央节点的各节点组成。他是以中央节点为中心，把若干外围节点连接起来的辐射式互联结构，很使用于局域网连接</p>
+</li>
+<li><p>优点</p>
+<ul>
+<li>便于节点、设备的添加或删减</li>
+<li>由于每个接入点只连接一个设备，当某个节点出现故障时，不影响整个网络的运行</li>
+</ul>
+</li>
+<li><p>缺点</p>
+<ul>
+<li>以中央节点为中心，将导致中央节点发生故障时整个网络不能运行</li>
+</ul>
+</li>
+</ul>
+<h3 id="总线型"><a href="#总线型" class="headerlink" title="总线型"></a>总线型</h3><ul>
+<li><p>以一根公用通信线路为传输介质，所有网络节点均通过相应接口直接连接到腾通信线路，这根所有节点通信公用的传输线路被称为总线。在局域网中，总线一般采用同轴电缆或双绞线</p>
+</li>
+<li><p>优点</p>
+<ul>
+<li>通信线路的长度较短，易于安装和部线</li>
+<li>由于各个节点共用一条总线作为数据通路，信道利用率高</li>
+<li>便于扩充或删除节点</li>
+</ul>
+</li>
+<li><p>缺点</p>
+<ul>
+<li>网络故障较难诊断</li>
+<li>总线长度和接入点数均有一定限制</li>
+</ul>
+</li>
+</ul>
+<h3 id="环型"><a href="#环型" class="headerlink" title="环型"></a>环型</h3><ul>
+<li><p>优点</p>
+<ul>
+<li>每个节点的通信地位均平等</li>
+<li>容易实现远距离的高速数据传送</li>
+<li>电缆故障容易查找和排除</li>
+</ul>
+</li>
+<li><p>缺点</p>
+<ul>
+<li>通信线路闭合的环结构使节点不易扩充</li>
+<li>可靠性差，环路断开将导致整个网络不能工作</li>
+</ul>
+</li>
+</ul>
+<h3 id="网状型"><a href="#网状型" class="headerlink" title="网状型"></a>网状型</h3><ul>
+<li><p>优点</p>
+<ul>
+<li>节点间的多链路连接增强了网络连接的可靠性</li>
+<li>部分节点或单条线路故障不影响全网运行</li>
+</ul>
+</li>
+<li><p>缺点</p>
+<ul>
+<li>复杂而庞大的网状结构需要较高的建设和运行费用</li>
+<li>网状型拓扑结构的路径控制复杂，增加了算法设计难度</li>
+<li>子主题 3</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+</article>
+<!-- 评论区域 -->
+<!-- 
+ -->
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/categories/">分类</a></li>
+         
+          <li><a href="/tags/">标签</a></li>
+         
+          <li><a href="/search">搜索</a></li>
+         
+          <li><a href="/links">友链</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#3-1-1计算机网络概念与功能"><span class="toc-number">1.</span> <span class="toc-text">3.1.1计算机网络概念与功能</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#计算机网络"><span class="toc-number">1.1.</span> <span class="toc-text">计算机网络</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#所谓计算机网络，是指将地理位置不同，且具有独立功能的多台计算机及其外部设备，通过信息设备和通信线路连接起来，在网络操作系统，网络管理软件，以及网络通信协议等"><span class="toc-number">1.1.1.</span> <span class="toc-text">所谓计算机网络，是指将地理位置不同，且具有独立功能的多台计算机及其外部设备，通过信息设备和通信线路连接起来，在网络操作系统，网络管理软件，以及网络通信协议等</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#计算机网络存在的主要目的是在于解决计算机之间的数据通信和资源共享"><span class="toc-number">1.1.2.</span> <span class="toc-text">计算机网络存在的主要目的是在于解决计算机之间的数据通信和资源共享</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#计算机网络是一个复杂的软硬件系统，不仅包括计算机、通信设备、通信线路等相关硬件，还需要多种网络软件的密切配合和支持"><span class="toc-number">1.1.3.</span> <span class="toc-text">计算机网络是一个复杂的软硬件系统，不仅包括计算机、通信设备、通信线路等相关硬件，还需要多种网络软件的密切配合和支持</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#计算机网络主要包括包含网络连接对象（即元件、网络传输介质、网络连接的控制机制）和网络的方式和结构四个部分"><span class="toc-number">1.1.4.</span> <span class="toc-text">计算机网络主要包括包含网络连接对象（即元件、网络传输介质、网络连接的控制机制）和网络的方式和结构四个部分</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#计算机网络的主要功能和作用"><span class="toc-number">1.2.</span> <span class="toc-text">计算机网络的主要功能和作用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#数据通信"><span class="toc-number">1.2.1.</span> <span class="toc-text">数据通信</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#资源共享"><span class="toc-number">1.2.2.</span> <span class="toc-text">资源共享</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#提高系统可靠性"><span class="toc-number">1.2.3.</span> <span class="toc-text">提高系统可靠性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#分布处理"><span class="toc-number">1.2.4.</span> <span class="toc-text">分布处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#负载平衡"><span class="toc-number">1.2.5.</span> <span class="toc-text">负载平衡</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-1-2计算机网络分类"><span class="toc-number">2.</span> <span class="toc-text">3.1.2计算机网络分类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#按网络分布的地理范围"><span class="toc-number">2.1.</span> <span class="toc-text">按网络分布的地理范围</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#局域网"><span class="toc-number">2.1.1.</span> <span class="toc-text">局域网</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#城域网"><span class="toc-number">2.1.2.</span> <span class="toc-text">城域网</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#广域网"><span class="toc-number">2.1.3.</span> <span class="toc-text">广域网</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#按网络速率与网络带宽"><span class="toc-number">2.2.</span> <span class="toc-text">按网络速率与网络带宽</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#按网络传输速率可以分为高速网和低速网"><span class="toc-number">2.2.1.</span> <span class="toc-text">按网络传输速率可以分为高速网和低速网</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在每秒几兆比特至每秒几比特范围的网络称为高速网络。"><span class="toc-number">2.2.2.</span> <span class="toc-text">在每秒几兆比特至每秒几比特范围的网络称为高速网络。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#也可将传输速率在每秒几千比特的网络称为低速网"><span class="toc-number">2.2.3.</span> <span class="toc-text">也可将传输速率在每秒几千比特的网络称为低速网</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-1-3计算机网络组成"><span class="toc-number">3.</span> <span class="toc-text">3.1.3计算机网络组成</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#网络软件系统"><span class="toc-number">3.1.</span> <span class="toc-text">网络软件系统</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#网络软件系统包括网络操作系统，通信软件，网络协议，和网络应用软件"><span class="toc-number">3.1.1.</span> <span class="toc-text">网络软件系统包括网络操作系统，通信软件，网络协议，和网络应用软件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#网络操作系统运行与服务器上，除了具有一般操作系统的处理器管理，存储器管理，设备管理和文件管理外，还需具备以下两大功能，一是提供高效、可靠的网络通信功能，以实现计算机之间高效可靠的通信；二是为网上用户提供多种网络服务功能，如文件传输服务功能、电子邮件服务功能、远程打印服务功能等"><span class="toc-number">3.1.2.</span> <span class="toc-text">网络操作系统运行与服务器上，除了具有一般操作系统的处理器管理，存储器管理，设备管理和文件管理外，还需具备以下两大功能，一是提供高效、可靠的网络通信功能，以实现计算机之间高效可靠的通信；二是为网上用户提供多种网络服务功能，如文件传输服务功能、电子邮件服务功能、远程打印服务功能等</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#目前常用的网络操作系统"><span class="toc-number">3.1.3.</span> <span class="toc-text">目前常用的网络操作系统</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#通信软件"><span class="toc-number">3.2.</span> <span class="toc-text">通信软件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#通信软件是用以监督和控制通信工作的软件，它不仅是计算机网络软件遵守的规则集合，简而言之，是为进行网络数据交换而建立的规则，标准或约定，是网络软件系统的重要组成部分"><span class="toc-number">3.2.1.</span> <span class="toc-text">通信软件是用以监督和控制通信工作的软件，它不仅是计算机网络软件遵守的规则集合，简而言之，是为进行网络数据交换而建立的规则，标准或约定，是网络软件系统的重要组成部分</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网络协议"><span class="toc-number">3.3.</span> <span class="toc-text">网络协议</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一条网络协议至少包括三个基本要素"><span class="toc-number">3.3.1.</span> <span class="toc-text">一条网络协议至少包括三个基本要素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#目前常用的协议有：基于互联网的TCP-IP协议和局域网IEEE-802-X协议"><span class="toc-number">3.3.2.</span> <span class="toc-text">目前常用的协议有：基于互联网的TCP&#x2F;IP协议和局域网IEEE 802.X协议</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TCP-IP协议现已成为网络互连的基本标准，包含两个核心协议：传输控制协议（TCP）和网际协议（IP）"><span class="toc-number">3.3.3.</span> <span class="toc-text">TCP&#x2F;IP协议现已成为网络互连的基本标准，包含两个核心协议：传输控制协议（TCP）和网际协议（IP）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IEEE-802-X协议是以太局域网接入标准协议，其中，IEEE-802-3协议是总线型局域网的标准"><span class="toc-number">3.3.4.</span> <span class="toc-text">IEEE 802.X协议是以太局域网接入标准协议，其中，IEEE 802.3协议是总线型局域网的标准</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#开放系统互联模型"><span class="toc-number">3.4.</span> <span class="toc-text">开放系统互联模型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#计算机网路技术是伴随着各种计算机网络应用的需求而逐渐发展起来的，不同的网络系统有着各自不同的通信方式和内部网络编码。为了使计算机能够在异种网络间实现自由通信和资源共享，国际标准化组织简称ISO-在1981年提出了开放系统互联模型-OSI-这一标准的问世消除了不同网络系统间因协议不同而导致的通信障碍，使得在互联网范围内，不同的网络系统可以不需要转码的转换装置即可实现通信。这其中的“开放”是指任何两个准守参考模型和相关标准的系统能进行连接，而互联则指能够将不同的系统互相连接而实现共享资源，交换信息、分布处理和分布应用等网络应用"><span class="toc-number">3.4.1.</span> <span class="toc-text">计算机网路技术是伴随着各种计算机网络应用的需求而逐渐发展起来的，不同的网络系统有着各自不同的通信方式和内部网络编码。为了使计算机能够在异种网络间实现自由通信和资源共享，国际标准化组织简称ISO 在1981年提出了开放系统互联模型 OSI 这一标准的问世消除了不同网络系统间因协议不同而导致的通信障碍，使得在互联网范围内，不同的网络系统可以不需要转码的转换装置即可实现通信。这其中的“开放”是指任何两个准守参考模型和相关标准的系统能进行连接，而互联则指能够将不同的系统互相连接而实现共享资源，交换信息、分布处理和分布应用等网络应用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#OSI是一个机遇网络协议规范化的网络工作逻辑参考模型"><span class="toc-number">3.4.2.</span> <span class="toc-text">OSI是一个机遇网络协议规范化的网络工作逻辑参考模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#七层模型"><span class="toc-number">3.4.3.</span> <span class="toc-text">七层模型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网络硬件系统"><span class="toc-number">3.5.</span> <span class="toc-text">网络硬件系统</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#网络硬件系统包括"><span class="toc-number">3.5.1.</span> <span class="toc-text">网络硬件系统包括</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#软件实现"><span class="toc-number">3.6.</span> <span class="toc-text">软件实现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#硬件实现"><span class="toc-number">3.7.</span> <span class="toc-text">硬件实现</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-1-4计算机网络拓扑结构"><span class="toc-number">4.</span> <span class="toc-text">3.1.4计算机网络拓扑结构</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#计算机网络拓扑结构"><span class="toc-number">4.1.</span> <span class="toc-text">计算机网络拓扑结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#网络拓扑结构是指在计算机网络中，各通信节点通过制定设备和线路进行相互连接的方法和形式，其核心内容是网络节点之间的连接关系。"><span class="toc-number">4.1.1.</span> <span class="toc-text">网络拓扑结构是指在计算机网络中，各通信节点通过制定设备和线路进行相互连接的方法和形式，其核心内容是网络节点之间的连接关系。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#目前常见的局域网拓扑结构主要有星型，总线型，环形，和网状型。"><span class="toc-number">4.1.2.</span> <span class="toc-text">目前常见的局域网拓扑结构主要有星型，总线型，环形，和网状型。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#广域网采用网状拓扑结构"><span class="toc-number">4.1.3.</span> <span class="toc-text">广域网采用网状拓扑结构</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常见拓扑结构"><span class="toc-number">4.2.</span> <span class="toc-text">常见拓扑结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#星形"><span class="toc-number">4.2.1.</span> <span class="toc-text">星形</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#总线型"><span class="toc-number">4.2.2.</span> <span class="toc-text">总线型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#环型"><span class="toc-number">4.2.3.</span> <span class="toc-text">环型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#网状型"><span class="toc-number">4.2.4.</span> <span class="toc-text">网状型</span></a></li></ol></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="mailto:?subject=3.1计算机网络概述&body=Check out this article: http://flousfl.github.io/blog/2020/04/11/3-1%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <!-- <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://flousfl.github.io/blog/2020/04/11/3-1%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0/" target="_blank" rel="noopener"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://flousfl.github.io/blog/2020/04/11/3-1%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0/&text=3.1计算机网络概述" target="_blank" rel="noopener"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://flousfl.github.io/blog/2020/04/11/3-1%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0/&title=3.1计算机网络概述" target="_blank" rel="noopener"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://flousfl.github.io/blog/2020/04/11/3-1%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0/&is_video=false&description=3.1计算机网络概述" target="_blank" rel="noopener"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://flousfl.github.io/blog/2020/04/11/3-1%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0/&title=3.1计算机网络概述" target="_blank" rel="noopener"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://flousfl.github.io/blog/2020/04/11/3-1%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0/&title=3.1计算机网络概述" target="_blank" rel="noopener"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://flousfl.github.io/blog/2020/04/11/3-1%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0/&title=3.1计算机网络概述" target="_blank" rel="noopener"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://flousfl.github.io/blog/2020/04/11/3-1%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0/&title=3.1计算机网络概述" target="_blank" rel="noopener"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://flousfl.github.io/blog/2020/04/11/3-1%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0/&name=3.1计算机网络概述&description=" target="_blank" rel="noopener"><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=http://flousfl.github.io/blog/2020/04/11/3-1%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0/&t=3.1计算机网络概述" target="_blank" rel="noopener"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li> -->
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2019-2020
+    flous
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/categories/">分类</a></li>
+         
+          <li><a href="/tags/">标签</a></li>
+         
+          <li><a href="/search">搜索</a></li>
+         
+          <li><a href="/links">友链</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+  
+    <script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'></script>
+    <script>
+      if (window.mermaid) {
+        mermaid.initialize({theme: 'forest'});
+      }
+    </script>
+  
+</footer>
+
+    </div>
+    <!-- styles -->
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+
+    <!-- jquery -->
+
+<script src="/lib/jquery/jquery.min.js"></script>
+
+
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+
+<!-- clipboard -->
+
+  
+<script src="/lib/clipboard/clipboard.min.js"></script>
+
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
