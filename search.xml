@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>一次VirtualBox上的Arch经历</title>
+      <link href="/2020/04/18/%E4%B8%80%E6%AC%A1VirtualBox%E4%B8%8A%E7%9A%84Arch%E7%BB%8F%E5%8E%86/"/>
+      <url>/2020/04/18/%E4%B8%80%E6%AC%A1VirtualBox%E4%B8%8A%E7%9A%84Arch%E7%BB%8F%E5%8E%86/</url>
+      
+        <content type="html"><![CDATA[<!-- 上面是跳链区域 --><!-- 下面是正文区域 --><h1 id="在-VirtualBox-上安装-ArchLinux"><a href="#在-VirtualBox-上安装-ArchLinux" class="headerlink" title="在 VirtualBox 上安装 ArchLinux"></a>在 <a href="https://www.virtualbox.org/" target="_blank" rel="noopener">VirtualBox</a> 上安装 <a href="https://www.archlinux.org/" target="_blank" rel="noopener">ArchLinux</a></h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> 日志 </category>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>3.4网页基本元素</title>
       <link href="/2020/04/11/3-4%E7%BD%91%E9%A1%B5%E5%9F%BA%E6%9C%AC%E5%85%83%E7%B4%A0/"/>
       <url>/2020/04/11/3-4%E7%BD%91%E9%A1%B5%E5%9F%BA%E6%9C%AC%E5%85%83%E7%B4%A0/</url>
@@ -423,7 +450,7 @@
     
     
     <entry>
-      <title>一次惨痛的Linux全盘经历</title>
+      <title>一次惨痛的Linux全盘经历（物理机）</title>
       <link href="/2020/04/07/%E4%B8%80%E6%AC%A1%E6%83%A8%E7%97%9B%E7%9A%84Linux%E5%85%A8%E7%9B%98%E7%BB%8F%E5%8E%86/"/>
       <url>/2020/04/07/%E4%B8%80%E6%AC%A1%E6%83%A8%E7%97%9B%E7%9A%84Linux%E5%85%A8%E7%9B%98%E7%BB%8F%E5%8E%86/</url>
       
