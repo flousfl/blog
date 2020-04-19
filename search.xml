@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>Markdown 的学习笔记</title>
+      <link href="/2020/04/19/Markdown%20%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <url>/2020/04/19/Markdown%20%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+      
+        <content type="html"><![CDATA[<h1 id="折叠文本"><a href="#折叠文本" class="headerlink" title="折叠文本"></a>折叠文本</h1><h2 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h2><!-- 折叠文本 --><details><summary>显示的文本（点击展开）</summary><p>隐藏文本，被你发现了😁</p></details><!-- 用来防止源码看晕过去 --><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">details</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">summary</span>&gt;</span></span>显示的文本（CLICK ME）<span class="xml"><span class="tag">&lt;/<span class="name">summary</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line">隐藏文本，被你发现了😁</span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">details</span>&gt;</span></span></span><br></pre></td></tr></table></figure><blockquote><p>PS：如果你要隐藏的内容使用了语法，那么请在<mark>标签</mark>后空一行</p></blockquote><h1 id="超链接的另外一种方式"><a href="#超链接的另外一种方式" class="headerlink" title="超链接的另外一种方式"></a>超链接的另外一种方式</h1><h1 id="百度谷歌"><a href="#百度谷歌" class="headerlink" title="百度谷歌"></a><a href="https://www.baidu.com" target="_blank" rel="noopener">百度</a><a href="https://www.google.com" target="_blank" rel="noopener">谷歌</a></h1><!-- 中间空行 --><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">百度</span>][<span class="symbol">baidu</span>] </span><br><span class="line">[<span class="string">谷歌</span>][<span class="symbol">google</span>]</span><br><span class="line"><span class="xml"><span class="comment">&lt;!-- 中间空行 --&gt;</span></span></span><br><span class="line">[<span class="symbol">baidu</span>]: <span class="link">https://www.baidu.com</span></span><br><span class="line">[<span class="symbol">google</span>]: <span class="link">https://www.google.com</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> markdown </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>一次VirtualBox上的Arch经历</title>
       <link href="/2020/04/18/%E4%B8%80%E6%AC%A1VirtualBox%E4%B8%8A%E7%9A%84Arch%E7%BB%8F%E5%8E%86/"/>
       <url>/2020/04/18/%E4%B8%80%E6%AC%A1VirtualBox%E4%B8%8A%E7%9A%84Arch%E7%BB%8F%E5%8E%86/</url>
@@ -400,25 +419,6 @@
     
     
     <entry>
-      <title>Markdown 的学习笔记</title>
-      <link href="/2020/04/08/Markdown%20%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-      <url>/2020/04/08/Markdown%20%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
-      
-        <content type="html"><![CDATA[<h1 id="折叠文本"><a href="#折叠文本" class="headerlink" title="折叠文本"></a>折叠文本</h1><h2 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h2><!-- 折叠文本 --><details><summary>显示的文本（CLICK ME）</summary><p>隐藏文本，被你发现了😁</p></details><!-- 用来防止源码看晕过去 --><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">details</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">summary</span>&gt;</span></span>显示的文本（CLICK ME）<span class="xml"><span class="tag">&lt;/<span class="name">summary</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line">隐藏文本，被你发现了😁</span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">details</span>&gt;</span></span></span><br></pre></td></tr></table></figure><blockquote><p>PS：如果你要隐藏的内容使用了语法，那么请在<mark>标签</mark>后空一行</p></blockquote>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> markdown </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>为SumatraPDF改的一份适合阅读PDF的配色</title>
       <link href="/2020/04/08/%E4%B8%BASumatraPDF%E6%94%B9%E7%9A%84%E4%B8%80%E4%BB%BD%E9%80%82%E5%90%88%E9%98%85%E8%AF%BBPDF%E7%9A%84%E9%85%8D%E8%89%B2/"/>
       <url>/2020/04/08/%E4%B8%BASumatraPDF%E6%94%B9%E7%9A%84%E4%B8%80%E4%BB%BD%E9%80%82%E5%90%88%E9%98%85%E8%AF%BBPDF%E7%9A%84%E9%85%8D%E8%89%B2/</url>
@@ -496,6 +496,8 @@
         <tags>
             
             <tag> Hexo </tag>
+            
+            <tag> Npm </tag>
             
         </tags>
       

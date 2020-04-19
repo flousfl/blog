@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://flous.top/"/>
-  <updated>2020-04-18T04:38:39.212Z</updated>
+  <updated>2020-04-19T05:19:36.642Z</updated>
   <id>https://flous.top/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Markdown 的学习笔记</title>
+    <link href="https://flous.top/2020/04/19/Markdown%20%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>https://flous.top/2020/04/19/Markdown%20%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
+    <published>2020-04-19T05:20:19.000Z</published>
+    <updated>2020-04-19T05:19:36.642Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="折叠文本"><a href="#折叠文本" class="headerlink" title="折叠文本"></a>折叠文本</h1><h2 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h2><!-- 折叠文本 --><details><summary>显示的文本（点击展开）</summary><p>隐藏文本，被你发现了😁</p></details><!-- 用来防止源码看晕过去 --><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">details</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">summary</span>&gt;</span></span>显示的文本（CLICK ME）<span class="xml"><span class="tag">&lt;/<span class="name">summary</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line">隐藏文本，被你发现了😁</span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">details</span>&gt;</span></span></span><br></pre></td></tr></table></figure><blockquote><p>PS：如果你要隐藏的内容使用了语法，那么请在<mark>标签</mark>后空一行</p></blockquote><h1 id="超链接的另外一种方式"><a href="#超链接的另外一种方式" class="headerlink" title="超链接的另外一种方式"></a>超链接的另外一种方式</h1><h1 id="百度谷歌"><a href="#百度谷歌" class="headerlink" title="百度谷歌"></a><a href="https://www.baidu.com" target="_blank" rel="noopener">百度</a><a href="https://www.google.com" target="_blank" rel="noopener">谷歌</a></h1><!-- 中间空行 --><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">百度</span>][<span class="symbol">baidu</span>] </span><br><span class="line">[<span class="string">谷歌</span>][<span class="symbol">google</span>]</span><br><span class="line"><span class="xml"><span class="comment">&lt;!-- 中间空行 --&gt;</span></span></span><br><span class="line">[<span class="symbol">baidu</span>]: <span class="link">https://www.baidu.com</span></span><br><span class="line">[<span class="symbol">google</span>]: <span class="link">https://www.google.com</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;折叠文本&quot;&gt;&lt;a href=&quot;#折叠文本&quot; class=&quot;headerlink&quot; title=&quot;折叠文本&quot;&gt;&lt;/a&gt;折叠文本&lt;/h1&gt;&lt;h2 id=&quot;效果&quot;&gt;&lt;a href=&quot;#效果&quot; class=&quot;headerlink&quot; title=&quot;效果&quot;&gt;&lt;/a&gt;效果&lt;/h
+      
+    
+    </summary>
+    
+    
+    
+      <category term="markdown" scheme="https://flous.top/tags/markdown/"/>
+    
+  </entry>
   
   <entry>
     <title>一次VirtualBox上的Arch经历</title>
@@ -425,30 +449,6 @@
   </entry>
   
   <entry>
-    <title>Markdown 的学习笔记</title>
-    <link href="https://flous.top/2020/04/08/Markdown%20%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    <id>https://flous.top/2020/04/08/Markdown%20%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
-    <published>2020-04-08T10:41:19.000Z</published>
-    <updated>2020-04-11T09:11:20.140Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="折叠文本"><a href="#折叠文本" class="headerlink" title="折叠文本"></a>折叠文本</h1><h2 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h2><!-- 折叠文本 --><details><summary>显示的文本（CLICK ME）</summary><p>隐藏文本，被你发现了😁</p></details><!-- 用来防止源码看晕过去 --><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">details</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">summary</span>&gt;</span></span>显示的文本（CLICK ME）<span class="xml"><span class="tag">&lt;/<span class="name">summary</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line">隐藏文本，被你发现了😁</span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">details</span>&gt;</span></span></span><br></pre></td></tr></table></figure><blockquote><p>PS：如果你要隐藏的内容使用了语法，那么请在<mark>标签</mark>后空一行</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;折叠文本&quot;&gt;&lt;a href=&quot;#折叠文本&quot; class=&quot;headerlink&quot; title=&quot;折叠文本&quot;&gt;&lt;/a&gt;折叠文本&lt;/h1&gt;&lt;h2 id=&quot;效果&quot;&gt;&lt;a href=&quot;#效果&quot; class=&quot;headerlink&quot; title=&quot;效果&quot;&gt;&lt;/a&gt;效果&lt;/h
-      
-    
-    </summary>
-    
-    
-    
-      <category term="markdown" scheme="https://flous.top/tags/markdown/"/>
-    
-  </entry>
-  
-  <entry>
     <title>为SumatraPDF改的一份适合阅读PDF的配色</title>
     <link href="https://flous.top/2020/04/08/%E4%B8%BASumatraPDF%E6%94%B9%E7%9A%84%E4%B8%80%E4%BB%BD%E9%80%82%E5%90%88%E9%98%85%E8%AF%BBPDF%E7%9A%84%E9%85%8D%E8%89%B2/"/>
     <id>https://flous.top/2020/04/08/%E4%B8%BASumatraPDF%E6%94%B9%E7%9A%84%E4%B8%80%E4%BB%BD%E9%80%82%E5%90%88%E9%98%85%E8%AF%BBPDF%E7%9A%84%E9%85%8D%E8%89%B2/</id>
@@ -514,7 +514,7 @@
     <link href="https://flous.top/2020/04/07/about_hexo/"/>
     <id>https://flous.top/2020/04/07/about_hexo/</id>
     <published>2020-04-07T03:12:57.038Z</published>
-    <updated>2020-04-08T02:06:53.197Z</updated>
+    <updated>2020-04-19T05:15:12.808Z</updated>
     
     <content type="html"><![CDATA[<h2 id="切换淘宝镜像源加速："><a href="#切换淘宝镜像源加速：" class="headerlink" title="切换淘宝镜像源加速："></a>切换淘宝镜像源加速：</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm config <span class="built_in">set</span> registry http://registry.npm.taobao.org/</span><br></pre></td></tr></table></figure><h2 id="换回默认源"><a href="#换回默认源" class="headerlink" title="换回默认源"></a>换回<mark>默认源</mark></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm config <span class="built_in">set</span> registryhttps://registry.npmjs.org</span><br></pre></td></tr></table></figure><p>欢迎来到 <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! 这是你的第一篇文章. 单击 <a href="https://hexo.io/docs/" target="_blank" rel="noopener">文档</a> 获得更多信息.<br>如果你在使用Hexo的过程中有任何问题,！！<br>你可以在 <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a>找到答案或者在 <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>上面问我.</p><h1 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h1><h2 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span> <span class="comment"># 我的新文章</span></span><br></pre></td></tr></table></figure><p>More info[更多信息]: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h2 id="运行服务"><a href="#运行服务" class="headerlink" title="运行服务"></a>运行服务</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server <span class="comment"># 运行服务，即在【本地预览】</span></span><br></pre></td></tr></table></figure><p>More info[更多信息]: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h4 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate <span class="comment"># 生成博客</span></span><br></pre></td></tr></table></figure><p>More info[更多信息]: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy <span class="comment"># 部署博客</span></span><br></pre></td></tr></table></figure><p>More info[更多信息]: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment[部署]</a></p>]]></content>
     
@@ -534,6 +534,8 @@
     
     
       <category term="Hexo" scheme="https://flous.top/tags/Hexo/"/>
+    
+      <category term="Npm" scheme="https://flous.top/tags/Npm/"/>
     
   </entry>
   
