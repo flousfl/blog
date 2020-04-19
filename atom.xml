@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://flous.top/"/>
-  <updated>2020-04-19T05:23:34.191Z</updated>
+  <updated>2020-04-19T12:04:17.672Z</updated>
   <id>https://flous.top/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一次VirtualBox上的Arch经历</title>
+    <link href="https://flous.top/2020/04/19/%E4%B8%80%E6%AC%A1VirtualBox%E4%B8%8A%E7%9A%84Arch%E7%BB%8F%E5%8E%86/"/>
+    <id>https://flous.top/2020/04/19/%E4%B8%80%E6%AC%A1VirtualBox%E4%B8%8A%E7%9A%84Arch%E7%BB%8F%E5%8E%86/</id>
+    <published>2020-04-19T12:05:42.000Z</published>
+    <updated>2020-04-19T12:04:17.672Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>文章参考(引用)官方 wiki</p><ul><li><a href="https://wiki.archlinux.org/index.php/Installation_guide_(简体中文)" target="_blank" rel="noopener">https://wiki.archlinux.org/index.php/Installation_guide_(简体中文)</a></li><li><a href="https://wiki.archlinux.org/index.php/Kernel_(简体中文)" target="_blank" rel="noopener">https://wiki.archlinux.org/index.php/Kernel_(简体中文)</a></li><li><a href="https://wiki.archlinux.org/index.php/VirtualBox_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#%E5%9C%A8_VirtualBox_%E4%B8%AD%E5%AE%89%E8%A3%85_Archlinux" target="_blank" rel="noopener">https://wiki.archlinux.org/index.php/VirtualBox_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#%E5%9C%A8_VirtualBox_%E4%B8%AD%E5%AE%89%E8%A3%85_Archlinux</a></li><li><a href="https://wiki.archlinux.org/index.php/GRUB_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)" target="_blank" rel="noopener">https://wiki.archlinux.org/index.php/GRUB_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)</a></li><li></li></ul></blockquote><!-- 上面是跳链区域 --><!-- 下面是正文区域 --><h1 id="在-VirtualBox-上安装-ArchLinux"><a href="#在-VirtualBox-上安装-ArchLinux" class="headerlink" title="在 VirtualBox 上安装 ArchLinux"></a>在 <a href="https://www.virtualbox.org/" target="_blank" rel="noopener">VirtualBox</a> 上安装 <a href="https://www.archlinux.org/" target="_blank" rel="noopener">ArchLinux</a></h1><h2 id="新建一个虚拟机：ArchLinux"><a href="#新建一个虚拟机：ArchLinux" class="headerlink" title="新建一个虚拟机：ArchLinux"></a>新建一个虚拟机：ArchLinux</h2><h2 id="VirtualBox配置"><a href="#VirtualBox配置" class="headerlink" title="VirtualBox配置"></a>VirtualBox配置</h2><ul><li>CPU：2 ()</li><li>RAM：4096 MB</li><li>存储(SATA)：40G<ul><li>ESP(efi)：512 MB</li><li>Swap：4096 MB</li><li>/:剩余容量</li></ul></li><li><blockquote><p>由于采用了 EFI 所以把 VirtualBox中的<code>启用 EFI</code>勾上</p></blockquote></li></ul><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><blockquote><p>先根据前面的存储配置进行分区<br><br>建议使用 <code>cfdisk</code> 工具，终端下这个工具比较简单方便</p></blockquote><h2 id="先换源"><a href="#先换源" class="headerlink" title="先换源"></a>先换源</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># nano /etc/pacman.d/mirrorlist</span></span><br></pre></td></tr></table></figure><blockquote><p>将其中的 CN 源剪切到最上面，只有 <code>##</code> 的这行后面</p><ul><li><code>Ctrl</code>+<code>w</code> 是搜索</li><li><code>Ctrl</code>+<code>k</code> 是剪切</li><li><code>Ctrl</code>+<code>u</code> 是粘贴</li><li><code>Ctrl</code>+<code>o</code> 是保存(直接回车)</li></ul></blockquote><h2 id="安装必须的软件包"><a href="#安装必须的软件包" class="headerlink" title="安装必须的软件包"></a>安装必须的软件包</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pacstrap /mnt base linux linux-firmware</span></span><br></pre></td></tr></table></figure><blockquote><p>Tip: 可以将 linux 替换为 kernel 页面中介绍的内核软件包。如果知道自己的需求，可以不安装内核和固件软件包。</p></blockquote><p>这里我采用 linux-zen 内核，</p><blockquote><p><a href="https://github.com/zen-kernel/zen-kernel" target="_blank" rel="noopener">ZEN Kernel</a> 是一些内核黑客合作的结果，提供了适合日常使用的优秀内核</p><blockquote><p>如果你还想安装其他软件包组比如 base-devel，请将他们的名字添加到 <code>pacstrap</code> 后，并用空格隔开。你也可以在<a href="###Chroot"><code>Chroot</code></a> 进新系统后使用 <code>pacman</code> 手动安装软件包或组</p></blockquote></blockquote><h2 id="配置系统"><a href="#配置系统" class="headerlink" title="配置系统"></a>配置系统</h2><h3 id="Fstab"><a href="#Fstab" class="headerlink" title="Fstab"></a>Fstab</h3><p>用以下命令生成 <code>fstab</code> 文件 (用 <code>-U</code> 或 <code>-L</code> 选项设置<code>UUID</code> 或卷标)：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># genfstab -U /mnt &gt;&gt; /mnt/etc/fstab</span></span><br></pre></td></tr></table></figure><h3 id="Chroot"><a href="#Chroot" class="headerlink" title="Chroot"></a>Chroot</h3><p><code>Change root</code> 到新安装的系统：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># arch-chroot /mnt</span></span><br></pre></td></tr></table></figure><h2 id="设置时区"><a href="#设置时区" class="headerlink" title="设置时区"></a>设置时区</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime</span></span><br></pre></td></tr></table></figure><blockquote><p>运行 hwclock(8) 以生成 /etc/adjtime：</p></blockquote><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># hwclock --systohc</span></span><br></pre></td></tr></table></figure><blockquote><p>Ps: 这个命令将硬件时间已经被设置为 UTC 时间</p></blockquote><h2 id="安装一个基本的文本编辑器"><a href="#安装一个基本的文本编辑器" class="headerlink" title="安装一个基本的文本编辑器"></a>安装一个基本的<mark>文本编辑器</mark></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pacman -S nano</span></span><br></pre></td></tr></table></figure><h2 id="本地化"><a href="#本地化" class="headerlink" title="本地化"></a>本地化</h2><p>本地化的程序与库若要本地化文本，都依赖 Locale，后者明确规定地域、货币、时区日期的格式、字符排列方式和其他本地化标准等等。在下面两个文件设置：<code>locale.gen</code> 与 <code>locale.conf</code></p><p>编辑 <code>/etc/locale.gen</code> 然后移除需要的地区的注释。</p><p>接着执行 <code>locale-gen</code> 以生成 <code>locale</code> 讯息：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># locale-gen</span></span><br></pre></td></tr></table></figure><h4 id="安装联网程序"><a href="#安装联网程序" class="headerlink" title="安装联网程序"></a>安装联网程序</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pacman -S dhcpcd networkmanager</span></span><br></pre></td></tr></table></figure><h2 id="安装引导"><a href="#安装引导" class="headerlink" title="安装引导"></a>安装引导</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pacman -S grub efibootmgr intel-ucode</span></span><br><span class="line"><span class="comment"># grub-install --target=x86_64-efi --efi-directory=[esp] --bootloader-id=GRUB</span></span><br><span class="line"><span class="comment"># grub-mkconfig -o /boot/grub/grub.cfg</span></span><br></pre></td></tr></table></figure><blockquote><p>上面的 <code>[esp]</code>就是你的 <code>efi</code> 目录位置<br>出现 <code>No eeror reported</code> 即成功</p></blockquote><h2 id="到这里基本的系统就安装好了，软件得自己去看-Wiki-咯"><a href="#到这里基本的系统就安装好了，软件得自己去看-Wiki-咯" class="headerlink" title="到这里基本的系统就安装好了，软件得自己去看 Wiki 咯"></a>到这里基本的系统就安装好了，软件得自己去看 <code>Wiki</code> 咯</h2><p><font color="red">新的系统里面啥也没有你需要自己安装需要的程序</font></p><blockquote><p>base 软件包并没有包含全部 live 环境中的程序，packages.x86_64 页面包含了它们的差异。需要额外安装：</p><blockquote><ul><li>管理所用文件系统 的用户工具：<code>ntfs-3g</code></li><li>访问 RAID 或 LVM 分区的工具</li><li>未包含在 linux-firmware 中的额外固件<ul><li>一些驱动什么的</li></ul></li><li>联网需要的程序 <code>DHCPCD</code> 或 <code>networkmanager</code></li><li>文本编辑器 <code>nano</code></li><li>访问 man 和 info 页面的工具： <code>man-db, man-pages</code> 和 <code>texinfo</code></li></ul></blockquote></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;文章参考(引用)官方 wiki&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://wiki.archlinux.org/index.php/Installation_guide_(简体中文)&quot; target=&quot;_blank&quot; rel=&quot;n
+      
+    
+    </summary>
+    
+    
+      <category term="日志" scheme="https://flous.top/categories/%E6%97%A5%E5%BF%97/"/>
+    
+      <category term="Linux" scheme="https://flous.top/categories/%E6%97%A5%E5%BF%97/Linux/"/>
+    
+    
+      <category term="Linux" scheme="https://flous.top/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>Markdown 的学习笔记</title>
@@ -37,36 +68,6 @@
     
     
       <category term="markdown" scheme="https://flous.top/tags/markdown/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>一次VirtualBox上的Arch经历</title>
-    <link href="https://flous.top/2020/04/18/%E4%B8%80%E6%AC%A1VirtualBox%E4%B8%8A%E7%9A%84Arch%E7%BB%8F%E5%8E%86/"/>
-    <id>https://flous.top/2020/04/18/%E4%B8%80%E6%AC%A1VirtualBox%E4%B8%8A%E7%9A%84Arch%E7%BB%8F%E5%8E%86/</id>
-    <published>2020-04-18T00:22:42.000Z</published>
-    <updated>2020-04-18T04:38:39.212Z</updated>
-    
-    <content type="html"><![CDATA[<!-- 上面是跳链区域 --><!-- 下面是正文区域 --><h1 id="在-VirtualBox-上安装-ArchLinux"><a href="#在-VirtualBox-上安装-ArchLinux" class="headerlink" title="在 VirtualBox 上安装 ArchLinux"></a>在 <a href="https://www.virtualbox.org/" target="_blank" rel="noopener">VirtualBox</a> 上安装 <a href="https://www.archlinux.org/" target="_blank" rel="noopener">ArchLinux</a></h1><h1 id="test"><a href="#test" class="headerlink" title="test"></a>test</h1>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;!-- 上面是跳链区域 --&gt;
-&lt;!-- 下面是正文区域 --&gt;
-&lt;h1 id=&quot;在-VirtualBox-上安装-ArchLinux&quot;&gt;&lt;a href=&quot;#在-VirtualBox-上安装-ArchLinux&quot; class=&quot;headerlink&quot; title=&quot;在 Virt
-      
-    
-    </summary>
-    
-    
-      <category term="日志" scheme="https://flous.top/categories/%E6%97%A5%E5%BF%97/"/>
-    
-      <category term="Linux" scheme="https://flous.top/categories/%E6%97%A5%E5%BF%97/Linux/"/>
-    
-    
-      <category term="Linux" scheme="https://flous.top/tags/Linux/"/>
     
   </entry>
   
