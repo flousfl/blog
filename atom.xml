@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://flous.top/"/>
-  <updated>2020-04-19T12:04:17.672Z</updated>
-  <id>https://flous.top/</id>
+  <link href="https://flous-fl.github.io/hexo-cactus-blog/"/>
+  <updated>2020-04-19T12:04:39.330Z</updated>
+  <id>https://flous-fl.github.io/hexo-cactus-blog/</id>
   
   <author>
     <name>flous</name>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>一次VirtualBox上的Arch经历</title>
-    <link href="https://flous.top/2020/04/19/%E4%B8%80%E6%AC%A1VirtualBox%E4%B8%8A%E7%9A%84Arch%E7%BB%8F%E5%8E%86/"/>
-    <id>https://flous.top/2020/04/19/%E4%B8%80%E6%AC%A1VirtualBox%E4%B8%8A%E7%9A%84Arch%E7%BB%8F%E5%8E%86/</id>
+    <link href="https://flous-fl.github.io/hexo-cactus-blog/2020/04/19/%E4%B8%80%E6%AC%A1VirtualBox%E4%B8%8A%E7%9A%84Arch%E7%BB%8F%E5%8E%86/"/>
+    <id>https://flous-fl.github.io/hexo-cactus-blog/2020/04/19/%E4%B8%80%E6%AC%A1VirtualBox%E4%B8%8A%E7%9A%84Arch%E7%BB%8F%E5%8E%86/</id>
     <published>2020-04-19T12:05:42.000Z</published>
-    <updated>2020-04-19T12:04:17.672Z</updated>
+    <updated>2020-04-19T12:04:39.330Z</updated>
     
     <content type="html"><![CDATA[<blockquote><p>文章参考(引用)官方 wiki</p><ul><li><a href="https://wiki.archlinux.org/index.php/Installation_guide_(简体中文)" target="_blank" rel="noopener">https://wiki.archlinux.org/index.php/Installation_guide_(简体中文)</a></li><li><a href="https://wiki.archlinux.org/index.php/Kernel_(简体中文)" target="_blank" rel="noopener">https://wiki.archlinux.org/index.php/Kernel_(简体中文)</a></li><li><a href="https://wiki.archlinux.org/index.php/VirtualBox_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#%E5%9C%A8_VirtualBox_%E4%B8%AD%E5%AE%89%E8%A3%85_Archlinux" target="_blank" rel="noopener">https://wiki.archlinux.org/index.php/VirtualBox_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#%E5%9C%A8_VirtualBox_%E4%B8%AD%E5%AE%89%E8%A3%85_Archlinux</a></li><li><a href="https://wiki.archlinux.org/index.php/GRUB_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)" target="_blank" rel="noopener">https://wiki.archlinux.org/index.php/GRUB_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)</a></li><li></li></ul></blockquote><!-- 上面是跳链区域 --><!-- 下面是正文区域 --><h1 id="在-VirtualBox-上安装-ArchLinux"><a href="#在-VirtualBox-上安装-ArchLinux" class="headerlink" title="在 VirtualBox 上安装 ArchLinux"></a>在 <a href="https://www.virtualbox.org/" target="_blank" rel="noopener">VirtualBox</a> 上安装 <a href="https://www.archlinux.org/" target="_blank" rel="noopener">ArchLinux</a></h1><h2 id="新建一个虚拟机：ArchLinux"><a href="#新建一个虚拟机：ArchLinux" class="headerlink" title="新建一个虚拟机：ArchLinux"></a>新建一个虚拟机：ArchLinux</h2><h2 id="VirtualBox配置"><a href="#VirtualBox配置" class="headerlink" title="VirtualBox配置"></a>VirtualBox配置</h2><ul><li>CPU：2 ()</li><li>RAM：4096 MB</li><li>存储(SATA)：40G<ul><li>ESP(efi)：512 MB</li><li>Swap：4096 MB</li><li>/:剩余容量</li></ul></li><li><blockquote><p>由于采用了 EFI 所以把 VirtualBox中的<code>启用 EFI</code>勾上</p></blockquote></li></ul><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><blockquote><p>先根据前面的存储配置进行分区<br><br>建议使用 <code>cfdisk</code> 工具，终端下这个工具比较简单方便</p></blockquote><h2 id="先换源"><a href="#先换源" class="headerlink" title="先换源"></a>先换源</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># nano /etc/pacman.d/mirrorlist</span></span><br></pre></td></tr></table></figure><blockquote><p>将其中的 CN 源剪切到最上面，只有 <code>##</code> 的这行后面</p><ul><li><code>Ctrl</code>+<code>w</code> 是搜索</li><li><code>Ctrl</code>+<code>k</code> 是剪切</li><li><code>Ctrl</code>+<code>u</code> 是粘贴</li><li><code>Ctrl</code>+<code>o</code> 是保存(直接回车)</li></ul></blockquote><h2 id="安装必须的软件包"><a href="#安装必须的软件包" class="headerlink" title="安装必须的软件包"></a>安装必须的软件包</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pacstrap /mnt base linux linux-firmware</span></span><br></pre></td></tr></table></figure><blockquote><p>Tip: 可以将 linux 替换为 kernel 页面中介绍的内核软件包。如果知道自己的需求，可以不安装内核和固件软件包。</p></blockquote><p>这里我采用 linux-zen 内核，</p><blockquote><p><a href="https://github.com/zen-kernel/zen-kernel" target="_blank" rel="noopener">ZEN Kernel</a> 是一些内核黑客合作的结果，提供了适合日常使用的优秀内核</p><blockquote><p>如果你还想安装其他软件包组比如 base-devel，请将他们的名字添加到 <code>pacstrap</code> 后，并用空格隔开。你也可以在<a href="###Chroot"><code>Chroot</code></a> 进新系统后使用 <code>pacman</code> 手动安装软件包或组</p></blockquote></blockquote><h2 id="配置系统"><a href="#配置系统" class="headerlink" title="配置系统"></a>配置系统</h2><h3 id="Fstab"><a href="#Fstab" class="headerlink" title="Fstab"></a>Fstab</h3><p>用以下命令生成 <code>fstab</code> 文件 (用 <code>-U</code> 或 <code>-L</code> 选项设置<code>UUID</code> 或卷标)：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># genfstab -U /mnt &gt;&gt; /mnt/etc/fstab</span></span><br></pre></td></tr></table></figure><h3 id="Chroot"><a href="#Chroot" class="headerlink" title="Chroot"></a>Chroot</h3><p><code>Change root</code> 到新安装的系统：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># arch-chroot /mnt</span></span><br></pre></td></tr></table></figure><h2 id="设置时区"><a href="#设置时区" class="headerlink" title="设置时区"></a>设置时区</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime</span></span><br></pre></td></tr></table></figure><blockquote><p>运行 hwclock(8) 以生成 /etc/adjtime：</p></blockquote><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># hwclock --systohc</span></span><br></pre></td></tr></table></figure><blockquote><p>Ps: 这个命令将硬件时间已经被设置为 UTC 时间</p></blockquote><h2 id="安装一个基本的文本编辑器"><a href="#安装一个基本的文本编辑器" class="headerlink" title="安装一个基本的文本编辑器"></a>安装一个基本的<mark>文本编辑器</mark></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pacman -S nano</span></span><br></pre></td></tr></table></figure><h2 id="本地化"><a href="#本地化" class="headerlink" title="本地化"></a>本地化</h2><p>本地化的程序与库若要本地化文本，都依赖 Locale，后者明确规定地域、货币、时区日期的格式、字符排列方式和其他本地化标准等等。在下面两个文件设置：<code>locale.gen</code> 与 <code>locale.conf</code></p><p>编辑 <code>/etc/locale.gen</code> 然后移除需要的地区的注释。</p><p>接着执行 <code>locale-gen</code> 以生成 <code>locale</code> 讯息：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># locale-gen</span></span><br></pre></td></tr></table></figure><h4 id="安装联网程序"><a href="#安装联网程序" class="headerlink" title="安装联网程序"></a>安装联网程序</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pacman -S dhcpcd networkmanager</span></span><br></pre></td></tr></table></figure><h2 id="安装引导"><a href="#安装引导" class="headerlink" title="安装引导"></a>安装引导</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pacman -S grub efibootmgr intel-ucode</span></span><br><span class="line"><span class="comment"># grub-install --target=x86_64-efi --efi-directory=[esp] --bootloader-id=GRUB</span></span><br><span class="line"><span class="comment"># grub-mkconfig -o /boot/grub/grub.cfg</span></span><br></pre></td></tr></table></figure><blockquote><p>上面的 <code>[esp]</code>就是你的 <code>efi</code> 目录位置<br>出现 <code>No eeror reported</code> 即成功</p></blockquote><h2 id="到这里基本的系统就安装好了，软件得自己去看-Wiki-咯"><a href="#到这里基本的系统就安装好了，软件得自己去看-Wiki-咯" class="headerlink" title="到这里基本的系统就安装好了，软件得自己去看 Wiki 咯"></a>到这里基本的系统就安装好了，软件得自己去看 <code>Wiki</code> 咯</h2><p><font color="red">新的系统里面啥也没有你需要自己安装需要的程序</font></p><blockquote><p>base 软件包并没有包含全部 live 环境中的程序，packages.x86_64 页面包含了它们的差异。需要额外安装：</p><blockquote><ul><li>管理所用文件系统 的用户工具：<code>ntfs-3g</code></li><li>访问 RAID 或 LVM 分区的工具</li><li>未包含在 linux-firmware 中的额外固件<ul><li>一些驱动什么的</li></ul></li><li>联网需要的程序 <code>DHCPCD</code> 或 <code>networkmanager</code></li><li>文本编辑器 <code>nano</code></li><li>访问 man 和 info 页面的工具： <code>man-db, man-pages</code> 和 <code>texinfo</code></li></ul></blockquote></blockquote>]]></content>
     
@@ -38,19 +38,19 @@
     </summary>
     
     
-      <category term="日志" scheme="https://flous.top/categories/%E6%97%A5%E5%BF%97/"/>
+      <category term="日志" scheme="https://flous-fl.github.io/hexo-cactus-blog/categories/%E6%97%A5%E5%BF%97/"/>
     
-      <category term="Linux" scheme="https://flous.top/categories/%E6%97%A5%E5%BF%97/Linux/"/>
+      <category term="Linux" scheme="https://flous-fl.github.io/hexo-cactus-blog/categories/%E6%97%A5%E5%BF%97/Linux/"/>
     
     
-      <category term="Linux" scheme="https://flous.top/tags/Linux/"/>
+      <category term="Linux" scheme="https://flous-fl.github.io/hexo-cactus-blog/tags/Linux/"/>
     
   </entry>
   
   <entry>
     <title>Markdown 的学习笔记</title>
-    <link href="https://flous.top/2020/04/19/Markdown%20%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    <id>https://flous.top/2020/04/19/Markdown%20%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
+    <link href="https://flous-fl.github.io/hexo-cactus-blog/2020/04/19/Markdown%20%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>https://flous-fl.github.io/hexo-cactus-blog/2020/04/19/Markdown%20%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
     <published>2020-04-19T05:20:19.000Z</published>
     <updated>2020-04-19T05:23:34.191Z</updated>
     
@@ -67,14 +67,14 @@
     
     
     
-      <category term="markdown" scheme="https://flous.top/tags/markdown/"/>
+      <category term="markdown" scheme="https://flous-fl.github.io/hexo-cactus-blog/tags/markdown/"/>
     
   </entry>
   
   <entry>
     <title>3.4网页基本元素</title>
-    <link href="https://flous.top/2020/04/11/3-4%E7%BD%91%E9%A1%B5%E5%9F%BA%E6%9C%AC%E5%85%83%E7%B4%A0/"/>
-    <id>https://flous.top/2020/04/11/3-4%E7%BD%91%E9%A1%B5%E5%9F%BA%E6%9C%AC%E5%85%83%E7%B4%A0/</id>
+    <link href="https://flous-fl.github.io/hexo-cactus-blog/2020/04/11/3-4%E7%BD%91%E9%A1%B5%E5%9F%BA%E6%9C%AC%E5%85%83%E7%B4%A0/"/>
+    <id>https://flous-fl.github.io/hexo-cactus-blog/2020/04/11/3-4%E7%BD%91%E9%A1%B5%E5%9F%BA%E6%9C%AC%E5%85%83%E7%B4%A0/</id>
     <published>2020-04-11T08:58:05.000Z</published>
     <updated>2020-04-18T05:50:33.099Z</updated>
     
@@ -90,21 +90,21 @@
     </summary>
     
     
-      <category term="计算机基础" scheme="https://flous.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+      <category term="计算机基础" scheme="https://flous-fl.github.io/hexo-cactus-blog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
     
-      <category term="unit3" scheme="https://flous.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/unit3/"/>
+      <category term="unit3" scheme="https://flous-fl.github.io/hexo-cactus-blog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/unit3/"/>
     
     
-      <category term="Loading" scheme="https://flous.top/tags/Loading/"/>
+      <category term="Loading" scheme="https://flous-fl.github.io/hexo-cactus-blog/tags/Loading/"/>
     
-      <category term="note" scheme="https://flous.top/tags/note/"/>
+      <category term="note" scheme="https://flous-fl.github.io/hexo-cactus-blog/tags/note/"/>
     
   </entry>
   
   <entry>
     <title>3.3HTML语言（少3.3.1、3.3.2、3.3.4）</title>
-    <link href="https://flous.top/2020/04/11/3-4(%E5%B0%913.3.1,3.3.2,3.3.4)/"/>
-    <id>https://flous.top/2020/04/11/3-4(%E5%B0%913.3.1,3.3.2,3.3.4)/</id>
+    <link href="https://flous-fl.github.io/hexo-cactus-blog/2020/04/11/3-4(%E5%B0%913.3.1,3.3.2,3.3.4)/"/>
+    <id>https://flous-fl.github.io/hexo-cactus-blog/2020/04/11/3-4(%E5%B0%913.3.1,3.3.2,3.3.4)/</id>
     <published>2020-04-11T08:56:10.000Z</published>
     <updated>2020-04-18T05:50:30.109Z</updated>
     
@@ -120,21 +120,21 @@
     </summary>
     
     
-      <category term="计算机基础" scheme="https://flous.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+      <category term="计算机基础" scheme="https://flous-fl.github.io/hexo-cactus-blog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
     
-      <category term="unit3" scheme="https://flous.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/unit3/"/>
+      <category term="unit3" scheme="https://flous-fl.github.io/hexo-cactus-blog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/unit3/"/>
     
     
-      <category term="Loading" scheme="https://flous.top/tags/Loading/"/>
+      <category term="Loading" scheme="https://flous-fl.github.io/hexo-cactus-blog/tags/Loading/"/>
     
-      <category term="note" scheme="https://flous.top/tags/note/"/>
+      <category term="note" scheme="https://flous-fl.github.io/hexo-cactus-blog/tags/note/"/>
     
   </entry>
   
   <entry>
     <title>3.2网页设计概述(这里少了3.2.3-3.2.4)</title>
-    <link href="https://flous.top/2020/04/11/3-2%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1%E6%A6%82%E8%BF%B0(%E5%B0%913.2.3-3.2.4)/"/>
-    <id>https://flous.top/2020/04/11/3-2%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1%E6%A6%82%E8%BF%B0(%E5%B0%913.2.3-3.2.4)/</id>
+    <link href="https://flous-fl.github.io/hexo-cactus-blog/2020/04/11/3-2%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1%E6%A6%82%E8%BF%B0(%E5%B0%913.2.3-3.2.4)/"/>
+    <id>https://flous-fl.github.io/hexo-cactus-blog/2020/04/11/3-2%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1%E6%A6%82%E8%BF%B0(%E5%B0%913.2.3-3.2.4)/</id>
     <published>2020-04-11T08:52:38.000Z</published>
     <updated>2020-04-18T05:50:22.856Z</updated>
     
@@ -150,21 +150,21 @@
     </summary>
     
     
-      <category term="计算机基础" scheme="https://flous.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+      <category term="计算机基础" scheme="https://flous-fl.github.io/hexo-cactus-blog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
     
-      <category term="unit3" scheme="https://flous.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/unit3/"/>
+      <category term="unit3" scheme="https://flous-fl.github.io/hexo-cactus-blog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/unit3/"/>
     
     
-      <category term="Loading" scheme="https://flous.top/tags/Loading/"/>
+      <category term="Loading" scheme="https://flous-fl.github.io/hexo-cactus-blog/tags/Loading/"/>
     
-      <category term="note" scheme="https://flous.top/tags/note/"/>
+      <category term="note" scheme="https://flous-fl.github.io/hexo-cactus-blog/tags/note/"/>
     
   </entry>
   
   <entry>
     <title>3.1计算机网络概述</title>
-    <link href="https://flous.top/2020/04/11/3-1%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0/"/>
-    <id>https://flous.top/2020/04/11/3-1%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0/</id>
+    <link href="https://flous-fl.github.io/hexo-cactus-blog/2020/04/11/3-1%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0/"/>
+    <id>https://flous-fl.github.io/hexo-cactus-blog/2020/04/11/3-1%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0/</id>
     <published>2020-04-11T08:48:07.000Z</published>
     <updated>2020-04-18T05:50:17.495Z</updated>
     
@@ -180,21 +180,21 @@
     </summary>
     
     
-      <category term="计算机基础" scheme="https://flous.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+      <category term="计算机基础" scheme="https://flous-fl.github.io/hexo-cactus-blog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
     
-      <category term="unit3" scheme="https://flous.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/unit3/"/>
+      <category term="unit3" scheme="https://flous-fl.github.io/hexo-cactus-blog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/unit3/"/>
     
     
-      <category term="Loading" scheme="https://flous.top/tags/Loading/"/>
+      <category term="Loading" scheme="https://flous-fl.github.io/hexo-cactus-blog/tags/Loading/"/>
     
-      <category term="note" scheme="https://flous.top/tags/note/"/>
+      <category term="note" scheme="https://flous-fl.github.io/hexo-cactus-blog/tags/note/"/>
     
   </entry>
   
   <entry>
     <title>2.4计算机选购</title>
-    <link href="https://flous.top/2020/04/11/2-4%E8%AE%A1%E7%AE%97%E6%9C%BA%E9%80%89%E8%B4%AD/"/>
-    <id>https://flous.top/2020/04/11/2-4%E8%AE%A1%E7%AE%97%E6%9C%BA%E9%80%89%E8%B4%AD/</id>
+    <link href="https://flous-fl.github.io/hexo-cactus-blog/2020/04/11/2-4%E8%AE%A1%E7%AE%97%E6%9C%BA%E9%80%89%E8%B4%AD/"/>
+    <id>https://flous-fl.github.io/hexo-cactus-blog/2020/04/11/2-4%E8%AE%A1%E7%AE%97%E6%9C%BA%E9%80%89%E8%B4%AD/</id>
     <published>2020-04-11T08:39:35.000Z</published>
     <updated>2020-04-18T05:49:48.635Z</updated>
     
@@ -210,21 +210,21 @@
     </summary>
     
     
-      <category term="计算机基础" scheme="https://flous.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+      <category term="计算机基础" scheme="https://flous-fl.github.io/hexo-cactus-blog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
     
-      <category term="unit2" scheme="https://flous.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/unit2/"/>
+      <category term="unit2" scheme="https://flous-fl.github.io/hexo-cactus-blog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/unit2/"/>
     
     
-      <category term="Loading" scheme="https://flous.top/tags/Loading/"/>
+      <category term="Loading" scheme="https://flous-fl.github.io/hexo-cactus-blog/tags/Loading/"/>
     
-      <category term="note" scheme="https://flous.top/tags/note/"/>
+      <category term="note" scheme="https://flous-fl.github.io/hexo-cactus-blog/tags/note/"/>
     
   </entry>
   
   <entry>
     <title>2.3计算机系统维护</title>
-    <link href="https://flous.top/2020/04/11/2-3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%BB%B4%E6%8A%A4/"/>
-    <id>https://flous.top/2020/04/11/2-3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%BB%B4%E6%8A%A4/</id>
+    <link href="https://flous-fl.github.io/hexo-cactus-blog/2020/04/11/2-3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%BB%B4%E6%8A%A4/"/>
+    <id>https://flous-fl.github.io/hexo-cactus-blog/2020/04/11/2-3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%BB%B4%E6%8A%A4/</id>
     <published>2020-04-11T08:37:43.000Z</published>
     <updated>2020-04-18T05:49:45.657Z</updated>
     
@@ -240,21 +240,21 @@
     </summary>
     
     
-      <category term="计算机基础" scheme="https://flous.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+      <category term="计算机基础" scheme="https://flous-fl.github.io/hexo-cactus-blog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
     
-      <category term="unit2" scheme="https://flous.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/unit2/"/>
+      <category term="unit2" scheme="https://flous-fl.github.io/hexo-cactus-blog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/unit2/"/>
     
     
-      <category term="Loading" scheme="https://flous.top/tags/Loading/"/>
+      <category term="Loading" scheme="https://flous-fl.github.io/hexo-cactus-blog/tags/Loading/"/>
     
-      <category term="note" scheme="https://flous.top/tags/note/"/>
+      <category term="note" scheme="https://flous-fl.github.io/hexo-cactus-blog/tags/note/"/>
     
   </entry>
   
   <entry>
     <title>2.2计算机软件安装</title>
-    <link href="https://flous.top/2020/04/11/2-2%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
-    <id>https://flous.top/2020/04/11/2-2%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/</id>
+    <link href="https://flous-fl.github.io/hexo-cactus-blog/2020/04/11/2-2%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
+    <id>https://flous-fl.github.io/hexo-cactus-blog/2020/04/11/2-2%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/</id>
     <published>2020-04-11T08:34:17.000Z</published>
     <updated>2020-04-18T05:49:43.152Z</updated>
     
@@ -270,21 +270,21 @@
     </summary>
     
     
-      <category term="计算机基础" scheme="https://flous.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+      <category term="计算机基础" scheme="https://flous-fl.github.io/hexo-cactus-blog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
     
-      <category term="unit2" scheme="https://flous.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/unit2/"/>
+      <category term="unit2" scheme="https://flous-fl.github.io/hexo-cactus-blog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/unit2/"/>
     
     
-      <category term="Loading" scheme="https://flous.top/tags/Loading/"/>
+      <category term="Loading" scheme="https://flous-fl.github.io/hexo-cactus-blog/tags/Loading/"/>
     
-      <category term="note" scheme="https://flous.top/tags/note/"/>
+      <category term="note" scheme="https://flous-fl.github.io/hexo-cactus-blog/tags/note/"/>
     
   </entry>
   
   <entry>
     <title>2.1计算机硬件组装</title>
-    <link href="https://flous.top/2020/04/11/2-1%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6%E7%BB%84%E8%A3%85/"/>
-    <id>https://flous.top/2020/04/11/2-1%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6%E7%BB%84%E8%A3%85/</id>
+    <link href="https://flous-fl.github.io/hexo-cactus-blog/2020/04/11/2-1%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6%E7%BB%84%E8%A3%85/"/>
+    <id>https://flous-fl.github.io/hexo-cactus-blog/2020/04/11/2-1%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6%E7%BB%84%E8%A3%85/</id>
     <published>2020-04-11T08:27:43.000Z</published>
     <updated>2020-04-18T05:48:55.876Z</updated>
     
@@ -300,21 +300,21 @@
     </summary>
     
     
-      <category term="计算机基础" scheme="https://flous.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+      <category term="计算机基础" scheme="https://flous-fl.github.io/hexo-cactus-blog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
     
-      <category term="unit2" scheme="https://flous.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/unit2/"/>
+      <category term="unit2" scheme="https://flous-fl.github.io/hexo-cactus-blog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/unit2/"/>
     
     
-      <category term="Loading" scheme="https://flous.top/tags/Loading/"/>
+      <category term="Loading" scheme="https://flous-fl.github.io/hexo-cactus-blog/tags/Loading/"/>
     
-      <category term="note" scheme="https://flous.top/tags/note/"/>
+      <category term="note" scheme="https://flous-fl.github.io/hexo-cactus-blog/tags/note/"/>
     
   </entry>
   
   <entry>
     <title>1.5微型计算机操作系统（未整理）</title>
-    <link href="https://flous.top/2020/04/11/1-5%E5%BE%AE%E5%9E%8B%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%EF%BC%88%E6%9C%AA%E6%95%B4%E7%90%86%EF%BC%89/"/>
-    <id>https://flous.top/2020/04/11/1-5%E5%BE%AE%E5%9E%8B%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%EF%BC%88%E6%9C%AA%E6%95%B4%E7%90%86%EF%BC%89/</id>
+    <link href="https://flous-fl.github.io/hexo-cactus-blog/2020/04/11/1-5%E5%BE%AE%E5%9E%8B%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%EF%BC%88%E6%9C%AA%E6%95%B4%E7%90%86%EF%BC%89/"/>
+    <id>https://flous-fl.github.io/hexo-cactus-blog/2020/04/11/1-5%E5%BE%AE%E5%9E%8B%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%EF%BC%88%E6%9C%AA%E6%95%B4%E7%90%86%EF%BC%89/</id>
     <published>2020-04-11T08:24:27.000Z</published>
     <updated>2020-04-18T05:49:31.575Z</updated>
     
@@ -323,21 +323,21 @@
     </summary>
     
     
-      <category term="计算机基础" scheme="https://flous.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+      <category term="计算机基础" scheme="https://flous-fl.github.io/hexo-cactus-blog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
     
-      <category term="unit1" scheme="https://flous.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/unit1/"/>
+      <category term="unit1" scheme="https://flous-fl.github.io/hexo-cactus-blog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/unit1/"/>
     
     
-      <category term="Loading" scheme="https://flous.top/tags/Loading/"/>
+      <category term="Loading" scheme="https://flous-fl.github.io/hexo-cactus-blog/tags/Loading/"/>
     
-      <category term="note" scheme="https://flous.top/tags/note/"/>
+      <category term="note" scheme="https://flous-fl.github.io/hexo-cactus-blog/tags/note/"/>
     
   </entry>
   
   <entry>
     <title>1.4计算机安全知识防护(未整理)</title>
-    <link href="https://flous.top/2020/04/11/1-4%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AE%89%E5%85%A8%E7%9F%A5%E8%AF%86%E9%98%B2%E6%8A%A4%EF%BC%88%E6%9C%AA%E6%95%B4%E7%90%86%EF%BC%89/"/>
-    <id>https://flous.top/2020/04/11/1-4%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AE%89%E5%85%A8%E7%9F%A5%E8%AF%86%E9%98%B2%E6%8A%A4%EF%BC%88%E6%9C%AA%E6%95%B4%E7%90%86%EF%BC%89/</id>
+    <link href="https://flous-fl.github.io/hexo-cactus-blog/2020/04/11/1-4%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AE%89%E5%85%A8%E7%9F%A5%E8%AF%86%E9%98%B2%E6%8A%A4%EF%BC%88%E6%9C%AA%E6%95%B4%E7%90%86%EF%BC%89/"/>
+    <id>https://flous-fl.github.io/hexo-cactus-blog/2020/04/11/1-4%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AE%89%E5%85%A8%E7%9F%A5%E8%AF%86%E9%98%B2%E6%8A%A4%EF%BC%88%E6%9C%AA%E6%95%B4%E7%90%86%EF%BC%89/</id>
     <published>2020-04-11T08:22:55.000Z</published>
     <updated>2020-04-18T05:49:29.065Z</updated>
     
@@ -346,21 +346,21 @@
     </summary>
     
     
-      <category term="计算机基础" scheme="https://flous.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+      <category term="计算机基础" scheme="https://flous-fl.github.io/hexo-cactus-blog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
     
-      <category term="unit1" scheme="https://flous.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/unit1/"/>
+      <category term="unit1" scheme="https://flous-fl.github.io/hexo-cactus-blog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/unit1/"/>
     
     
-      <category term="Loading" scheme="https://flous.top/tags/Loading/"/>
+      <category term="Loading" scheme="https://flous-fl.github.io/hexo-cactus-blog/tags/Loading/"/>
     
-      <category term="note" scheme="https://flous.top/tags/note/"/>
+      <category term="note" scheme="https://flous-fl.github.io/hexo-cactus-blog/tags/note/"/>
     
   </entry>
   
   <entry>
     <title>1.3数字化信息编码与数据表示</title>
-    <link href="https://flous.top/2020/04/11/1-3%E6%95%B0%E5%AD%97%E5%8C%96%E4%BF%A1%E6%81%AF%E7%BC%96%E7%A0%81%E4%B8%8E%E6%95%B0%E6%8D%AE%E8%A1%A8%E7%A4%BA/"/>
-    <id>https://flous.top/2020/04/11/1-3%E6%95%B0%E5%AD%97%E5%8C%96%E4%BF%A1%E6%81%AF%E7%BC%96%E7%A0%81%E4%B8%8E%E6%95%B0%E6%8D%AE%E8%A1%A8%E7%A4%BA/</id>
+    <link href="https://flous-fl.github.io/hexo-cactus-blog/2020/04/11/1-3%E6%95%B0%E5%AD%97%E5%8C%96%E4%BF%A1%E6%81%AF%E7%BC%96%E7%A0%81%E4%B8%8E%E6%95%B0%E6%8D%AE%E8%A1%A8%E7%A4%BA/"/>
+    <id>https://flous-fl.github.io/hexo-cactus-blog/2020/04/11/1-3%E6%95%B0%E5%AD%97%E5%8C%96%E4%BF%A1%E6%81%AF%E7%BC%96%E7%A0%81%E4%B8%8E%E6%95%B0%E6%8D%AE%E8%A1%A8%E7%A4%BA/</id>
     <published>2020-04-11T08:13:05.000Z</published>
     <updated>2020-04-18T05:49:24.647Z</updated>
     
@@ -379,17 +379,17 @@
     </summary>
     
     
-      <category term="计算机基础" scheme="https://flous.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+      <category term="计算机基础" scheme="https://flous-fl.github.io/hexo-cactus-blog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
     
-      <category term="unit1" scheme="https://flous.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/unit1/"/>
+      <category term="unit1" scheme="https://flous-fl.github.io/hexo-cactus-blog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/unit1/"/>
     
     
   </entry>
   
   <entry>
     <title>1.2计算机系统的组成</title>
-    <link href="https://flous.top/2020/04/09/1-2%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%BB%84%E6%88%90/"/>
-    <id>https://flous.top/2020/04/09/1-2%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%BB%84%E6%88%90/</id>
+    <link href="https://flous-fl.github.io/hexo-cactus-blog/2020/04/09/1-2%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%BB%84%E6%88%90/"/>
+    <id>https://flous-fl.github.io/hexo-cactus-blog/2020/04/09/1-2%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%BB%84%E6%88%90/</id>
     <published>2020-04-09T07:56:18.000Z</published>
     <updated>2020-04-18T05:49:17.936Z</updated>
     
@@ -405,21 +405,21 @@
     </summary>
     
     
-      <category term="计算机基础" scheme="https://flous.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+      <category term="计算机基础" scheme="https://flous-fl.github.io/hexo-cactus-blog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
     
-      <category term="unit1" scheme="https://flous.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/unit1/"/>
+      <category term="unit1" scheme="https://flous-fl.github.io/hexo-cactus-blog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/unit1/"/>
     
     
-      <category term="Loading" scheme="https://flous.top/tags/Loading/"/>
+      <category term="Loading" scheme="https://flous-fl.github.io/hexo-cactus-blog/tags/Loading/"/>
     
-      <category term="note" scheme="https://flous.top/tags/note/"/>
+      <category term="note" scheme="https://flous-fl.github.io/hexo-cactus-blog/tags/note/"/>
     
   </entry>
   
   <entry>
     <title>1.1计算机概述</title>
-    <link href="https://flous.top/2020/04/09/1-1%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%A6%82%E8%BF%B0/"/>
-    <id>https://flous.top/2020/04/09/1-1%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%A6%82%E8%BF%B0/</id>
+    <link href="https://flous-fl.github.io/hexo-cactus-blog/2020/04/09/1-1%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%A6%82%E8%BF%B0/"/>
+    <id>https://flous-fl.github.io/hexo-cactus-blog/2020/04/09/1-1%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%A6%82%E8%BF%B0/</id>
     <published>2020-04-08T22:45:00.000Z</published>
     <updated>2020-04-18T05:48:41.851Z</updated>
     
@@ -438,21 +438,21 @@
     </summary>
     
     
-      <category term="计算机基础" scheme="https://flous.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+      <category term="计算机基础" scheme="https://flous-fl.github.io/hexo-cactus-blog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
     
-      <category term="unit1" scheme="https://flous.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/unit1/"/>
+      <category term="unit1" scheme="https://flous-fl.github.io/hexo-cactus-blog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/unit1/"/>
     
     
-      <category term="Loading" scheme="https://flous.top/tags/Loading/"/>
+      <category term="Loading" scheme="https://flous-fl.github.io/hexo-cactus-blog/tags/Loading/"/>
     
-      <category term="note" scheme="https://flous.top/tags/note/"/>
+      <category term="note" scheme="https://flous-fl.github.io/hexo-cactus-blog/tags/note/"/>
     
   </entry>
   
   <entry>
     <title>为SumatraPDF改的一份适合阅读PDF的配色</title>
-    <link href="https://flous.top/2020/04/08/%E4%B8%BASumatraPDF%E6%94%B9%E7%9A%84%E4%B8%80%E4%BB%BD%E9%80%82%E5%90%88%E9%98%85%E8%AF%BBPDF%E7%9A%84%E9%85%8D%E8%89%B2/"/>
-    <id>https://flous.top/2020/04/08/%E4%B8%BASumatraPDF%E6%94%B9%E7%9A%84%E4%B8%80%E4%BB%BD%E9%80%82%E5%90%88%E9%98%85%E8%AF%BBPDF%E7%9A%84%E9%85%8D%E8%89%B2/</id>
+    <link href="https://flous-fl.github.io/hexo-cactus-blog/2020/04/08/%E4%B8%BASumatraPDF%E6%94%B9%E7%9A%84%E4%B8%80%E4%BB%BD%E9%80%82%E5%90%88%E9%98%85%E8%AF%BBPDF%E7%9A%84%E9%85%8D%E8%89%B2/"/>
+    <id>https://flous-fl.github.io/hexo-cactus-blog/2020/04/08/%E4%B8%BASumatraPDF%E6%94%B9%E7%9A%84%E4%B8%80%E4%BB%BD%E9%80%82%E5%90%88%E9%98%85%E8%AF%BBPDF%E7%9A%84%E9%85%8D%E8%89%B2/</id>
     <published>2020-04-08T02:06:45.000Z</published>
     <updated>2020-04-18T01:31:40.028Z</updated>
     
@@ -468,23 +468,23 @@
     </summary>
     
     
-      <category term="工具" scheme="https://flous.top/categories/%E5%B7%A5%E5%85%B7/"/>
+      <category term="工具" scheme="https://flous-fl.github.io/hexo-cactus-blog/categories/%E5%B7%A5%E5%85%B7/"/>
     
-      <category term="SumatraPDF" scheme="https://flous.top/categories/%E5%B7%A5%E5%85%B7/SumatraPDF/"/>
+      <category term="SumatraPDF" scheme="https://flous-fl.github.io/hexo-cactus-blog/categories/%E5%B7%A5%E5%85%B7/SumatraPDF/"/>
     
-      <category term="备份" scheme="https://flous.top/categories/%E5%A4%87%E4%BB%BD/"/>
+      <category term="备份" scheme="https://flous-fl.github.io/hexo-cactus-blog/categories/%E5%A4%87%E4%BB%BD/"/>
     
     
-      <category term="Read" scheme="https://flous.top/tags/Read/"/>
+      <category term="Read" scheme="https://flous-fl.github.io/hexo-cactus-blog/tags/Read/"/>
     
-      <category term="Experience" scheme="https://flous.top/tags/Experience/"/>
+      <category term="Experience" scheme="https://flous-fl.github.io/hexo-cactus-blog/tags/Experience/"/>
     
   </entry>
   
   <entry>
     <title>一次惨痛的Linux全盘经历（物理机）</title>
-    <link href="https://flous.top/2020/04/07/%E4%B8%80%E6%AC%A1%E6%83%A8%E7%97%9B%E7%9A%84Linux%E5%85%A8%E7%9B%98%E7%BB%8F%E5%8E%86/"/>
-    <id>https://flous.top/2020/04/07/%E4%B8%80%E6%AC%A1%E6%83%A8%E7%97%9B%E7%9A%84Linux%E5%85%A8%E7%9B%98%E7%BB%8F%E5%8E%86/</id>
+    <link href="https://flous-fl.github.io/hexo-cactus-blog/2020/04/07/%E4%B8%80%E6%AC%A1%E6%83%A8%E7%97%9B%E7%9A%84Linux%E5%85%A8%E7%9B%98%E7%BB%8F%E5%8E%86/"/>
+    <id>https://flous-fl.github.io/hexo-cactus-blog/2020/04/07/%E4%B8%80%E6%AC%A1%E6%83%A8%E7%97%9B%E7%9A%84Linux%E5%85%A8%E7%9B%98%E7%BB%8F%E5%8E%86/</id>
     <published>2020-04-07T07:19:25.000Z</published>
     <updated>2020-04-18T00:23:32.390Z</updated>
     
@@ -501,19 +501,19 @@
     </summary>
     
     
-      <category term="日志" scheme="https://flous.top/categories/%E6%97%A5%E5%BF%97/"/>
+      <category term="日志" scheme="https://flous-fl.github.io/hexo-cactus-blog/categories/%E6%97%A5%E5%BF%97/"/>
     
-      <category term="Linux" scheme="https://flous.top/categories/%E6%97%A5%E5%BF%97/Linux/"/>
+      <category term="Linux" scheme="https://flous-fl.github.io/hexo-cactus-blog/categories/%E6%97%A5%E5%BF%97/Linux/"/>
     
     
-      <category term="Error" scheme="https://flous.top/tags/Error/"/>
+      <category term="Error" scheme="https://flous-fl.github.io/hexo-cactus-blog/tags/Error/"/>
     
   </entry>
   
   <entry>
     <title>关于Hexo博客的一些记录</title>
-    <link href="https://flous.top/2020/04/07/about_hexo/"/>
-    <id>https://flous.top/2020/04/07/about_hexo/</id>
+    <link href="https://flous-fl.github.io/hexo-cactus-blog/2020/04/07/about_hexo/"/>
+    <id>https://flous-fl.github.io/hexo-cactus-blog/2020/04/07/about_hexo/</id>
     <published>2020-04-07T03:12:57.038Z</published>
     <updated>2020-04-19T05:15:12.808Z</updated>
     
@@ -529,21 +529,21 @@
     </summary>
     
     
-      <category term="博客" scheme="https://flous.top/categories/%E5%8D%9A%E5%AE%A2/"/>
+      <category term="博客" scheme="https://flous-fl.github.io/hexo-cactus-blog/categories/%E5%8D%9A%E5%AE%A2/"/>
     
-      <category term="Hexo" scheme="https://flous.top/categories/%E5%8D%9A%E5%AE%A2/Hexo/"/>
+      <category term="Hexo" scheme="https://flous-fl.github.io/hexo-cactus-blog/categories/%E5%8D%9A%E5%AE%A2/Hexo/"/>
     
     
-      <category term="Hexo" scheme="https://flous.top/tags/Hexo/"/>
+      <category term="Hexo" scheme="https://flous-fl.github.io/hexo-cactus-blog/tags/Hexo/"/>
     
-      <category term="Npm" scheme="https://flous.top/tags/Npm/"/>
+      <category term="Npm" scheme="https://flous-fl.github.io/hexo-cactus-blog/tags/Npm/"/>
     
   </entry>
   
   <entry>
     <title>为什么要使用 Windows 10 的 214 条理由（滑稽）</title>
-    <link href="https://flous.top/2020/04/04/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8-Windows-10-%E7%9A%84-214-%E6%9D%A1%E7%90%86%E7%94%B1%EF%BC%88%E6%BB%91%E7%A8%BD%EF%BC%89/"/>
-    <id>https://flous.top/2020/04/04/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8-Windows-10-%E7%9A%84-214-%E6%9D%A1%E7%90%86%E7%94%B1%EF%BC%88%E6%BB%91%E7%A8%BD%EF%BC%89/</id>
+    <link href="https://flous-fl.github.io/hexo-cactus-blog/2020/04/04/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8-Windows-10-%E7%9A%84-214-%E6%9D%A1%E7%90%86%E7%94%B1%EF%BC%88%E6%BB%91%E7%A8%BD%EF%BC%89/"/>
+    <id>https://flous-fl.github.io/hexo-cactus-blog/2020/04/04/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8-Windows-10-%E7%9A%84-214-%E6%9D%A1%E7%90%86%E7%94%B1%EF%BC%88%E6%BB%91%E7%A8%BD%EF%BC%89/</id>
     <published>2020-04-04T04:55:40.000Z</published>
     <updated>2020-04-04T05:08:16.000Z</updated>
     
@@ -559,21 +559,21 @@
     </summary>
     
     
-      <category term="Windows" scheme="https://flous.top/categories/Windows/"/>
+      <category term="Windows" scheme="https://flous-fl.github.io/hexo-cactus-blog/categories/Windows/"/>
     
-      <category term="Bug" scheme="https://flous.top/categories/Windows/Bug/"/>
+      <category term="Bug" scheme="https://flous-fl.github.io/hexo-cactus-blog/categories/Windows/Bug/"/>
     
     
-      <category term="System" scheme="https://flous.top/tags/System/"/>
+      <category term="System" scheme="https://flous-fl.github.io/hexo-cactus-blog/tags/System/"/>
     
-      <category term="Windows" scheme="https://flous.top/tags/Windows/"/>
+      <category term="Windows" scheme="https://flous-fl.github.io/hexo-cactus-blog/tags/Windows/"/>
     
   </entry>
   
   <entry>
     <title>网易云音乐外链测试</title>
-    <link href="https://flous.top/2020/03/28/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E5%A4%96%E9%93%BE%E6%B5%8B%E8%AF%95/"/>
-    <id>https://flous.top/2020/03/28/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E5%A4%96%E9%93%BE%E6%B5%8B%E8%AF%95/</id>
+    <link href="https://flous-fl.github.io/hexo-cactus-blog/2020/03/28/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E5%A4%96%E9%93%BE%E6%B5%8B%E8%AF%95/"/>
+    <id>https://flous-fl.github.io/hexo-cactus-blog/2020/03/28/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E5%A4%96%E9%93%BE%E6%B5%8B%E8%AF%95/</id>
     <published>2020-03-28T10:21:01.000Z</published>
     <updated>2020-04-02T11:16:44.000Z</updated>
     
@@ -589,14 +589,14 @@
     </summary>
     
     
-      <category term="测试" scheme="https://flous.top/categories/%E6%B5%8B%E8%AF%95/"/>
+      <category term="测试" scheme="https://flous-fl.github.io/hexo-cactus-blog/categories/%E6%B5%8B%E8%AF%95/"/>
     
-      <category term="音乐" scheme="https://flous.top/categories/%E6%B5%8B%E8%AF%95/%E9%9F%B3%E4%B9%90/"/>
+      <category term="音乐" scheme="https://flous-fl.github.io/hexo-cactus-blog/categories/%E6%B5%8B%E8%AF%95/%E9%9F%B3%E4%B9%90/"/>
     
     
-      <category term="Music" scheme="https://flous.top/tags/Music/"/>
+      <category term="Music" scheme="https://flous-fl.github.io/hexo-cactus-blog/tags/Music/"/>
     
-      <category term="Test" scheme="https://flous.top/tags/Test/"/>
+      <category term="Test" scheme="https://flous-fl.github.io/hexo-cactus-blog/tags/Test/"/>
     
   </entry>
   
